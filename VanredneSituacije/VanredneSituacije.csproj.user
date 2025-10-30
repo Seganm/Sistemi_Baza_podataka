@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaAngazovanostVozila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaDodajAngazovano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaDodajInterventnu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaJedinicaVozila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaOperativciJedinice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaOpremaDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledAngazovanih.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledEkspertiza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledEvidencijeServisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledIntervencija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledIntervenise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledIstorijeUloga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledJedinice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledOpreme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledPredstavnikaSluzbe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledSaradjivanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledSertifikata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledSituacije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledSluzbe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledSoftvera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledSpecijalizacija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledVozila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledZaposlenih.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajAnaliticarom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajDodeljenim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajDzipom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajEkspertizama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledDodeljenih.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaPregledPrijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajEvidencijomServisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajIntervencijama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajIntervenise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajIstorijomUloga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajKamionom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajKoordinatorom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajLicnomZastitom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajMedicinskom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajOperativnim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajOpstomInterventnom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajPredstavnikomSluzbe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajPrijavama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajSanitetskim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajSaradjivanjem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajSertifikatima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajSluzbom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajSoftverom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajSpecijalizacijama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajSpecijalnim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajSpecijalnomInterventnom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajTehnickom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajSituacijom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUpravljajZalihama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaZaposleniDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaVoziloDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaZaposleni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

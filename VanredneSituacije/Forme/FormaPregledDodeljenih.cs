@@ -36,7 +36,7 @@ namespace VanredneSituacije.Forme
         {
             if (gridDodeljivanja.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Koje dodeljivanje menjamo?", "Info");
+                MessageBox.Show("Koje dodeljivanje menjamoo?", "Info");
                 return;
             }
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SBP_Projekat\\VanredneSituacije\\VanredneSituacije.csproj": {}
+    "C:\\Users\\Marko\\Desktop\\KlonSBP\\Sistemi_Baza_podataka\\VanredneSituacije\\VanredneSituacije.csproj": {}
   },
   "projects": {
-    "D:\\SBP_Projekat\\VanredneSituacije\\VanredneSituacije.csproj": {
+    "C:\\Users\\Marko\\Desktop\\KlonSBP\\Sistemi_Baza_podataka\\VanredneSituacije\\VanredneSituacije.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SBP_Projekat\\VanredneSituacije\\VanredneSituacije.csproj",
+        "projectUniqueName": "C:\\Users\\Marko\\Desktop\\KlonSBP\\Sistemi_Baza_podataka\\VanredneSituacije\\VanredneSituacije.csproj",
         "projectName": "VanredneSituacije",
-        "projectPath": "D:\\SBP_Projekat\\VanredneSituacije\\VanredneSituacije.csproj",
+        "projectPath": "C:\\Users\\Marko\\Desktop\\KlonSBP\\Sistemi_Baza_podataka\\VanredneSituacije\\VanredneSituacije.csproj",
         "packagesPath": "C:\\Users\\Marko\\.nuget\\packages\\",
-        "outputPath": "D:\\SBP_Projekat\\VanredneSituacije\\obj\\",
+        "outputPath": "C:\\Users\\Marko\\Desktop\\KlonSBP\\Sistemi_Baza_podataka\\VanredneSituacije\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

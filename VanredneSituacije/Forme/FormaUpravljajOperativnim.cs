@@ -52,7 +52,7 @@ namespace VanredneSituacije.Forme
                 chkZensko.Checked = true;
             }
 
-            txtTelefon.Text = OperativniRadnik.Kontakt_Telefon;
+            txtTelefon.Text = OperativniRadnik.BrojTelefona;
             txtEmail.Text = OperativniRadnik.Email;
             txtAdresa.Text = OperativniRadnik.AdresaStanovanja;
             dtpZaposlenje.Value = OperativniRadnik.Datum_Zaposlenja;
@@ -111,7 +111,7 @@ namespace VanredneSituacije.Forme
                     Ime = txtIme.Text,
                     Prezime = txtPrezime.Text,
                     Datum_Rodjenja = dtpRodjenje.Value,
-                    Kontakt_Telefon = txtTelefon.Text,
+                    BrojTelefona = txtTelefon.Text,
                     Email = txtEmail.Text,
                     AdresaStanovanja = txtAdresa.Text,
                     Datum_Zaposlenja = dtpZaposlenje.Value,

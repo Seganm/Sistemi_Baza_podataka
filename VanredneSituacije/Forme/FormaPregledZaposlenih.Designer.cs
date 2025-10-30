@@ -198,7 +198,7 @@ namespace VanredneSituacije.Forme
             polKolona.DataPropertyName = "Pol";
             polKolona.HeaderText = "Pol";
 
-            kontaktKolona.DataPropertyName = "Kontakt_Telefon";
+            kontaktKolona.DataPropertyName = "BrojTelefona";
             kontaktKolona.HeaderText = "Telefon";
 
             emailKolona.DataPropertyName = "Email";

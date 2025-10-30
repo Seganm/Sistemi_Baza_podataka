@@ -47,7 +47,7 @@ namespace VanredneSituacije.Forme
                 checkZensko.Checked = true;
             }
 
-            textKontakt.Text = kord.Kontakt_Telefon;
+            textKontakt.Text = kord.BrojTelefona;
             textEmail.Text = kord.Email;
             textAdresa.Text = kord.AdresaStanovanja;
             try
@@ -101,7 +101,7 @@ namespace VanredneSituacije.Forme
                 kordinator.Ime = textIme.Text;
                 kordinator.Prezime = textPrezime.Text;
                 kordinator.Datum_Rodjenja = dateRodjenje.Value;
-                kordinator.Kontakt_Telefon = textKontakt.Text;
+                kordinator.BrojTelefona = textKontakt.Text;
                 kordinator.Email = textEmail.Text;
                 kordinator.AdresaStanovanja = textAdresa.Text;
 

@@ -19,7 +19,7 @@ namespace VanredneSituacije.DTO
             JMBG = zap.JMBG;
             Datum_Rodjenja = zap.Datum_Rodjenja;
             Datum_Zaposlenja = zap.Datum_Zaposlenja;
-            Kontakt_Telefon = zap.Kontakt_Telefon;
+            BrojTelefona = zap.BrojTelefona;
             Email = zap.Email;
             AdresaStanovanja = zap.AdresaStanovanja;
             Pol = zap.Pol;
@@ -38,7 +38,7 @@ namespace VanredneSituacije.DTO
 
         public virtual DateTime Datum_Zaposlenja { get; set; }
 
-        public virtual string Kontakt_Telefon { get; set; }
+        public virtual string BrojTelefona { get; set; }
 
         public virtual string Email { get; set; }
 
@@ -66,7 +66,7 @@ namespace VanredneSituacije.DTO
 
         public virtual string Pol { get; set; }
 
-        public virtual string Kontakt_Telefon { get; set; }
+        public virtual string BrojTelefona { get; set; }
 
 
 
@@ -81,7 +81,7 @@ namespace VanredneSituacije.DTO
             Prezime = zap.Prezime;
             Pol = zap.Pol;
             AdresaStanovanja = zap.AdresaStanovanja;
-            Kontakt_Telefon = zap.Kontakt_Telefon;
+            BrojTelefona = zap.BrojTelefona;
             Email = zap.Email;
             Datum_Rodjenja = zap.Datum_Rodjenja;
             Datum_Zaposlenja = zap.Datum_Zaposlenja;

@@ -38,7 +38,7 @@ namespace VanredneSituacije.Forme
             checkMusko.Checked = _analiticar.Pol == "M";
             checkZensko.Checked = _analiticar.Pol == "Z";
 
-            textKontakt.Text = _analiticar.Kontakt_Telefon;
+            textKontakt.Text = _analiticar.BrojTelefona;
             textEmail.Text = _analiticar.Email;
             textAdresa.Text = _analiticar.AdresaStanovanja;
             dateZaposlenje.Value = _analiticar.Datum_Zaposlenja;
@@ -113,7 +113,7 @@ namespace VanredneSituacije.Forme
                     Prezime = textPrezime.Text,
                     Datum_Rodjenja = dateRodjenja.Value,
                     Pol = pol,
-                    Kontakt_Telefon = textKontakt.Text,
+                    BrojTelefona = textKontakt.Text,
                     Email = textEmail.Text,
                     AdresaStanovanja = textAdresa.Text,
                     Datum_Zaposlenja = dateZaposlenje.Value

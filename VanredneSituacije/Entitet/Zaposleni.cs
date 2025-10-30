@@ -16,7 +16,7 @@ namespace VanredneSituacije.Entitet
         public virtual string Ime { get; set; }
         public virtual string Prezime { get; set; }
         public virtual string JMBG { get; set; }
-        public virtual string Kontakt_Telefon { get; set; }
+        public virtual string BrojTelefona { get; set; }
         public virtual string Email { get; set; }
         public virtual string AdresaStanovanja { get; set; }
 

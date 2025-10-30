@@ -77,7 +77,7 @@ namespace VanredneSituacije
                 a.Prezime = analiticar.Prezime;
                 a.JMBG = analiticar.JMBG;
 
-                a.Kontakt_Telefon = analiticar.Kontakt_Telefon;
+                a.BrojTelefona = analiticar.BrojTelefona;
                 a.AdresaStanovanja = analiticar.AdresaStanovanja;
                 a.Pol = analiticar.Pol;
 
@@ -112,7 +112,7 @@ namespace VanredneSituacije
                 a.Email = analiticar.Email;
                 a.AdresaStanovanja = analiticar.AdresaStanovanja;
                 a.Pol = analiticar.Pol;
-                a.Kontakt_Telefon = analiticar.Kontakt_Telefon;
+                a.BrojTelefona = analiticar.BrojTelefona;
                 a.Datum_Rodjenja = analiticar.Datum_Rodjenja;
                 a.Datum_Zaposlenja = analiticar.Datum_Zaposlenja;
 
@@ -196,7 +196,7 @@ namespace VanredneSituacije
                 a.Datum_Zaposlenja = analiticar.Datum_Zaposlenja;
                 a.Datum_Rodjenja = analiticar.Datum_Rodjenja;
                 a.Pol = analiticar.Pol;
-                a.Kontakt_Telefon = analiticar.Kontakt_Telefon;
+                a.BrojTelefona = analiticar.BrojTelefona;
                 IstorijaUloga istorija = new IstorijaUloga
                 {
                     Zaposleni = a,
@@ -232,7 +232,7 @@ namespace VanredneSituacije
                 k.Prezime = koordinator.Prezime;
                 k.Datum_Rodjenja = koordinator.Datum_Rodjenja;
                 k.Pol = koordinator.Pol;
-                k.Kontakt_Telefon = koordinator.Kontakt_Telefon;
+                k.BrojTelefona = koordinator.BrojTelefona;
                 k.Email = koordinator.Email;
                 k.Datum_Zaposlenja = koordinator.Datum_Zaposlenja;
                 k.BrojTimova = koordinator.BrojTimova;
@@ -293,7 +293,7 @@ namespace VanredneSituacije
                 k.AdresaStanovanja = kordinator.AdresaStanovanja;
                 k.BrojTimova = kordinator.BrojTimova;
                 k.Pol = kordinator.Pol;
-                k.Kontakt_Telefon = kordinator.Kontakt_Telefon;
+                k.BrojTelefona = kordinator.BrojTelefona;
                 k.Email = kordinator.Email;
                 k.Datum_Rodjenja = kordinator.Datum_Rodjenja;
                 k.Datum_Zaposlenja = kordinator.Datum_Zaposlenja;
@@ -356,7 +356,7 @@ namespace VanredneSituacije
                 k.Prezime = koordinator.Prezime;
                 k.Datum_Rodjenja = koordinator.Datum_Rodjenja;
                 k.Pol = koordinator.Pol;
-                k.Kontakt_Telefon = koordinator.Kontakt_Telefon;
+                k.BrojTelefona = koordinator.BrojTelefona;
                 k.Email = koordinator.Email;
                 k.AdresaStanovanja = koordinator.AdresaStanovanja;
                 k.Datum_Zaposlenja = koordinator.Datum_Zaposlenja;
@@ -1259,7 +1259,7 @@ namespace VanredneSituacije
                 radnik.Datum_Zaposlenja = opRadnik.Datum_Zaposlenja;
                 radnik.Datum_Rodjenja = opRadnik.Datum_Rodjenja;
                 radnik.Pol = opRadnik.Pol;
-                radnik.Kontakt_Telefon = opRadnik.Kontakt_Telefon;
+                radnik.BrojTelefona = opRadnik.BrojTelefona;
                 radnik.Broj_Sati = opRadnik.Broj_Sati;
                 radnik.Fizicka_Spremnost = opRadnik.Fizicka_Spremnost;
                 if (opRadnik.InterventnaJedinica != null || opRadnik.InterventnaJedinica > 0)
@@ -1304,7 +1304,7 @@ namespace VanredneSituacije
                 radnik.Broj_Sati = opRadnik.Broj_Sati;
                 radnik.Fizicka_Spremnost = opRadnik.Fizicka_Spremnost;
                 radnik.Pol = opRadnik.Pol;
-                radnik.Kontakt_Telefon = opRadnik.Kontakt_Telefon;
+                radnik.BrojTelefona = opRadnik.BrojTelefona;
                 radnik.Email = opRadnik.Email;
                 radnik.AdresaStanovanja = opRadnik.AdresaStanovanja;
                 radnik.Datum_Zaposlenja = opRadnik.Datum_Zaposlenja;
@@ -2927,7 +2927,7 @@ namespace VanredneSituacije
             return intervencije;
         }
 
-        public static async Task<DTOIntervencija> VratiIntervenciju(int intervencijaId)
+        public static async Task<DTOIntervencija> VratiIntervencijuu(int intervencijaId)
         {
             DTOIntervencija intervencija = new DTOIntervencija();
             try

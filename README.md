@@ -1,0 +1,2 @@
+# Sistemi_Baza_podataka
+Vanredna_situacija

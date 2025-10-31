@@ -24,7 +24,7 @@ namespace VanredneSituacije
                 ISession sesija = DataLayer.GetSession();
                 if (sesija == null)
                 {
-                    throw new SessionException("Greska pri kreiranju sesije");
+                    throw new SessionException("Greskaa pri kreiranju sesije");
                 }
                 var koords = await sesija.Query<Koordinator>().ToListAsync();
                 var operatives = await sesija.Query<OperativniRadnik>().ToListAsync();

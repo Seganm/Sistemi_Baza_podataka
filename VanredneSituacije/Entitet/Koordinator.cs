@@ -13,7 +13,7 @@ namespace VanredneSituacije.Entitet
             Specijalizacija = new List<Specijalizacije>();
         }
         public virtual IList<Specijalizacije> Specijalizacija { get; set; }
-        public virtual int BrojTimova { get; set; }
+        public virtual int BrTimova { get; set; }
 
 
     }

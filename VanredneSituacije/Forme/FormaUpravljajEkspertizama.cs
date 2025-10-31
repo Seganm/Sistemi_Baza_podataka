@@ -43,7 +43,7 @@ namespace VanredneSituacije.Forme
 
         private async void btnSacuvaj_Click(object sender, EventArgs e)
         {
-            var ekspertizaDto = new DTOIzmeniEkspertizu
+            var ekspertizaDto = new DTOEkspertizaIzmenii
             {
                 JMBGAnaliticara = _jmbgAnaliticara,
                 Oblast = txtOblastEkspertize.Text.Trim()
@@ -60,13 +60,13 @@ namespace VanredneSituacije.Forme
             {
                 if (_ekspertiza == null)
                 {
-                    await DTOManager.DodajEkspertizu(ekspertizaDto);
+                    await DTOManager.EkspertizaDodajj(ekspertizaDto);
                     MessageBox.Show("Ekspertiza je uspešno dodata.", "Uspeh",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    await DTOManager.IzmeniEkspertizu(ekspertizaDto, _ekspertiza.Id);
+                    await DTOManager.EkspertizaIzmenii(ekspertizaDto, _ekspertiza.Id);
                     MessageBox.Show("Podaci o ekspertizi su uspešno ažurirani.", "Uspeh",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

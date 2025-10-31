@@ -129,7 +129,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                return new JsonResult(await DTOManager.VratiSvaUcestvovanjaUVanrednojSituaciji(vanrednaId));
+                return new JsonResult(await DTOManager.VanrednaUcestvovanjaVratii(vanrednaId));
             }
             catch (Exception ex)
             {

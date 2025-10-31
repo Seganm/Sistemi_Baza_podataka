@@ -13,11 +13,11 @@ namespace VanredneSituacijeWebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
 
-        public async Task<IActionResult> IstorijaUlogaAdd([FromBody] DTODodajIstorijuUloga istorija)
+        public async Task<IActionResult> IstorijaUlogaAdd([FromBody] DTOIstorijaDodajj istorija)
         {
             try
             {
-                await DTOManager.DodajIstorijuUloga(istorija);
+                await DTOManager.IstorijaDodajj(istorija);
                 return Ok();
             }
             catch (Exception ex)
@@ -34,7 +34,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                return new JsonResult(await DTOManager.VratiSveZaposlene());
+                return new JsonResult(await DTOManager.ZaposleniVratii());
             }
             catch (Exception ex)
             {
@@ -51,7 +51,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                return new JsonResult(await DTOManager.VratiIstorijuUZaposlenog(maticniBroj));
+                return new JsonResult(await DTOManager.IstorijaVratiPoJMBG(maticniBroj));
             }
             catch (Exception ex)
             {
@@ -68,7 +68,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                await DTOManager.ObrisiIstorijuUloga(istorijaId);
+                await DTOManager.IstorijaObrisii(istorijaId);
                 return Ok();
 
             }
@@ -83,11 +83,11 @@ namespace VanredneSituacijeWebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
 
-        public async Task<IActionResult> IstorijaChange([FromBody] DTODodajIstorijuUloga istorija, int istorijaId)
+        public async Task<IActionResult> IstorijaChange([FromBody] DTOIstorijaDodajj istorija, int istorijaId)
         {
             try
             {
-                await DTOManager.IzmeniIstorijuUloga(istorija, istorijaId);
+                await DTOManager.IstorijaIzmenii(istorija, istorijaId);
                 return Ok();
             }
             catch (Exception ex)

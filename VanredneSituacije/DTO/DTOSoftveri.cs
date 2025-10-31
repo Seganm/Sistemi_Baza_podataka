@@ -33,16 +33,16 @@ namespace VanredneSituacije.DTO
       
     }
 
-    public class DTODodajSoftver
+    public class DTOSoftveriDodajj
     {
-        public DTODodajSoftver() { }
-        public DTODodajSoftver(Softveri soft)
+        public DTOSoftveriDodajj() { }
+        public DTOSoftveriDodajj(Softveri soft)
         {
             Naziv = soft.Naziv;
-            JMBG_Analiticar = soft.Analiticar.JMBG;
+            JMBGAnaliticaraa = soft.Analiticar.JMBG;
 
         }
         public virtual string Naziv { get; set; }
-        public virtual string JMBG_Analiticar { get; set; }
+        public virtual string JMBGAnaliticaraa { get; set; }
     }
 }

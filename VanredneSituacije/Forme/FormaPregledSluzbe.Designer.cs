@@ -113,7 +113,7 @@ namespace VanredneSituacije.Forme
             };
             tabelaSluzbi.DefaultCellStyle = cellStyle;
 
-            kolonaIdSektora.DataPropertyName = "Id_Sektora";
+            kolonaIdSektora.DataPropertyName = "SektorrId";
             kolonaIdSektora.HeaderText = "ID sektora";
 
             kolonaTipSektora.DataPropertyName = "TipSektora";

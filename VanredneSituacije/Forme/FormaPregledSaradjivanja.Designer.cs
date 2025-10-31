@@ -101,14 +101,14 @@ namespace VanredneSituacije.Forme
             kolSektor.HeaderText = "Sektor ID";
             kolSluzba.DataPropertyName = "NazivSluzbe";
             kolSluzba.HeaderText = "Naziv službe";
-            kolSituacija.DataPropertyName = "VanrednaSituacijaID";
+            kolSituacija.DataPropertyName = "IDVanSituacije";
             kolSituacija.HeaderText = "ID vanredne situacije";
             kolTip.DataPropertyName = "TipVs";
             kolTip.HeaderText = "Tip situacije";
             kolUloga.DataPropertyName = "Uloga";
             kolUloga.HeaderText = "Uloga u saradnji";
 
-            bindingSaradnje.DataSource = typeof(DTO.DTOVratiSaradnju);
+            bindingSaradnje.DataSource = typeof(DTO.DTOSaradnjeVratiPoId);
 
             oznakaNaslov.AutoSize = true;
             oznakaNaslov.Font = new Font("Segoe UI Semibold", 14F);

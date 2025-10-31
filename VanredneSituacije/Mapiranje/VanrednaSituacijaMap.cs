@@ -17,8 +17,8 @@ namespace VanredneSituacije.Mapiranja
 
             Id(x => x.Id).GeneratedBy.TriggerIdentity();
 
-            Map(x => x.Datum_Od).Column("Datum_Od");
-            Map(x => x.Datum_Do).Column("Datum_Do");
+            Map(x => x.DatumPoc).Column("DatumPoc");
+            Map(x => x.DatumKraj).Column("DatumKraj");
             Map(x => x.Tip).Column("Tip");
             Map(x => x.Broj_Ugrozenih_Osoba).Column("Broj_Ugrozenih_Osoba");
             Map(x => x.Nivo_Opasnosti).Column("Nivo_Opasnosti").CustomType<EnumStringType<NivoOpasnosti>>();

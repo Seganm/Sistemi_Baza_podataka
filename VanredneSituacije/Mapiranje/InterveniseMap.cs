@@ -15,9 +15,9 @@ namespace VanredneSituacije.Mapiranje
             Table("Intervenise");
 
             Id(x => x.Id, "Id").GeneratedBy.TriggerIdentity();
-            References(x => x.IdVandredneSituacije, "IdVanredneSituacije").Cascade.None();
-            References(x => x.IdInterventneJed, "IdInterventneJed").Cascade.None();
-            References(x => x.IdIntervencije, "IdIntervencije").Cascade.None();
+            References(x => x.IdVanrednee, "IdVanredneSituacije").Cascade.None();
+            References(x => x.IdInterventnee, "IdInterventnee").Cascade.None();
+            References(x => x.IdIntervencijee, "IdIntervencijee").Cascade.None();
         }
     }
 }

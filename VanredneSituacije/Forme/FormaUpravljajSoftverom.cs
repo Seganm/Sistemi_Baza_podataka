@@ -42,9 +42,9 @@ namespace VanredneSituacije.Forme
 
         private async void btnSacuvaj_Click(object sender, EventArgs e)
         {
-            DTODodajSoftver s = new DTODodajSoftver
+            DTOSoftveriDodajj s = new DTOSoftveriDodajj
             {
-                JMBG_Analiticar = txtJmbgAnaliticara.Text,
+                JMBGAnaliticaraa = txtJmbgAnaliticara.Text,
                 Naziv = txtNazivSoftvera.Text
             };
 
@@ -56,14 +56,14 @@ namespace VanredneSituacije.Forme
 
             if (_trenutniSoftver == null)
             {
-                await DTOManager.DodajSoftver(s);
+                await DTOManager.SoftveriDodajj(s);
                 MessageBox.Show("Softver je  dodat.", "");
             }
             else
             {
                 if (int.TryParse(_trenutniSoftver.Id.ToString(), out int idSoftvera))
                 {
-                    await DTOManager.IzmeniSoftver(s, idSoftvera);
+                    await DTOManager.SoftverIzmenii(s, idSoftvera);
                     MessageBox.Show("Podaci o softveru su ažurirani.", "Uspešno");
                 }
                 else

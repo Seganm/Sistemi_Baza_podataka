@@ -8,7 +8,7 @@ namespace VanredneSituacije.Entitet
 {
     public class Sluzba
     {
-        public virtual int Id_Sektora { get; set; }
+        public virtual int SektorrId { get; set; }
         public virtual IList<Saradnja> VandredneSituacije { get; set; }
         public virtual string TipSektora { get; set; }
 

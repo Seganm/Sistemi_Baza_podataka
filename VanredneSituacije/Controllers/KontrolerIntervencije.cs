@@ -49,7 +49,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                return new JsonResult(await DTOManager.VratiSvaUcestvovanjaUIntervenciji(ucestvovanjeId));
+                return new JsonResult(await DTOManager.IntervencijaUcestvovanjaVratii(ucestvovanjeId));
             }
             catch (Exception ex)
             {

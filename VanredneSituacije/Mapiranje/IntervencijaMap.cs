@@ -31,11 +31,11 @@ namespace VanredneSituacije.Mapiranje
             Map(x => x.Broj_Spasenih, "Broj_Spasenih");
 
             HasMany(x => x.Ucestvovalos)
-              .KeyColumn("IdIntervencije")
+              .KeyColumn("IdIntervencijee")
               .Inverse()
               .Cascade.All();
             HasMany(x => x.Ucestvuje)
-                .KeyColumn("IdIntervencije")
+                .KeyColumn("IdIntervencijee")
                 .Inverse()
                 .Cascade.All();
 

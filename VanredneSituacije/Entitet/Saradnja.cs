@@ -10,7 +10,7 @@ namespace VanredneSituacije.Entitet
     {
 
         public virtual int Id { get; set; }
-        public virtual VanrednaSituacija VandrednaSituacija { get; set; }
+        public virtual VanrednaSituacija Vanredna_Sit { get; set; }
         public virtual Sluzba Sektor { get; set; }
         public virtual string Uloga { get; set; }
     }

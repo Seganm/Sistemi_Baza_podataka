@@ -18,7 +18,7 @@ namespace VanredneSituacije.Forme
 
         public async void UcitajEkspertize()
         {
-            var lista = await DTOManager.VratiEkspertizeAnaliticara(analiticar.JMBG);
+            var lista = await DTOManager.EkspertizeVratiPoJMBG(analiticar.JMBG);
             gridEkspertize.DataSource = lista;
             gridEkspertize.Refresh();
             gridEkspertize.ClearSelection();
@@ -63,7 +63,7 @@ namespace VanredneSituacije.Forme
 
             if (potvrda == DialogResult.OK)
             {
-                await DTOManager.ObrisiEkspertizu(selektovana.Id);
+                await DTOManager.EkspertizaObrisii(selektovana.Id);
                 MessageBox.Show("Ekspertiza uspešno obrisana.", "Info");
                 UcitajEkspertize();
             }

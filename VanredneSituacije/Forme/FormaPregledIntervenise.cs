@@ -23,7 +23,7 @@ namespace VanredneSituacije.Forme
 
         public async void UcitajZaSituaciju(int situacijaId)
         {
-            var lista = await DTOManager.VratiSvaUcestvovanjaUVanrednojSituaciji(situacijaId);
+            var lista = await DTOManager.VanrednaUcestvovanjaVratii(situacijaId);
             gridUcestvovanja.DataSource = lista;
             gridUcestvovanja.Refresh();
             gridUcestvovanja.ClearSelection();
@@ -63,7 +63,7 @@ namespace VanredneSituacije.Forme
 
             if (potvrda == DialogResult.OK)
             {
-                await DTOManager.ObrisiUcestvuje(selektovana.Id);
+                await DTOManager.InterveniseObrisii(selektovana.Id);
                 MessageBox.Show("Učešće uspešno obrisano.", "Info");
                 OsveziPrikaz();
             }
@@ -79,7 +79,7 @@ namespace VanredneSituacije.Forme
 
         public async void UcitajSvaUcestvovanja()
         {
-            var lista = await DTOManager.VratiSvaUcestvovanja();
+            var lista = await DTOManager.UcestvovanjaVratii();
             gridUcestvovanja.DataSource = lista;
             gridUcestvovanja.Refresh();
             gridUcestvovanja.ClearSelection();

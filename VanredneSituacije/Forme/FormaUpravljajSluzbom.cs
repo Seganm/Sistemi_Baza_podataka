@@ -56,7 +56,7 @@ namespace VanredneSituacije.Forme
             if (_postojecaSluzba == null)
                 await DTOManager.DodajSluzbu(nova);
             else
-                await DTOManager.IzmeniSluzbu(nova, _postojecaSluzba.Id_Sektora);
+                await DTOManager.IzmeniSluzbu(nova, _postojecaSluzba.SektorrId);
 
             DialogResult = DialogResult.OK;
             Close();

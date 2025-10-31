@@ -94,7 +94,7 @@ namespace VanredneSituacije.Forme
             kolId.HeaderText = "ID";
             kolId.Name = "kolId";
 
-            kolJedinica.DataPropertyName = "IdInterventneJed";
+            kolJedinica.DataPropertyName = "IdInterventnee";
             kolJedinica.HeaderText = "Interventna jedinica";
             kolJedinica.Name = "kolJedinica";
 
@@ -102,7 +102,7 @@ namespace VanredneSituacije.Forme
             kolSituacija.HeaderText = "Vanredna situacija";
             kolSituacija.Name = "kolSituacija";
 
-            kolIntervencija.DataPropertyName = "IdIntervencije";
+            kolIntervencija.DataPropertyName = "IdIntervencijee";
             kolIntervencija.HeaderText = "Intervencija";
             kolIntervencija.Name = "kolIntervencija";
 

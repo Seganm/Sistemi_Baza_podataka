@@ -29,25 +29,25 @@ namespace VanredneSituacije.Forme
             textJmbg.ReadOnly = true;
             textJmbg.BackColor = Color.LightGray;
         }
-        public FormaUpravljajIstorijomUloga(string jmbgZaposlenog)
+        public FormaUpravljajIstorijomUloga(string JMBGZap)
         {
             InitializeComponent();
-            textJmbg.Text = jmbgZaposlenog;
+            textJmbg.Text = JMBGZap;
             textJmbg.ReadOnly = true;
             textJmbg.BackColor = Color.LightGray;
         }
         public void PopuniPodacima()
         {
-            textJmbg.Text = istorija.JMBGZaposlenog;
+            textJmbg.Text = istorija.JMBGZap;
             comboBox1.Text = istorija.Uloga;
-            dateDatumOf.Value = istorija.Datum_Od;
-            if (istorija.Datum_Do == null)
+            dateDatumOf.Value = istorija.DatumPoc;
+            if (istorija.DatumKraj == null)
             {
                 dateDatumDo.Value = DateTime.Now;
             }
             else
             {
-                dateDatumDo.Value = (DateTime)istorija.Datum_Do;
+                dateDatumDo.Value = (DateTime)istorija.DatumKraj;
             }
         }
 
@@ -79,8 +79,8 @@ namespace VanredneSituacije.Forme
 
         private async void buttonSacuvaj_Click(object sender, EventArgs e)
         {
-            DTODodajIstorijuUloga istorijaa = new DTODodajIstorijuUloga();
-            istorijaa.JMBGZaposlenog = textJmbg.Text;
+            DTOIstorijaDodajj istorijaa = new DTOIstorijaDodajj();
+            istorijaa.JMBGZap = textJmbg.Text;
             istorijaa.Uloga = comboBox1.SelectedItem.ToString();
 
             if (dateDatumOf.Value == DateTime.MinValue || dateDatumOf.Value == DateTime.MinValue)
@@ -89,8 +89,8 @@ namespace VanredneSituacije.Forme
                 dateDatumDo.Value = DateTime.Now;
             }
 
-            istorijaa.Datum_Od = dateDatumOf.Value;
-            istorijaa.Datum_Do = dateDatumDo.Value;
+            istorijaa.DatumPoc = dateDatumOf.Value;
+            istorijaa.DatumKraj = dateDatumDo.Value;
 
             if (string.IsNullOrEmpty(textJmbg.Text) || comboBox1.SelectedIndex == -1 || (!dateDatumOf.Checked))
             {
@@ -99,11 +99,11 @@ namespace VanredneSituacije.Forme
             }
             if (istorija != null)
             {
-                await DTOManager.IzmeniIstorijuUloga(istorijaa, istorija.Id);
+                await DTOManager.IstorijaIzmenii(istorijaa, istorija.Id);
             }
             else
             {
-                await DTOManager.DodajIstorijuUloga(istorijaa);
+                await DTOManager.IstorijaDodajj(istorijaa);
             }
             this.DialogResult = DialogResult.OK;
             this.Close();

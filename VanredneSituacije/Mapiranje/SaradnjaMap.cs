@@ -15,7 +15,7 @@ namespace VanredneSituacije.Mapiranje
             Table("Saradnja");
 
             Id(x => x.Id, "Id").GeneratedBy.TriggerIdentity();
-            References(x => x.VandrednaSituacija)
+            References(x => x.Vanredna_Sit)
               .Column("Id_Vanredne_Situacije")
               .Not.Nullable().Cascade.None();
             References(x => x.Sektor)

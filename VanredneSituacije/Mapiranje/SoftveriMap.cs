@@ -14,7 +14,7 @@ namespace VanredneSituacije.Mapiranje
         {
             Table("Softveri");
             Id(x => x.Id, "Id").GeneratedBy.TriggerIdentity();
-            References(x => x.Analiticar, "JMBG_Analiticara").Cascade.None();
+            References(x => x.Analiticar, "JMBGAnaliticaraaa").Cascade.None();
             Map(x => x.Naziv, "Naziv");
         }
     }

@@ -24,9 +24,9 @@ namespace VanredneSituacije.Forme
             DataGridViewCellStyle alternateRowStyle = new DataGridViewCellStyle();
             DataGridViewCellStyle cellStyle = new DataGridViewCellStyle();
 
-            dugmeObrisiSoftver = new Button();
-            dugmeIzmeniSoftver = new Button();
-            dugmeDodajSoftver = new Button();
+            dugmeSoftveriObrisii = new Button();
+            dugmeSoftverIzmenii = new Button();
+            dugmeSoftveriDodajj = new Button();
             tabelaSoftveri = new DataGridView();
             kolonaId = new DataGridViewTextBoxColumn();
             kolonaImeAnaliticara = new DataGridViewTextBoxColumn();
@@ -41,39 +41,39 @@ namespace VanredneSituacije.Forme
             SuspendLayout();
 
          
-            dugmeDodajSoftver.BackColor = Color.FromArgb(0, 122, 204);
-            dugmeDodajSoftver.FlatAppearance.BorderSize = 0;
-            dugmeDodajSoftver.FlatStyle = FlatStyle.Flat;
-            dugmeDodajSoftver.Font = new Font("Segoe UI Semibold", 9F);
-            dugmeDodajSoftver.ForeColor = Color.White;
-            dugmeDodajSoftver.Location = new Point(12, 11);
-            dugmeDodajSoftver.Size = new Size(150, 32);
-            dugmeDodajSoftver.Text = "➕ Dodaj softver";
-            dugmeDodajSoftver.UseVisualStyleBackColor = false;
-            dugmeDodajSoftver.Click += dugmeDodajSoftver_Click;
+            dugmeSoftveriDodajj.BackColor = Color.FromArgb(0, 122, 204);
+            dugmeSoftveriDodajj.FlatAppearance.BorderSize = 0;
+            dugmeSoftveriDodajj.FlatStyle = FlatStyle.Flat;
+            dugmeSoftveriDodajj.Font = new Font("Segoe UI Semibold", 9F);
+            dugmeSoftveriDodajj.ForeColor = Color.White;
+            dugmeSoftveriDodajj.Location = new Point(12, 11);
+            dugmeSoftveriDodajj.Size = new Size(150, 32);
+            dugmeSoftveriDodajj.Text = "➕ Dodaj softver";
+            dugmeSoftveriDodajj.UseVisualStyleBackColor = false;
+            dugmeSoftveriDodajj.Click += dugmeSoftveriDodajj_Click;
 
    
-            dugmeIzmeniSoftver.BackColor = Color.FromArgb(255, 193, 7);
-            dugmeIzmeniSoftver.FlatAppearance.BorderSize = 0;
-            dugmeIzmeniSoftver.FlatStyle = FlatStyle.Flat;
-            dugmeIzmeniSoftver.Font = new Font("Segoe UI Semibold", 9F);
-            dugmeIzmeniSoftver.ForeColor = Color.Black;
-            dugmeIzmeniSoftver.Location = new Point(168, 11);
-            dugmeIzmeniSoftver.Size = new Size(150, 32);
-            dugmeIzmeniSoftver.Text = "✏ Izmeni podatke";
-            dugmeIzmeniSoftver.UseVisualStyleBackColor = false;
-            dugmeIzmeniSoftver.Click += dugmeIzmeniSoftver_Click;
+            dugmeSoftverIzmenii.BackColor = Color.FromArgb(255, 193, 7);
+            dugmeSoftverIzmenii.FlatAppearance.BorderSize = 0;
+            dugmeSoftverIzmenii.FlatStyle = FlatStyle.Flat;
+            dugmeSoftverIzmenii.Font = new Font("Segoe UI Semibold", 9F);
+            dugmeSoftverIzmenii.ForeColor = Color.Black;
+            dugmeSoftverIzmenii.Location = new Point(168, 11);
+            dugmeSoftverIzmenii.Size = new Size(150, 32);
+            dugmeSoftverIzmenii.Text = "✏ Izmeni podatke";
+            dugmeSoftverIzmenii.UseVisualStyleBackColor = false;
+            dugmeSoftverIzmenii.Click += dugmeSoftverIzmenii_Click;
 
-            dugmeObrisiSoftver.BackColor = Color.FromArgb(220, 70, 70);
-            dugmeObrisiSoftver.FlatAppearance.BorderSize = 0;
-            dugmeObrisiSoftver.FlatStyle = FlatStyle.Flat;
-            dugmeObrisiSoftver.Font = new Font("Segoe UI Semibold", 9F);
-            dugmeObrisiSoftver.ForeColor = Color.White;
-            dugmeObrisiSoftver.Location = new Point(1022, 11);
-            dugmeObrisiSoftver.Size = new Size(150, 32);
-            dugmeObrisiSoftver.Text = "🗑 Obriši zapis";
-            dugmeObrisiSoftver.UseVisualStyleBackColor = false;
-            dugmeObrisiSoftver.Click += dugmeObrisiSoftver_Click;
+            dugmeSoftveriObrisii.BackColor = Color.FromArgb(220, 70, 70);
+            dugmeSoftveriObrisii.FlatAppearance.BorderSize = 0;
+            dugmeSoftveriObrisii.FlatStyle = FlatStyle.Flat;
+            dugmeSoftveriObrisii.Font = new Font("Segoe UI Semibold", 9F);
+            dugmeSoftveriObrisii.ForeColor = Color.White;
+            dugmeSoftveriObrisii.Location = new Point(1022, 11);
+            dugmeSoftveriObrisii.Size = new Size(150, 32);
+            dugmeSoftveriObrisii.Text = "🗑 Obriši zapis";
+            dugmeSoftveriObrisii.UseVisualStyleBackColor = false;
+            dugmeSoftveriObrisii.Click += dugmeSoftveriObrisii_Click;
 
             alternateRowStyle.BackColor = Color.FromArgb(250, 250, 253);
             tabelaSoftveri.AlternatingRowsDefaultCellStyle = alternateRowStyle;
@@ -133,9 +133,9 @@ namespace VanredneSituacije.Forme
             ClientSize = new Size(1184, 661);
             Controls.Add(naslovLabela);
             Controls.Add(tabelaSoftveri);
-            Controls.Add(dugmeObrisiSoftver);
-            Controls.Add(dugmeIzmeniSoftver);
-            Controls.Add(dugmeDodajSoftver);
+            Controls.Add(dugmeSoftveriObrisii);
+            Controls.Add(dugmeSoftverIzmenii);
+            Controls.Add(dugmeSoftveriDodajj);
             Font = new Font("Segoe UI", 10F);
             Name = "FormaPregledSoftvera";
             StartPosition = FormStartPosition.CenterScreen;
@@ -150,9 +150,9 @@ namespace VanredneSituacije.Forme
 
         #endregion
 
-        private Button dugmeObrisiSoftver;
-        private Button dugmeIzmeniSoftver;
-        private Button dugmeDodajSoftver;
+        private Button dugmeSoftveriObrisii;
+        private Button dugmeSoftverIzmenii;
+        private Button dugmeSoftveriDodajj;
         private DataGridView tabelaSoftveri;
         private BindingSource softverBinding;
         private DataGridViewTextBoxColumn kolonaId;

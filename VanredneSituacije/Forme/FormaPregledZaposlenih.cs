@@ -26,7 +26,7 @@ namespace VanredneSituacije.Forme
 
             if (tip == "Svi zaposleni")
             {
-                tabelaZaposleni.DataSource = await DTOManager.VratiSveZaposlene();
+                tabelaZaposleni.DataSource = await DTOManager.ZaposleniVratii();
                 dugmeSertifikati.Visible = false;
                 dugmeEkspertize.Visible = false;
                 dugmeSoftver.Visible = false;
@@ -42,7 +42,7 @@ namespace VanredneSituacije.Forme
             }
             else if (tip == "Koordinatori")
             {
-                tabelaZaposleni.DataSource = await DTOManager.VratiKordinatora();
+                tabelaZaposleni.DataSource = await DTOManager.KoordinatorVratii();
                 dugmeSertifikati.Visible = false;
                 dugmeEkspertize.Visible = false;
                 dugmeSoftver.Visible = false;
@@ -50,7 +50,7 @@ namespace VanredneSituacije.Forme
             }
             else if (tip == "Analitičari")
             {
-                tabelaZaposleni.DataSource = await DTOManager.VratiAnaliticare();
+                tabelaZaposleni.DataSource = await DTOManager.AnaliticariVratii();
                 dugmeSertifikati.Visible = false;
                 dugmeEkspertize.Visible = true;
                 dugmeSoftver.Visible = true;
@@ -58,7 +58,7 @@ namespace VanredneSituacije.Forme
             }
             else
             {
-                tabelaZaposleni.DataSource = await DTOManager.VratiSveZaposlene();
+                tabelaZaposleni.DataSource = await DTOManager.ZaposleniVratii();
                 dugmeSertifikati.Visible = false;
                 dugmeEkspertize.Visible = false;
                 dugmeSoftver.Visible = false;
@@ -92,9 +92,9 @@ namespace VanredneSituacije.Forme
                 if (zaposleni is DTOOperativniRadnik op)
                     await DTOManager.ObrisiOperativnogRadnika(op.JMBG);
                 else if (zaposleni is DTOKoordinator kor)
-                    await DTOManager.ObrisiKordinatora(kor.JMBG);
+                    await DTOManager.KoordinatorObrisii(kor.JMBG);
                 else if (zaposleni is DTOAnaliticar an)
-                    await DTOManager.ObrisiAnaliticara(an.JMBG);
+                    await DTOManager.AnaliticarObrisii(an.JMBG);
                 else
                     throw new Exception("Nepoznat tip zaposlenog.");
 
@@ -140,7 +140,7 @@ namespace VanredneSituacije.Forme
         private async void FormaPregledZaposlenih_Load(object sender, EventArgs e)
         {
             izborTipaZaposlenog.SelectedIndex = 0;
-            tabelaZaposleni.DataSource = await DTOManager.VratiSveZaposlene();
+            tabelaZaposleni.DataSource = await DTOManager.ZaposleniVratii();
             OsveziPrikazZaposlenih();
         }
 

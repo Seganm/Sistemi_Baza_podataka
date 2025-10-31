@@ -40,7 +40,7 @@ namespace VanredneSituacije.Forme
             txtJmbg.Text = OperativniRadnik.JMBG;
             txtIme.Text = OperativniRadnik.Ime;
             txtPrezime.Text = OperativniRadnik.Prezime;
-            dtpRodjenje.Value = OperativniRadnik.Datum_Rodjenja;
+            dtpRodjenje.Value = OperativniRadnik.DatumRodj;
             if (OperativniRadnik.Pol == "M")
             {
                 chkMusko.Checked = true;
@@ -54,8 +54,8 @@ namespace VanredneSituacije.Forme
 
             txtTelefon.Text = OperativniRadnik.BrojTelefona;
             txtEmail.Text = OperativniRadnik.Email;
-            txtAdresa.Text = OperativniRadnik.AdresaStanovanja;
-            dtpZaposlenje.Value = OperativniRadnik.Datum_Zaposlenja;
+            txtAdresa.Text = OperativniRadnik.AdresaStan;
+            dtpZaposlenje.Value = OperativniRadnik.DatumZap;
             numSati.Value = OperativniRadnik.Broj_Sati;
             cmbSpremnost.SelectedItem = OperativniRadnik.Fizicka_Spremnost;
 
@@ -110,11 +110,11 @@ namespace VanredneSituacije.Forme
                     JMBG = txtJmbg.Text,
                     Ime = txtIme.Text,
                     Prezime = txtPrezime.Text,
-                    Datum_Rodjenja = dtpRodjenje.Value,
+                    DatumRodj = dtpRodjenje.Value,
                     BrojTelefona = txtTelefon.Text,
                     Email = txtEmail.Text,
-                    AdresaStanovanja = txtAdresa.Text,
-                    Datum_Zaposlenja = dtpZaposlenje.Value,
+                    AdresaStan = txtAdresa.Text,
+                    DatumZap = dtpZaposlenje.Value,
                     Broj_Sati = (int)numSati.Value,
                     Fizicka_Spremnost = (Spremnost)cmbSpremnost.SelectedValue
                 };

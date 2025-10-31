@@ -192,7 +192,7 @@ namespace VanredneSituacije.Forme
             prezimeKolona.DataPropertyName = "Prezime";
             prezimeKolona.HeaderText = "Prezime";
 
-            datumRodjenjaKolona.DataPropertyName = "Datum_Rodjenja";
+            datumRodjenjaKolona.DataPropertyName = "DatumRodj";
             datumRodjenjaKolona.HeaderText = "Datum rođenja";
 
             polKolona.DataPropertyName = "Pol";
@@ -204,10 +204,10 @@ namespace VanredneSituacije.Forme
             emailKolona.DataPropertyName = "Email";
             emailKolona.HeaderText = "Email";
 
-            adresaKolona.DataPropertyName = "AdresaStanovanja";
+            adresaKolona.DataPropertyName = "AdresaStan";
             adresaKolona.HeaderText = "Adresa";
 
-            datumZaposlenjaKolona.DataPropertyName = "Datum_Zaposlenja";
+            datumZaposlenjaKolona.DataPropertyName = "DatumZap";
             datumZaposlenjaKolona.HeaderText = "Datum zaposlenja";
              
             AutoScaleDimensions = new SizeF(8F, 20F);

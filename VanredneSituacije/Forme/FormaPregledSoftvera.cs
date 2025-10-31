@@ -19,14 +19,14 @@ namespace VanredneSituacije.Forme
             OsveziPrikazSoftvera();
         }
 
-        private void dugmeDodajSoftver_Click(object sender, EventArgs e)
+        private void dugmeSoftveriDodajj_Click(object sender, EventArgs e)
         {
             var forma = new FormaUpravljajSoftverom(analiticar.JMBG);
             forma.ShowDialog();
             OsveziPrikazSoftvera();
         }
 
-        private void dugmeIzmeniSoftver_Click(object sender, EventArgs e)
+        private void dugmeSoftverIzmenii_Click(object sender, EventArgs e)
         {
             if (tabelaSoftveri.SelectedRows.Count == 0)
             {
@@ -41,7 +41,7 @@ namespace VanredneSituacije.Forme
             OsveziPrikazSoftvera();
         }
 
-        private async void dugmeObrisiSoftver_Click(object sender, EventArgs e)
+        private async void dugmeSoftveriObrisii_Click(object sender, EventArgs e)
         {
             if (tabelaSoftveri.SelectedRows.Count == 0)
             {
@@ -60,7 +60,7 @@ namespace VanredneSituacije.Forme
             if (potvrda == DialogResult.OK)
             {
                 var softver = tabelaSoftveri.SelectedRows[0].DataBoundItem as DTOSoftveri;
-                await DTOManager.ObrisiSoftver(softver.Id);
+                await DTOManager.SoftveriObrisii(softver.Id);
                 MessageBox.Show("Softver je obrisan.",
                     "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 OsveziPrikazSoftvera();
@@ -74,7 +74,7 @@ namespace VanredneSituacije.Forme
 
         public async void OsveziPrikazSoftvera()
         {
-            var lista = await DTOManager.VratiSoftvereAnaliticara(analiticar.JMBG);
+            var lista = await DTOManager.SoftverVratiPoJMBG(analiticar.JMBG);
             tabelaSoftveri.DataSource = lista;
             tabelaSoftveri.Refresh();
             tabelaSoftveri.ClearSelection();

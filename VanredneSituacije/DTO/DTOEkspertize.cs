@@ -35,16 +35,16 @@ namespace VanredneSituacije.DTO
 
 
     }
-    public class DTOIzmeniEkspertizu
+    public class DTOEkspertizaIzmenii
     {
 
 
 
-        public DTOIzmeniEkspertizu()
+        public DTOEkspertizaIzmenii()
         {
         }
 
-        public DTOIzmeniEkspertizu(Ekspertize e)
+        public DTOEkspertizaIzmenii(Ekspertize e)
         {
             JMBGAnaliticara = e.Analiticar.JMBG;
 

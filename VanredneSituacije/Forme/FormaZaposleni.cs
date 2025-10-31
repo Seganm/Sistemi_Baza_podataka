@@ -24,7 +24,7 @@ namespace VanredneSituacije.Forme
             }
 
             int idIstorije = int.Parse(tblIstorija.SelectedRows[0].Cells["Id"].Value.ToString());
-            DTOIstorijaUloga istorija = await DTOManager.VratiIstorijuU(idIstorije);
+            DTOIstorijaUloga istorija = await DTOManager.IstorijaVratiiU(idIstorije);
 
             new FormaUpravljajIstorijomUloga(istorija).ShowDialog();
             UcitajPodatke();
@@ -46,7 +46,7 @@ namespace VanredneSituacije.Forme
             if (potvrda == DialogResult.OK)
             {
                 var uloga = tblIstorija.CurrentRow.DataBoundItem as DTOIstorijaUloga;
-                await DTOManager.ObrisiIstorijuUloga(uloga.Id);
+                await DTOManager.IstorijaObrisii(uloga.Id);
 
                 MessageBox.Show("Stavka je uspešno obrisana.",
                     "Obaveštenje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -61,7 +61,7 @@ namespace VanredneSituacije.Forme
         {
             try
             {
-                tblIstorija.DataSource = await DTOManager.VratiIstoriju();
+                tblIstorija.DataSource = await DTOManager.IstorijaVratii();
                 tblIstorija.Refresh();
                 tblIstorija.ClearSelection();
             }

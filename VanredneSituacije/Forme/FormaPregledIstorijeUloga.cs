@@ -6,7 +6,7 @@ namespace VanredneSituacije.Forme
 {
     public partial class FormaPregledIstorijeUloga : Form
     {
-        private string jmbgZaposlenog;
+        private string JMBGZap;
 
         public FormaPregledIstorijeUloga()
         {
@@ -16,13 +16,13 @@ namespace VanredneSituacije.Forme
         public FormaPregledIstorijeUloga(string jmbg)
         {
             InitializeComponent();
-            jmbgZaposlenog = jmbg;
+            JMBGZap = jmbg;
             UcitajPodatke(jmbg);
         }
 
         private async void UcitajPodatke(string jmbg)
         {
-            var lista = await DTOManager.VratiIstorijuUZaposlenog(jmbg);
+            var lista = await DTOManager.IstorijaVratiPoJMBG(jmbg);
             gridIstorija.DataSource = lista;
             gridIstorija.Refresh();
             gridIstorija.ClearSelection();
@@ -30,7 +30,7 @@ namespace VanredneSituacije.Forme
 
         private async void UcitajSve()
         {
-            var lista = await DTOManager.VratiIstoriju();
+            var lista = await DTOManager.IstorijaVratii();
             gridIstorija.DataSource = lista;
             gridIstorija.Refresh();
             gridIstorija.ClearSelection();
@@ -38,15 +38,15 @@ namespace VanredneSituacije.Forme
 
         private void FormaPregledIstorijeUloga_Load(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(jmbgZaposlenog))
+            if (string.IsNullOrEmpty(JMBGZap))
                 UcitajSve();
             else
-                UcitajPodatke(jmbgZaposlenog);
+                UcitajPodatke(JMBGZap);
         }
 
         private void dugmeDodaj_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(jmbgZaposlenog))
+            if (string.IsNullOrEmpty(JMBGZap))
             {
                 var forma = new FormaUpravljajIstorijomUloga();
                 forma.ShowDialog();
@@ -54,9 +54,9 @@ namespace VanredneSituacije.Forme
             }
             else
             {
-                var forma = new FormaUpravljajIstorijomUloga(jmbgZaposlenog);
+                var forma = new FormaUpravljajIstorijomUloga(JMBGZap);
                 forma.ShowDialog();
-                UcitajPodatke(jmbgZaposlenog);
+                UcitajPodatke(JMBGZap);
             }
         }
 
@@ -72,10 +72,10 @@ namespace VanredneSituacije.Forme
             var forma = new FormaUpravljajIstorijomUloga(selektovana);
             forma.ShowDialog();
 
-            if (string.IsNullOrEmpty(jmbgZaposlenog))
+            if (string.IsNullOrEmpty(JMBGZap))
                 UcitajSve();
             else
-                UcitajPodatke(jmbgZaposlenog);
+                UcitajPodatke(JMBGZap);
         }
 
         private async void dugmeObrisi_Click(object sender, EventArgs e)
@@ -91,13 +91,13 @@ namespace VanredneSituacije.Forme
 
             if (potvrda == DialogResult.OK)
             {
-                await DTOManager.ObrisiIstorijuUloga(selektovana.Id);
+                await DTOManager.IstorijaObrisii(selektovana.Id);
                 MessageBox.Show("Istorija uspešno obrisana.", "Info");
 
-                if (string.IsNullOrEmpty(jmbgZaposlenog))
+                if (string.IsNullOrEmpty(JMBGZap))
                     UcitajSve();
                 else
-                    UcitajPodatke(jmbgZaposlenog);
+                    UcitajPodatke(JMBGZap);
             }
         }
     }

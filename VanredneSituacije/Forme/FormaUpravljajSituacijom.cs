@@ -37,9 +37,9 @@ namespace VanredneSituacije.Forme
         {
             await UcitajPrijave();
 
-            dtpDatumOd.Value = vanrednaSituacija.Datum_Od;
-            if (vanrednaSituacija.Datum_Do != null)
-                dtpDatumDo.Value = (DateTime)vanrednaSituacija.Datum_Do;
+            dtpDatumOd.Value = vanrednaSituacija.DatumPoc;
+            if (vanrednaSituacija.DatumKraj != null)
+                dtpDatumDo.Value = (DateTime)vanrednaSituacija.DatumKraj;
 
             txtTipSituacije.Text = vanrednaSituacija.Tip;
             numBrojUgrozenih.Value = vanrednaSituacija.Broj_Ugrozenih_Osoba ?? 0;
@@ -107,8 +107,8 @@ namespace VanredneSituacije.Forme
 
             var novaSituacija = new DTODodajVanrednuSituaciju
             {
-                Datum_Od = dtpDatumOd.Value,
-                Datum_Do = dtpDatumDo.Value,
+                DatumPoc = dtpDatumOd.Value,
+                DatumKraj = dtpDatumDo.Value,
                 Tip = txtTipSituacije.Text,
                 Broj_Ugrozenih_Osoba = (int)numBrojUgrozenih.Value,
                 IdPrijave = (int)cmbPrijave.SelectedValue,

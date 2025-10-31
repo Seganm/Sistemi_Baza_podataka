@@ -18,7 +18,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                await DTOManager.DodajKordinatora(koordinator);
+                await DTOManager.KoordinatorDodajj(koordinator);
                 return Ok();
             }
             catch (Exception ex)
@@ -35,7 +35,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                return new JsonResult(await DTOManager.VratiKordinatora());
+                return new JsonResult(await DTOManager.KoordinatorVratii());
             }
             catch (Exception ex)
             {
@@ -52,7 +52,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                return new JsonResult(await DTOManager.VratiKordinator(maticniBroj));
+                return new JsonResult(await DTOManager.KoordinatorVratiPoJMBG(maticniBroj));
             }
             catch (Exception ex)
             {
@@ -69,7 +69,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                await DTOManager.ObrisiKordinatora(maticniBroj);
+                await DTOManager.KoordinatorObrisii(maticniBroj);
                 return Ok();
 
             }
@@ -88,7 +88,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                await DTOManager.IzmeniKordinatora(koordinator, maticniBroj);
+                await DTOManager.KoordinatorIzmenii(koordinator, maticniBroj);
                 return Ok();
             }
             catch (Exception ex)

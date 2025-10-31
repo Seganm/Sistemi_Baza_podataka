@@ -35,7 +35,7 @@ namespace VanredneSituacije.Forme
             textJmbg.Text = kord.JMBG;
             textIme.Text = kord.Ime;
             textPrezime.Text = kord.Prezime;
-            dateRodjenje.Value = kord.Datum_Rodjenja;
+            dateRodjenje.Value = kord.DatumRodj;
             if (kord.Pol == "M")
             {
                 checkMusko.Checked = true;
@@ -49,10 +49,10 @@ namespace VanredneSituacije.Forme
 
             textKontakt.Text = kord.BrojTelefona;
             textEmail.Text = kord.Email;
-            textAdresa.Text = kord.AdresaStanovanja;
+            textAdresa.Text = kord.AdresaStan;
             try
             {
-                dateZaposlenje.Value = kord.Datum_Zaposlenja;
+                dateZaposlenje.Value = kord.DatumZap;
             }
             catch (Exception ex)
             {
@@ -100,10 +100,10 @@ namespace VanredneSituacije.Forme
                 kordinator.JMBG = textJmbg.Text;
                 kordinator.Ime = textIme.Text;
                 kordinator.Prezime = textPrezime.Text;
-                kordinator.Datum_Rodjenja = dateRodjenje.Value;
+                kordinator.DatumRodj = dateRodjenje.Value;
                 kordinator.BrojTelefona = textKontakt.Text;
                 kordinator.Email = textEmail.Text;
-                kordinator.AdresaStanovanja = textAdresa.Text;
+                kordinator.AdresaStan = textAdresa.Text;
 
                 if (textJmbg.Text.Length != 13 || int.TryParse(textJmbg.Text, out _))
                 {
@@ -136,11 +136,11 @@ namespace VanredneSituacije.Forme
 
                 if (kord == null)
                 {
-                    await DTOManager.DodajKordinatora(kordinator);
+                    await DTOManager.KoordinatorDodajj(kordinator);
                 }
                 else
                 {
-                    await DTOManager.IzmeniKordinatora(kordinator, kord.JMBG);
+                    await DTOManager.KoordinatorIzmenii(kordinator, kord.JMBG);
                 }
 
                 this.DialogResult = DialogResult.OK;

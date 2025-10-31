@@ -14,10 +14,10 @@ namespace VanredneSituacije.Mapiranje
         {
             Table("Angazovano");
             Id(x => x.ID, "Id").GeneratedBy.TriggerIdentity();
-            Map(x => x.Datum_Do, "Datum_Do");
-            Map(x => x.Datum_Od, "Datum_Od");
+            Map(x => x.DatumKraj, "DatumKraj");
+            Map(x => x.DatumPoc, "DatumPoc");
             References(x => x.Intervencija)
-                .Column("IdIntervencije")
+                .Column("IdIntervencijee")
                 .Not.Nullable().Cascade.None();
             References(x => x.Vozilo)
                 .Column("Registarska_Oznaka_Vozila")

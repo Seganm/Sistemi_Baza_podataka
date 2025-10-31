@@ -43,12 +43,12 @@ namespace VanredneSituacije.Forme
             listaIntervencija.SelectedValue = angazovanost.IntervencijaID;
             listaVozila.SelectedValue = angazovanost.VoziloReg;
 
-            datumOdPicker.Value = angazovanost.Datum_Od;
+            datumOdPicker.Value = angazovanost.DatumPoc;
 
-            if (angazovanost.Datum_Do == null)
+            if (angazovanost.DatumKraj == null)
                 datumDoPicker.Value = DateTime.Now;
             else
-                datumDoPicker.Value = (DateTime)angazovanost.Datum_Do;
+                datumDoPicker.Value = (DateTime)angazovanost.DatumKraj;
 
             listaIntervencija.Enabled = false;
             listaVozila.Enabled = false;
@@ -68,8 +68,8 @@ namespace VanredneSituacije.Forme
             {
                 IntervencijaID = (int)listaIntervencija.SelectedValue,
                 VoziloReg = (string)listaVozila.SelectedValue,
-                Datum_Od = datumOdPicker.Value,
-                Datum_Do = datumDoPicker.Value
+                DatumPoc = datumOdPicker.Value,
+                DatumKraj = datumDoPicker.Value
             };
 
             if (angazovanost == null)

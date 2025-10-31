@@ -9,8 +9,8 @@ namespace VanredneSituacije.Entitet
     public class IstorijaUloga
     {
         public virtual int Id { get; set; }
-        public virtual DateTime Datum_Od { get; set; }
-        public virtual DateTime? Datum_Do { get; set; }
+        public virtual DateTime DatumPoc { get; set; }
+        public virtual DateTime? DatumKraj { get; set; }
         public virtual string Uloga { get; set; }
         public virtual Zaposleni Zaposleni { get; set; }
     }

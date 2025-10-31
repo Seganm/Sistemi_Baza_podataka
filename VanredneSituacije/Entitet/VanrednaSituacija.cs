@@ -23,8 +23,8 @@ namespace VanredneSituacije.Entitet
         public virtual string Tip { get; set; }
         public virtual int? Broj_Ugrozenih_Osoba { get; set; }
         public virtual NivoOpasnosti Nivo_Opasnosti { get; set; }
-        public virtual DateTime Datum_Od { get; set; }
-        public virtual DateTime? Datum_Do { get; set; }
+        public virtual DateTime DatumPoc { get; set; }
+        public virtual DateTime? DatumKraj { get; set; }
 
         public virtual Prijava Prijava_ID { get; set; }
     }

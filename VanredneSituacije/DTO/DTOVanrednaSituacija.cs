@@ -10,8 +10,8 @@ namespace VanredneSituacije.DTO
     
         public class DTODodajVanrednuSituaciju
         {
-            public virtual DateTime Datum_Od { get; set; }
-            public virtual DateTime? Datum_Do { get; set; }
+            public virtual DateTime DatumPoc { get; set; }
+            public virtual DateTime? DatumKraj { get; set; }
 
             public virtual string Tip { get; set; }
             public virtual int? Broj_Ugrozenih_Osoba { get; set; }
@@ -30,8 +30,8 @@ namespace VanredneSituacije.DTO
 
             public DTODodajVanrednuSituaciju(VanrednaSituacija v)
             {
-                Datum_Od = v.Datum_Od;
-                Datum_Do = v.Datum_Do;
+                DatumPoc = v.DatumPoc;
+                DatumKraj = v.DatumKraj;
                 Tip = v.Tip;
                 Broj_Ugrozenih_Osoba = v.Broj_Ugrozenih_Osoba;
                 Nivo_Opasnosti = v.Nivo_Opasnosti;
@@ -67,8 +67,8 @@ namespace VanredneSituacije.DTO
         public class DTOVanrednaSituacija
         {
             public virtual int Id { get; set; }
-            public virtual DateTime Datum_Od { get; set; }
-            public virtual DateTime? Datum_Do { get; set; }
+            public virtual DateTime DatumPoc { get; set; }
+            public virtual DateTime? DatumKraj { get; set; }
 
             public virtual string Tip { get; set; }
             public virtual int? Broj_Ugrozenih_Osoba { get; set; }
@@ -89,8 +89,8 @@ namespace VanredneSituacije.DTO
             public DTOVanrednaSituacija(VanrednaSituacija v)
             {
                 Id = v.Id;
-                Datum_Od = v.Datum_Od;
-                Datum_Do = v.Datum_Do;
+                DatumPoc = v.DatumPoc;
+                DatumKraj = v.DatumKraj;
                 Tip = v.Tip;
                 Broj_Ugrozenih_Osoba = v.Broj_Ugrozenih_Osoba;
                 Nivo_Opasnosti = v.Nivo_Opasnosti.ToString();

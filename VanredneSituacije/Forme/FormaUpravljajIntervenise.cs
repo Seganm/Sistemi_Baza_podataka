@@ -47,8 +47,8 @@ namespace VanredneSituacije.Forme
             if (ucestvuje != null)
             {
                 comboVs.SelectedValue = ucestvuje.IdVanredneSituacije;
-                comboJedinica.SelectedValue = ucestvuje.IdInterventneJed;
-                comboIntervencija.SelectedValue = ucestvuje.IdIntervencije;
+                comboJedinica.SelectedValue = ucestvuje.IdInterventnee;
+                comboIntervencija.SelectedValue = ucestvuje.IdIntervencijee;
             }
         }
 
@@ -70,17 +70,17 @@ namespace VanredneSituacije.Forme
         private async void button1_Click(object sender, EventArgs e)
         {
             var add = new DTODodajIntervenise();
-            add.IdInterventneJed = (int)comboJedinica.SelectedValue;
-            add.IdIntervencije = (int)comboIntervencija.SelectedValue;
+            add.IdInterventnee = (int)comboJedinica.SelectedValue;
+            add.IdIntervencijee = (int)comboIntervencija.SelectedValue;
             add.IdVanredneSituacije = (int)comboVs.SelectedValue;
 
             if (ucestvuje != null)
             {
-                await DTOManager.IzmeniUcestvuje(add, ucestvuje.Id);
+                await DTOManager.InterveniseIzmenii(add, ucestvuje.Id);
             }
             else
             {
-                await DTOManager.DodajUcestvuje(add);
+                await DTOManager.InterveniseDodajj(add);
             }
 
             this.DialogResult = DialogResult.OK;

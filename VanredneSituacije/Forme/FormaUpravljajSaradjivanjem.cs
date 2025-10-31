@@ -29,8 +29,8 @@ namespace VanredneSituacije.Forme
             cmbSluzba.DataSource = sluzbe;
             cmbVanrednaSituacija.DataSource = vanredneSituacije;
 
-            cmbSluzba.DisplayMember = "Id_Sektora";
-            cmbSluzba.ValueMember = "Id_Sektora";
+            cmbSluzba.DisplayMember = "SektorrId";
+            cmbSluzba.ValueMember = "SektorrId";
 
             cmbVanrednaSituacija.DisplayMember = "Id";
             cmbVanrednaSituacija.ValueMember = "Id";
@@ -45,8 +45,8 @@ namespace VanredneSituacije.Forme
         {
             if (trenutnaSaradnja != null)
             {
-                cmbVanrednaSituacija.SelectedValue = trenutnaSaradnja.VandrednaSituacija.Id;
-                cmbSluzba.SelectedValue = trenutnaSaradnja.Sektor.Id_Sektora;
+                cmbVanrednaSituacija.SelectedValue = trenutnaSaradnja.Vanredna_Sit.Id;
+                cmbSluzba.SelectedValue = trenutnaSaradnja.Sektor.SektorrId;
                 txtUloga.Text = trenutnaSaradnja.Uloga;
             }
         }
@@ -59,17 +59,17 @@ namespace VanredneSituacije.Forme
                 return;
             }
 
-            DTODodajSaradnju novaSaradnja = new DTODodajSaradnju
+            DTOSaradnjaDodajj novaSaradnja = new DTOSaradnjaDodajj
             {
                 SektorID = (int)cmbSluzba.SelectedValue,
-                VanrednaSituacijaID = (int)cmbVanrednaSituacija.SelectedValue,
+                IDVanSituacije = (int)cmbVanrednaSituacija.SelectedValue,
                 Uloga = txtUloga.Text.Trim()
             };
 
             if (trenutnaSaradnja == null)
-                await DTOManager.DodajSaradnju(novaSaradnja);
+                await DTOManager.SaradnjaDodajj(novaSaradnja);
             else
-                await DTOManager.IzmeniSaradnju(novaSaradnja, trenutnaSaradnja.Id);
+                await DTOManager.SaradnjaIzmenii(novaSaradnja, trenutnaSaradnja.Id);
 
             DialogResult = DialogResult.OK;
             Close();

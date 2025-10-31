@@ -18,15 +18,15 @@ namespace VanredneSituacije.DTO
         {
             Id = i.Id;
             
-            IdIntervencije = new DTOIntervencija(i.IdIntervencije);
-            IdInterventneJed = new DTOVratiInterventnuJedinicu(i.IdInterventneJed);
-            IdVandredneSituacije = new DTOPregledVanredneSituacije(i.IdVandredneSituacije);
+            IdIntervencijee = new DTOIntervencija(i.IdIntervencijee);
+            IdInterventnee = new DTOVratiInterventnuJedinicu(i.IdInterventnee);
+            IdVanrednee = new DTOPregledVanredneSituacije(i.IdVanrednee);
         }
-        public virtual DTOPregledVanredneSituacije IdVandredneSituacije { get; set; }
+        public virtual DTOPregledVanredneSituacije IdVanrednee { get; set; }
 
-        public virtual DTOIntervencija IdIntervencije { get; set; }
+        public virtual DTOIntervencija IdIntervencijee { get; set; }
 
-        public virtual DTOVratiInterventnuJedinicu IdInterventneJed { get; set; }
+        public virtual DTOVratiInterventnuJedinicu IdInterventnee { get; set; }
 
 
         
@@ -36,8 +36,8 @@ namespace VanredneSituacije.DTO
     {
         public virtual int IdVanredneSituacije { get; set; }
 
-        public virtual int IdInterventneJed { get; set; }
-        public virtual int IdIntervencije { get; set; }
+        public virtual int IdInterventnee { get; set; }
+        public virtual int IdIntervencijee { get; set; }
 
 
 
@@ -47,12 +47,12 @@ namespace VanredneSituacije.DTO
         public virtual int Id { get; set; }
         public DTOVratiIntervenise(Intervenise i)
         {
-            if (i.IdVandredneSituacije != null)
-                IdVanredneSituacije = i.IdVandredneSituacije.Id;
-            if (i.IdIntervencije != null)
-                IdIntervencije = i.IdIntervencije.Id;
-            if (i.IdInterventneJed != null)
-                IdInterventneJed = i.IdInterventneJed.Jedinstveni_Broj;
+            if (i.IdVanrednee != null)
+                IdVanredneSituacije = i.IdVanrednee.Id;
+            if (i.IdIntervencijee != null)
+                IdIntervencijee = i.IdIntervencijee.Id;
+            if (i.IdInterventnee != null)
+                IdInterventnee = i.IdInterventnee.Jedinstveni_Broj;
 
             this.Id = i.Id;
 
@@ -66,17 +66,17 @@ namespace VanredneSituacije.DTO
 
         public DTODodajIntervenise(Intervenise i)
         {
-            if (i.IdVandredneSituacije != null)
-                IdVanredneSituacije = i.IdVandredneSituacije.Id;
-            if (i.IdIntervencije != null)
-                IdIntervencije = i.IdIntervencije.Id;
-            if (i.IdInterventneJed != null)
-                IdInterventneJed = i.IdInterventneJed.Jedinstveni_Broj;
+            if (i.IdVanrednee != null)
+                IdVanredneSituacije = i.IdVanrednee.Id;
+            if (i.IdIntervencijee != null)
+                IdIntervencijee = i.IdIntervencijee.Id;
+            if (i.IdInterventnee != null)
+                IdInterventnee = i.IdInterventnee.Jedinstveni_Broj;
           
         }
         public virtual int IdVanredneSituacije { get; set; }
-        public virtual int IdIntervencije { get; set; }
-        public virtual int IdInterventneJed { get; set; }
+        public virtual int IdIntervencijee { get; set; }
+        public virtual int IdInterventnee { get; set; }
 
 
        

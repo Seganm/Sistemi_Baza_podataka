@@ -9,8 +9,8 @@ namespace VanredneSituacije.Entitet
     public class Angazovano
     {
         public virtual int ID { get; set; }
-        public virtual DateTime? Datum_Do { get; set; }
-        public virtual DateTime Datum_Od { get; set; }
+        public virtual DateTime? DatumKraj { get; set; }
+        public virtual DateTime DatumPoc { get; set; }
 
         public virtual Intervencija Intervencija { get; set; }
 

@@ -34,14 +34,14 @@ namespace VanredneSituacije.DTO
 
 
     }
-    public class DTOIzmeniAnaliticara : DTOIzmeniZaposlenog
+    public class DTOAnaliticarIzmeniia : DTOIzmeniZaposlenog
     {
 
-        public DTOIzmeniAnaliticara()
+        public DTOAnaliticarIzmeniia()
         {
 
         }
-        public DTOIzmeniAnaliticara(Analiticar a) : base(a)
+        public DTOAnaliticarIzmeniia(Analiticar a) : base(a)
         {
         }
     }

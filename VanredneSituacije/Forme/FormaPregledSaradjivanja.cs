@@ -18,7 +18,7 @@ namespace VanredneSituacije.Forme
 
         private async void UcitajSaradnje()
         {
-            var lista = await DTOManager.VratiSaradnje();
+            var lista = await DTOManager.SaradnjeVratii();
             mrezaSaradnje.DataSource = lista;
             mrezaSaradnje.Refresh();
             mrezaSaradnje.ClearSelection();
@@ -40,7 +40,7 @@ namespace VanredneSituacije.Forme
             }
 
             int saradnjaId = int.Parse(mrezaSaradnje.SelectedRows[0].Cells[0].Value.ToString());
-            var saradnja = await DTOManager.VratiSaradnju(saradnjaId);
+            var saradnja = await DTOManager.SaradnjeVratiPoId(saradnjaId);
             var forma = new FormaUpravljajSaradjivanjem(saradnja);
             forma.ShowDialog();
             UcitajSaradnje();
@@ -64,7 +64,7 @@ namespace VanredneSituacije.Forme
 
             if (potvrda == DialogResult.OK)
             {
-                await DTOManager.ObrisiSaradnju(id);
+                await DTOManager.SaradnjaObrisii(id);
                 MessageBox.Show("Gotovo, saradnja obrisana bez greške! ", "Info");
                 UcitajSaradnje();
             }

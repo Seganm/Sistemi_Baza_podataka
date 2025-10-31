@@ -14,7 +14,7 @@ namespace VanredneSituacije.Mapiranje
         {
             Table("Sluzba");
 
-            Id(x => x.Id_Sektora, "Id_Sektora").GeneratedBy.TriggerIdentity();
+            Id(x => x.SektorrId, "SektorrId").GeneratedBy.TriggerIdentity();
 
             References(x => x.Predstavnik).Column("JMBGPredstavnika").Unique().Cascade.All();
 

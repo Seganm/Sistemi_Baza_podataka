@@ -32,7 +32,7 @@ namespace VanredneSituacije.Mapiranje
 
             HasMany(x => x.Oprema).KeyColumn("Id_Jedinice").Cascade.All();
             
-            HasMany(x => x.Ucestvuje).KeyColumn("IdInterventneJed").Inverse().Cascade.All().LazyLoad();
+            HasMany(x => x.Ucestvuje).KeyColumn("IdInterventnee").Inverse().Cascade.All().LazyLoad();
 
         }
     }

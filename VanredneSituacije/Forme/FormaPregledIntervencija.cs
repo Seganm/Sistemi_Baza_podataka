@@ -18,9 +18,9 @@ namespace VanredneSituacije.Forme
 
         private async void UcitajPodatke()
         {
-            gridIntervencije.DataSource = await DTOManager.VratiIntervencije();
-            gridIntervencije.Refresh();
-            gridIntervencije.ClearSelection();
+            grIdIntervencijee.DataSource = await DTOManager.VratiIntervencije();
+            grIdIntervencijee.Refresh();
+            grIdIntervencijee.ClearSelection();
         }
 
         private void dugmeDodaj_Click(object sender, EventArgs e)
@@ -32,13 +32,13 @@ namespace VanredneSituacije.Forme
 
         private async void dugmeIzmeni_Click(object sender, EventArgs e)
         {
-            if (gridIntervencije.SelectedRows.Count == 0)
+            if (grIdIntervencijee.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Koju intervenciju menjamo?", "Info");
                 return;
             }
 
-            var selektovana = gridIntervencije.CurrentRow.DataBoundItem as DTOIntervencija;
+            var selektovana = grIdIntervencijee.CurrentRow.DataBoundItem as DTOIntervencija;
             var forma = new FormaUpravljajIntervencijama(selektovana);
             forma.ShowDialog();
             UcitajPodatke();
@@ -46,13 +46,13 @@ namespace VanredneSituacije.Forme
 
         private async void dugmeObrisi_Click(object sender, EventArgs e)
         {
-            if (gridIntervencije.SelectedRows.Count == 0)
+            if (grIdIntervencijee.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Koju intervenciju brišemo?", "Info");
                 return;
             }
 
-            var selektovana = gridIntervencije.CurrentRow.DataBoundItem as DTOIntervencija;
+            var selektovana = grIdIntervencijee.CurrentRow.DataBoundItem as DTOIntervencija;
             var potvrda = MessageBox.Show("Brisanje ove intervencije?", "Info", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
             if (potvrda == DialogResult.OK)

@@ -128,10 +128,10 @@
             tabelaSituacije.Size = new Size(1147, 523);
 
 
-            datumOdKolona.DataPropertyName = "Datum_Od";
+            datumOdKolona.DataPropertyName = "DatumPoc";
             datumOdKolona.HeaderText = "Datum početka";
 
-            datumDoKolona.DataPropertyName = "Datum_Do";
+            datumDoKolona.DataPropertyName = "DatumKraj";
             datumDoKolona.HeaderText = "Datum završetka";
 
             tipKolona.DataPropertyName = "Tip";

@@ -16,7 +16,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                await DTOManager.DodajAnalitcar(analiticar);
+                await DTOManager.AnaliticarDodajj(analiticar);
                 return Ok();
             }
             catch (Exception ex)
@@ -33,7 +33,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                return new JsonResult(await DTOManager.VratiAnaliticare());
+                return new JsonResult(await DTOManager.AnaliticariVratii());
             }
             catch (Exception ex)
             {
@@ -42,14 +42,14 @@ namespace VanredneSituacijeWebAPI.Controllers
         }
 
         [HttpGet]
-        [Route("VratiAnaliticaraPoJMBG/{maticniBroj}")]
+        [Route("AnaliticarVratiiPoJMBG/{maticniBroj}")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
 
-        public async Task<IActionResult> VratiAnaliticaraPoJMBG(string maticniBroj)
+        public async Task<IActionResult> AnaliticarVratiiPoJMBG(string maticniBroj)
         {
             try
             {
-                return new JsonResult(await DTOManager.VratiAnaliticara(maticniBroj));
+                return new JsonResult(await DTOManager.AnaliticarVratii(maticniBroj));
             }
             catch (Exception ex)
             {
@@ -66,7 +66,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                await DTOManager.ObrisiAnaliticara(maticniBroj);
+                await DTOManager.AnaliticarObrisii(maticniBroj);
                 return Ok();
 
             }
@@ -84,7 +84,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                await DTOManager.IzmeniAnaliticar(analiticar, maticniBroj);
+                await DTOManager.AnaliticarIzmenii(analiticar, maticniBroj);
                 return Ok();
             }
             catch (Exception ex)
@@ -98,11 +98,11 @@ namespace VanredneSituacijeWebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status200OK)]
 
-        public async Task<IActionResult> EkspertizaDodaj([FromBody] DTOIzmeniEkspertizu ekspertiza)
+        public async Task<IActionResult> EkspertizaDodaj([FromBody] DTOEkspertizaIzmenii ekspertiza)
         {
             try
             {
-                await DTOManager.DodajEkspertizu(ekspertiza);
+                await DTOManager.EkspertizaDodajj(ekspertiza);
                 return Ok();
             }
             catch (Exception ex)
@@ -119,7 +119,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                return new JsonResult(await DTOManager.VratiEkspertize());
+                return new JsonResult(await DTOManager.EkspertizeVratii());
             }
             catch (Exception ex)
             {
@@ -129,14 +129,14 @@ namespace VanredneSituacijeWebAPI.Controllers
 
 
         [HttpGet]
-        [Route("VratiEkspertize/{maticniBroj}")]
+        [Route("EkspertizeVratii/{maticniBroj}")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<IActionResult> VratiEkspertize(string maticniBroj)
+        public async Task<IActionResult> EkspertizeVratii(string maticniBroj)
         {
             try
             {
-                return new JsonResult(await DTOManager.VratiEkspertizeAnaliticara(maticniBroj));
+                return new JsonResult(await DTOManager.EkspertizeVratiPoJMBG(maticniBroj));
             }
             catch (Exception e)
             {
@@ -153,7 +153,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                await DTOManager.ObrisiEkspertizu(ekspertizaId);
+                await DTOManager.EkspertizaObrisii(ekspertizaId);
                 return Ok();
 
             }
@@ -172,11 +172,11 @@ namespace VanredneSituacijeWebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
 
-        public async Task<IActionResult> EkspertizaIzmeni(int ekspertizaId, [FromBody] DTOIzmeniEkspertizu ekspertiza)
+        public async Task<IActionResult> EkspertizaIzmeni(int ekspertizaId, [FromBody] DTOEkspertizaIzmenii ekspertiza)
         {
             try
             {
-                await DTOManager.IzmeniEkspertizu(ekspertiza, ekspertizaId);
+                await DTOManager.EkspertizaIzmenii(ekspertiza, ekspertizaId);
                 return Ok();
             }
             catch (Exception ex)
@@ -190,11 +190,11 @@ namespace VanredneSituacijeWebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status200OK)]
 
-        public async Task<IActionResult> SoftverDodaj([FromBody] DTODodajSoftver softver)
+        public async Task<IActionResult> SoftverDodaj([FromBody] DTOSoftveriDodajj softver)
         {
             try
             {
-                await DTOManager.DodajSoftver(softver);
+                await DTOManager.SoftveriDodajj(softver);
                 return Ok();
             }
             catch (Exception ex)
@@ -205,14 +205,14 @@ namespace VanredneSituacijeWebAPI.Controllers
 
 
         [HttpGet]
-        [Route("VratiSoftveri")]
+        [Route("SoftverVratiPoIDi")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<IActionResult> VratiSoftveri()
+        public async Task<IActionResult> SoftverVratiPoIDi()
         {
             try
             {
-                return new JsonResult(await DTOManager.VratiSoftvere());
+                return new JsonResult(await DTOManager.SoftveriVratii());
             }
             catch (Exception ex)
             {
@@ -222,14 +222,14 @@ namespace VanredneSituacijeWebAPI.Controllers
 
 
         [HttpGet]
-        [Route("VratiSoftverPoJMBG/{maticniBroj}")]
+        [Route("SoftverVratiPoIDPoJMBG/{maticniBroj}")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<IActionResult> VratiSoftverPoJMBG(string maticniBroj)
+        public async Task<IActionResult> SoftverVratiPoIDPoJMBG(string maticniBroj)
         {
             try
             {
-                return new JsonResult(await DTOManager.VratiSoftvereAnaliticara(maticniBroj));
+                return new JsonResult(await DTOManager.SoftverVratiPoJMBG(maticniBroj));
             }
             catch (Exception ex)
             {
@@ -246,7 +246,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                await DTOManager.ObrisiSoftver(softverId);
+                await DTOManager.SoftveriObrisii(softverId);
                 return Ok();
 
             }
@@ -264,11 +264,11 @@ namespace VanredneSituacijeWebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
 
-        public async Task<IActionResult> SoftverIzmeni(int softverId, [FromBody] DTODodajSoftver softver)
+        public async Task<IActionResult> SoftverIzmeni(int softverId, [FromBody] DTOSoftveriDodajj softver)
         {
             try
             {
-                await DTOManager.IzmeniSoftver(softver, softverId);
+                await DTOManager.SoftverIzmenii(softver, softverId);
                 return Ok();
             }
             catch (Exception ex)

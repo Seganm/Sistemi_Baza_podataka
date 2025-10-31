@@ -16,7 +16,7 @@ namespace VanredneSituacije.Mapiranje
 
             KeyColumn("JMBG");
 
-            Map(x => x.BrojTimova).Column("Broj_Timova");
+            Map(x => x.BrTimova).Column("Broj_Timova");
             HasMany(x => x.Specijalizacija)
                 .KeyColumn("JMBG_Kordinatora")
                 .Inverse()

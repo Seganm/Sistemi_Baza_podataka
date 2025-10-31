@@ -14,15 +14,15 @@ namespace VanredneSituacije.DTO
         public DTOAngazovano(Angazovano a)
         {
             ID = a.ID;
-            Datum_Od = a.Datum_Od;
-            Datum_Do = a.Datum_Do;
+            DatumPoc = a.DatumPoc;
+            DatumKraj = a.DatumKraj;
             Vozilo = new DTOVozilo(a.Vozilo);
             Intervencija = new DTOIntervencija(a.Intervencija);
 
         }
         public virtual int ID { get; set; }
-        public virtual DateTime Datum_Od { get; set; }
-        public virtual DateTime? Datum_Do { get; set; }
+        public virtual DateTime DatumPoc { get; set; }
+        public virtual DateTime? DatumKraj { get; set; }
         public virtual DTOVozilo Vozilo { get; set; }
         public virtual DTOIntervencija Intervencija { get; set; }
 
@@ -36,17 +36,17 @@ namespace VanredneSituacije.DTO
         public DTOVratiAngazovano(Angazovano a)
         {
             Id = a.ID;
-            Datum_Od = a.Datum_Od;
-            Datum_Do = a.Datum_Do;
+            DatumPoc = a.DatumPoc;
+            DatumKraj = a.DatumKraj;
             VoziloReg = a.Vozilo.Registarska_Oznaka;
             IntervencijaID = a.Intervencija.Id;
 
 
         }
         public virtual int Id { get; set; }
-        public virtual DateTime Datum_Od { get; set; }
+        public virtual DateTime DatumPoc { get; set; }
 
-        public virtual DateTime? Datum_Do { get; set; }
+        public virtual DateTime? DatumKraj { get; set; }
         public virtual string VoziloReg { get; set; }
         public virtual int IntervencijaID { get; set; }
 
@@ -59,16 +59,16 @@ namespace VanredneSituacije.DTO
         public DTODodajAngazovano() { }
         public DTODodajAngazovano(Angazovano a)
         {
-            Datum_Od = a.Datum_Od;
-            Datum_Do = a.Datum_Do;
+            DatumPoc = a.DatumPoc;
+            DatumKraj = a.DatumKraj;
             VoziloReg = a.Vozilo.Registarska_Oznaka;
             IntervencijaID = a.Intervencija.Id;
  
 
         }
-        public virtual DateTime Datum_Od { get; set; }
+        public virtual DateTime DatumPoc { get; set; }
 
-        public virtual DateTime? Datum_Do { get; set; }
+        public virtual DateTime? DatumKraj { get; set; }
         public virtual string VoziloReg { get; set; }
         public virtual int IntervencijaID { get; set; }
 

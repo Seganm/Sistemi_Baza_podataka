@@ -18,9 +18,9 @@ namespace VanredneSituacije.DTO
 
         public DTOKoordinator(Koordinator koo) : base(koo)
         {
-            BrojTimova = koo.BrojTimova;
+            BrTimova = koo.BrTimova;
         }
-        public virtual int BrojTimova { get; set; }
+        public virtual int BrTimova { get; set; }
     }
 
     public class DTOPregledKoordinator
@@ -53,9 +53,9 @@ namespace VanredneSituacije.DTO
 
         public DTOIzmeniKoordinatora(Koordinator koo) : base(koo)
         {
-            BrojTimova = koo.BrojTimova;
+            BrTimova = koo.BrTimova;
         }
-        public virtual int BrojTimova { get; set; }
+        public virtual int BrTimova { get; set; }
     }
 
 }

@@ -121,12 +121,12 @@
             kolIntervencija.MinimumWidth = 6;
             kolIntervencija.Name = "kolIntervencija";
 
-            kolDatumOd.DataPropertyName = "Datum_Od";
+            kolDatumOd.DataPropertyName = "DatumPoc";
             kolDatumOd.HeaderText = "Datum početka";
             kolDatumOd.MinimumWidth = 6;
             kolDatumOd.Name = "kolDatumOd";
 
-            kolDatumDo.DataPropertyName = "Datum_Do";
+            kolDatumDo.DataPropertyName = "DatumKraj";
             kolDatumDo.HeaderText = "Datum završetka";
             kolDatumDo.MinimumWidth = 6;
             kolDatumDo.Name = "kolDatumDo";

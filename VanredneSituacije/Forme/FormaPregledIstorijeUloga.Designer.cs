@@ -83,7 +83,7 @@ namespace VanredneSituacije.Forme
             kolId.MinimumWidth = 6;
             kolId.Name = "kolId";
 
-            kolJMBG.DataPropertyName = "JMBGZaposlenog";
+            kolJMBG.DataPropertyName = "JMBGZap";
             kolJMBG.HeaderText = "JMBG zaposlenog";
             kolJMBG.MinimumWidth = 6;
             kolJMBG.Name = "kolJMBG";
@@ -93,12 +93,12 @@ namespace VanredneSituacije.Forme
             kolUloga.MinimumWidth = 6;
             kolUloga.Name = "kolUloga";
 
-            kolOd.DataPropertyName = "Datum_Od";
+            kolOd.DataPropertyName = "DatumPoc";
             kolOd.HeaderText = "Datum od";
             kolOd.MinimumWidth = 6;
             kolOd.Name = "kolOd";
 
-            kolDo.DataPropertyName = "Datum_Do";
+            kolDo.DataPropertyName = "DatumKraj";
             kolDo.HeaderText = "Datum do";
             kolDo.MinimumWidth = 6;
             kolDo.Name = "kolDo";

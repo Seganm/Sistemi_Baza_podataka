@@ -9,10 +9,10 @@ namespace VanredneSituacije.Entitet
     public class Intervenise
     {
         public virtual int Id { get; set; }
-        public virtual Intervencija IdIntervencije { get; set; }
+        public virtual Intervencija IdIntervencijee { get; set; }
 
-        public virtual VanrednaSituacija IdVandredneSituacije { get; set; }
-        public virtual InterventnaJedinica IdInterventneJed { get; set; }
+        public virtual VanrednaSituacija IdVanrednee { get; set; }
+        public virtual InterventnaJedinica IdInterventnee { get; set; }
         
 
       

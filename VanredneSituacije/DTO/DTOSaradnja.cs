@@ -18,11 +18,11 @@ namespace VanredneSituacije.DTO
             Id = sa.Id;
             Uloga = sa.Uloga;
             Sektor = new DTOSluzba(sa.Sektor);
-            VandrednaSituacija = new DTOVanrednaSituacija(sa.VandrednaSituacija);
+            Vanredna_Sit = new DTOVanrednaSituacija(sa.Vanredna_Sit);
         }
         public virtual DTOSluzba Sektor { get; set; }
 
-        public virtual DTOVanrednaSituacija VandrednaSituacija { get; set; }
+        public virtual DTOVanrednaSituacija Vanredna_Sit { get; set; }
         public virtual int Id { get; set; }
         public string Uloga { get; set; }
 
@@ -31,33 +31,33 @@ namespace VanredneSituacije.DTO
 
     }
 
-    public class DTODodajSaradnju
+    public class DTOSaradnjaDodajj
     {
-        public DTODodajSaradnju() { }
-        public DTODodajSaradnju(Saradnja sa)
+        public DTOSaradnjaDodajj() { }
+        public DTOSaradnjaDodajj(Saradnja sa)
         {
  
             Uloga = sa.Uloga;
-            SektorID = sa.Sektor.Id_Sektora;
-            VanrednaSituacijaID = sa.VandrednaSituacija.Id;
+            SektorID = sa.Sektor.SektorrId;
+            IDVanSituacije = sa.Vanredna_Sit.Id;
         }
         public string Uloga { get; set; }
-        public virtual int VanrednaSituacijaID { get; set; }
+        public virtual int IDVanSituacije { get; set; }
         public virtual int SektorID { get; set; }
 
 
       
     }
 
-    public class DTOVratiSaradnju
+    public class DTOSaradnjeVratiPoId
     {
-        public DTOVratiSaradnju() { }
-        public DTOVratiSaradnju(Saradnja sa)
+        public DTOSaradnjeVratiPoId() { }
+        public DTOSaradnjeVratiPoId(Saradnja sa)
         {
             Id = sa.Id;
-            SektorID = sa.Sektor.Id_Sektora;
-            VanrednaSituacijaID = sa.VandrednaSituacija.Id;
-            TipVs = sa.VandrednaSituacija.Tip;
+            SektorID = sa.Sektor.SektorrId;
+            IDVanSituacije = sa.Vanredna_Sit.Id;
+            TipVs = sa.Vanredna_Sit.Tip;
             NazivSluzbe = sa.Sektor.TipSektora;
 
             Uloga = sa.Uloga;
@@ -68,7 +68,7 @@ namespace VanredneSituacije.DTO
         public string Uloga { get; set; }
         public virtual int SektorID { get; set; }
 
-        public virtual int VanrednaSituacijaID { get; set; }
+        public virtual int IDVanSituacije { get; set; }
 
 
         

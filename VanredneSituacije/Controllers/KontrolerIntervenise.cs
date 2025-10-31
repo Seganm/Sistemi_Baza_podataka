@@ -17,7 +17,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                await DTOManager.DodajUcestvuje(intervenise);
+                await DTOManager.InterveniseDodajj(intervenise);
                 return Ok();
             }
             catch (Exception ex)
@@ -33,7 +33,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                return new JsonResult(await DTOManager.VratiSvaUcestvovanja());
+                return new JsonResult(await DTOManager.UcestvovanjaVratii());
             }
             catch (Exception ex)
             {
@@ -49,7 +49,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                return new JsonResult(await DTOManager.VratiUcestvuje(interveniseId));
+                return new JsonResult(await DTOManager.InterveniseVratii(interveniseId));
             }
             catch (Exception ex)
             {
@@ -65,7 +65,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                await DTOManager.ObrisiUcestvuje(interveniseId);
+                await DTOManager.InterveniseObrisii(interveniseId);
                 return Ok();
             }
             catch (Exception ex)
@@ -82,7 +82,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                await DTOManager.IzmeniUcestvuje(intervenise, interveniseId);
+                await DTOManager.InterveniseIzmenii(intervenise, interveniseId);
                 return Ok();
             }
             catch (Exception ex)

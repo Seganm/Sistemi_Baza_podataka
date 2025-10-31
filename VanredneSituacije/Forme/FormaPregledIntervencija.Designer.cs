@@ -20,8 +20,8 @@
             dugmeDodaj = new Button();
             dugmeIzmeni = new Button();
             dugmeObrisi = new Button();
-            gridIntervencije = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)gridIntervencije).BeginInit();
+            grIdIntervencijee = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)grIdIntervencijee).BeginInit();
             SuspendLayout();
 
             naslovLabel.AutoSize = true;
@@ -73,9 +73,9 @@
             dugmeObrisi.Click += dugmeObrisi_Click;
 
             redAlternating.BackColor = Color.FromArgb(250, 250, 253);
-            gridIntervencije.AlternatingRowsDefaultCellStyle = redAlternating;
-            gridIntervencije.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            gridIntervencije.BackgroundColor = Color.White;
+            grIdIntervencijee.AlternatingRowsDefaultCellStyle = redAlternating;
+            grIdIntervencijee.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            grIdIntervencijee.BackgroundColor = Color.White;
             zaglavlje.Alignment = DataGridViewContentAlignment.MiddleLeft;
             zaglavlje.BackColor = Color.FromArgb(230, 235, 245);
             zaglavlje.Font = new Font("Segoe UI Semibold", 10F);
@@ -83,8 +83,8 @@
             zaglavlje.SelectionBackColor = SystemColors.Highlight;
             zaglavlje.SelectionForeColor = SystemColors.HighlightText;
             zaglavlje.WrapMode = DataGridViewTriState.True;
-            gridIntervencije.ColumnHeadersDefaultCellStyle = zaglavlje;
-            gridIntervencije.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            grIdIntervencijee.ColumnHeadersDefaultCellStyle = zaglavlje;
+            grIdIntervencijee.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             redovi.Alignment = DataGridViewContentAlignment.MiddleLeft;
             redovi.BackColor = SystemColors.Window;
             redovi.Font = new Font("Segoe UI", 9.5F);
@@ -92,22 +92,22 @@
             redovi.SelectionBackColor = SystemColors.Highlight;
             redovi.SelectionForeColor = SystemColors.HighlightText;
             redovi.WrapMode = DataGridViewTriState.False;
-            gridIntervencije.DefaultCellStyle = redovi;
-            gridIntervencije.EnableHeadersVisualStyles = false;
-            gridIntervencije.GridColor = Color.FromArgb(225, 225, 225);
-            gridIntervencije.Location = new Point(12, 50);
-            gridIntervencije.Margin = new Padding(3, 2, 3, 2);
-            gridIntervencije.Name = "gridIntervencije";
-            gridIntervencije.RowHeadersWidth = 51;
-            gridIntervencije.RowTemplate.Height = 28;
-            gridIntervencije.Size = new Size(1160, 599);
-            gridIntervencije.TabIndex = 4;
+            grIdIntervencijee.DefaultCellStyle = redovi;
+            grIdIntervencijee.EnableHeadersVisualStyles = false;
+            grIdIntervencijee.GridColor = Color.FromArgb(225, 225, 225);
+            grIdIntervencijee.Location = new Point(12, 50);
+            grIdIntervencijee.Margin = new Padding(3, 2, 3, 2);
+            grIdIntervencijee.Name = "grIdIntervencijee";
+            grIdIntervencijee.RowHeadersWidth = 51;
+            grIdIntervencijee.RowTemplate.Height = 28;
+            grIdIntervencijee.Size = new Size(1160, 599);
+            grIdIntervencijee.TabIndex = 4;
 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 247, 250);
             ClientSize = new Size(1184, 661);
-            Controls.Add(gridIntervencije);
+            Controls.Add(grIdIntervencijee);
             Controls.Add(dugmeObrisi);
             Controls.Add(dugmeIzmeni);
             Controls.Add(dugmeDodaj);
@@ -117,7 +117,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Pregled intervencija";
             Load += FormaPregledIntervencija_Load;
-            ((System.ComponentModel.ISupportInitialize)gridIntervencije).EndInit();
+            ((System.ComponentModel.ISupportInitialize)grIdIntervencijee).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -126,6 +126,6 @@
         private Button dugmeDodaj;
         private Button dugmeIzmeni;
         private Button dugmeObrisi;
-        private DataGridView gridIntervencije;
+        private DataGridView grIdIntervencijee;
     }
 }

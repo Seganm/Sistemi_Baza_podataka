@@ -17,11 +17,11 @@ namespace VanredneSituacije.DTO
             Ime = zap.Ime;
             Prezime = zap.Prezime;
             JMBG = zap.JMBG;
-            Datum_Rodjenja = zap.Datum_Rodjenja;
-            Datum_Zaposlenja = zap.Datum_Zaposlenja;
+            DatumRodj = zap.DatumRodj;
+            DatumZap = zap.DatumZap;
             BrojTelefona = zap.BrojTelefona;
             Email = zap.Email;
-            AdresaStanovanja = zap.AdresaStanovanja;
+            AdresaStan = zap.AdresaStan;
             Pol = zap.Pol;
 
         }
@@ -33,16 +33,16 @@ namespace VanredneSituacije.DTO
         public virtual string JMBG { get; set; }
 
         public virtual string Pol { get; set; }
-        public virtual DateTime Datum_Rodjenja { get; set; }
+        public virtual DateTime DatumRodj { get; set; }
 
 
-        public virtual DateTime Datum_Zaposlenja { get; set; }
+        public virtual DateTime DatumZap { get; set; }
 
         public virtual string BrojTelefona { get; set; }
 
         public virtual string Email { get; set; }
 
-        public virtual string AdresaStanovanja { get; set; }
+        public virtual string AdresaStan { get; set; }
 
     }
 
@@ -58,7 +58,7 @@ namespace VanredneSituacije.DTO
         public virtual string Prezime { get; set; }
         public virtual string Email { get; set; }
 
-        public virtual string AdresaStanovanja { get; set; }
+        public virtual string AdresaStan { get; set; }
 
         public string PunoIme => Ime + " " + Prezime;
 
@@ -70,8 +70,8 @@ namespace VanredneSituacije.DTO
 
 
 
-        public virtual DateTime Datum_Rodjenja { get; set; }
-        public virtual DateTime Datum_Zaposlenja { get; set; }
+        public virtual DateTime DatumRodj { get; set; }
+        public virtual DateTime DatumZap { get; set; }
 
 
 
@@ -80,11 +80,11 @@ namespace VanredneSituacije.DTO
             Ime = zap.Ime;
             Prezime = zap.Prezime;
             Pol = zap.Pol;
-            AdresaStanovanja = zap.AdresaStanovanja;
+            AdresaStan = zap.AdresaStan;
             BrojTelefona = zap.BrojTelefona;
             Email = zap.Email;
-            Datum_Rodjenja = zap.Datum_Rodjenja;
-            Datum_Zaposlenja = zap.Datum_Zaposlenja;
+            DatumRodj = zap.DatumRodj;
+            DatumZap = zap.DatumZap;
         }
     }
 }

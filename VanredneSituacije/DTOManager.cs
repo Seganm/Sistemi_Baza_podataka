@@ -15,7 +15,7 @@ namespace VanredneSituacije
     {
         #region Zaposleni
 
-        public static async Task<IList<DTOZaposleni>> VratiSveZaposlene()
+        public static async Task<IList<DTOZaposleni>> ZaposleniVratii()
         {
             var zaposleni = new List<DTOZaposleni>();
             try
@@ -58,7 +58,7 @@ namespace VanredneSituacije
         #region Analiticar
 
 
-        public static async Task<DTOAnaliticar> VratiAnaliticara(string maticniBroj)
+        public static async Task<DTOAnaliticar> AnaliticarVratii(string maticniBroj)
         {
             DTOAnaliticar a = new DTOAnaliticar();
             try
@@ -78,12 +78,12 @@ namespace VanredneSituacije
                 a.JMBG = analiticar.JMBG;
 
                 a.BrojTelefona = analiticar.BrojTelefona;
-                a.AdresaStanovanja = analiticar.AdresaStanovanja;
+                a.AdresaStan = analiticar.AdresaStan;
                 a.Pol = analiticar.Pol;
 
                 a.Email = analiticar.Email;
-                a.Datum_Rodjenja = analiticar.Datum_Rodjenja;
-                a.Datum_Zaposlenja = a.Datum_Zaposlenja;
+                a.DatumRodj = analiticar.DatumRodj;
+                a.DatumZap = a.DatumZap;
 
                 sesija.Close();
             }
@@ -96,7 +96,7 @@ namespace VanredneSituacije
 
         }
 
-        public static async Task IzmeniAnaliticar(DTOAnaliticar analiticar, string maticniBroj)
+        public static async Task AnaliticarIzmenii(DTOAnaliticar analiticar, string maticniBroj)
         {
             try
             {
@@ -110,11 +110,11 @@ namespace VanredneSituacije
                 a.Prezime = analiticar.Prezime;
                 a.JMBG = maticniBroj;
                 a.Email = analiticar.Email;
-                a.AdresaStanovanja = analiticar.AdresaStanovanja;
+                a.AdresaStan = analiticar.AdresaStan;
                 a.Pol = analiticar.Pol;
                 a.BrojTelefona = analiticar.BrojTelefona;
-                a.Datum_Rodjenja = analiticar.Datum_Rodjenja;
-                a.Datum_Zaposlenja = analiticar.Datum_Zaposlenja;
+                a.DatumRodj = analiticar.DatumRodj;
+                a.DatumZap = analiticar.DatumZap;
 
 
                 await sesija.UpdateAsync(a);
@@ -131,7 +131,7 @@ namespace VanredneSituacije
         }
 
 
-        public static async Task ObrisiAnaliticara(string maticniBroj)
+        public static async Task AnaliticarObrisii(string maticniBroj)
         {
             try
             {
@@ -155,7 +155,7 @@ namespace VanredneSituacije
             }
         }
 
-        public static async Task<IList<DTOAnaliticar>> VratiAnaliticare()
+        public static async Task<IList<DTOAnaliticar>> AnaliticariVratii()
         {
             List<DTOAnaliticar> analiticari = new List<DTOAnaliticar>();
             try
@@ -177,7 +177,7 @@ namespace VanredneSituacije
             return analiticari;
         }
 
-        public static async Task DodajAnalitcar(DTOAnaliticar analiticar)
+        public static async Task AnaliticarDodajj(DTOAnaliticar analiticar)
         {
 
             try
@@ -192,17 +192,17 @@ namespace VanredneSituacije
                 a.Prezime = analiticar.Prezime;
                 a.JMBG = analiticar.JMBG;
                 a.Email = analiticar.Email;
-                a.AdresaStanovanja = analiticar.AdresaStanovanja;
-                a.Datum_Zaposlenja = analiticar.Datum_Zaposlenja;
-                a.Datum_Rodjenja = analiticar.Datum_Rodjenja;
+                a.AdresaStan = analiticar.AdresaStan;
+                a.DatumZap = analiticar.DatumZap;
+                a.DatumRodj = analiticar.DatumRodj;
                 a.Pol = analiticar.Pol;
                 a.BrojTelefona = analiticar.BrojTelefona;
                 IstorijaUloga istorija = new IstorijaUloga
                 {
                     Zaposleni = a,
                     Uloga = a.GetType().Name,
-                    Datum_Od = DateTime.Now,
-                    Datum_Do = null
+                    DatumPoc = DateTime.Now,
+                    DatumKraj = null
 
 
                 };
@@ -221,7 +221,7 @@ namespace VanredneSituacije
         }
         #endregion
         #region Koordinator
-        public static async Task IzmeniKordinatora(DTOKoordinator koordinator, string maticniBroj)
+        public static async Task KoordinatorIzmenii(DTOKoordinator koordinator, string maticniBroj)
         {
             try
             {
@@ -230,24 +230,24 @@ namespace VanredneSituacije
                 k.JMBG = maticniBroj;
                 k.Ime = koordinator.Ime;
                 k.Prezime = koordinator.Prezime;
-                k.Datum_Rodjenja = koordinator.Datum_Rodjenja;
+                k.DatumRodj = koordinator.DatumRodj;
                 k.Pol = koordinator.Pol;
                 k.BrojTelefona = koordinator.BrojTelefona;
                 k.Email = koordinator.Email;
-                k.Datum_Zaposlenja = koordinator.Datum_Zaposlenja;
-                k.BrojTimova = koordinator.BrojTimova;
+                k.DatumZap = koordinator.DatumZap;
+                k.BrTimova = koordinator.BrTimova;
 
 
-                DTODodajIstorijuUloga istorija = new DTODodajIstorijuUloga
+                DTOIstorijaDodajj istorija = new DTOIstorijaDodajj
                 {
-                    Datum_Od = DateTime.Now,
-                    Datum_Do = null,
-                    JMBGZaposlenog = k.JMBG,
+                    DatumPoc = DateTime.Now,
+                    DatumKraj = null,
+                    JMBGZap = k.JMBG,
                     Uloga = k.GetType().ToString()
 
                 };
 
-                await DTOManager.DodajIstorijuUloga(istorija);
+                await DTOManager.IstorijaDodajj(istorija);
 
                 await sesija.UpdateAsync(k);
                 await sesija.FlushAsync();
@@ -260,7 +260,7 @@ namespace VanredneSituacije
                 throw new Exception("Greska u try blocku", ex);
             }
         }
-        public static async Task ObrisiKordinatora(string maticniBroj)
+        public static async Task KoordinatorObrisii(string maticniBroj)
         {
             try
             {
@@ -280,7 +280,7 @@ namespace VanredneSituacije
                 throw new Exception("Greska u try blocku", ex);
             }
         }
-        public static async Task DodajKordinatora(DTOKoordinator kordinator)
+        public static async Task KoordinatorDodajj(DTOKoordinator kordinator)
         {
             try
             {
@@ -290,18 +290,18 @@ namespace VanredneSituacije
                 k.Prezime = kordinator.Prezime;
                 k.JMBG = kordinator.JMBG;
 
-                k.AdresaStanovanja = kordinator.AdresaStanovanja;
-                k.BrojTimova = kordinator.BrojTimova;
+                k.AdresaStan = kordinator.AdresaStan;
+                k.BrTimova = kordinator.BrTimova;
                 k.Pol = kordinator.Pol;
                 k.BrojTelefona = kordinator.BrojTelefona;
                 k.Email = kordinator.Email;
-                k.Datum_Rodjenja = kordinator.Datum_Rodjenja;
-                k.Datum_Zaposlenja = kordinator.Datum_Zaposlenja;
+                k.DatumRodj = kordinator.DatumRodj;
+                k.DatumZap = kordinator.DatumZap;
                 IstorijaUloga istorija = new IstorijaUloga();
                 istorija.Zaposleni = k;
                 istorija.Uloga = k.GetType().Name;
-                istorija.Datum_Od = DateTime.Now;
-                istorija.Datum_Do = null;
+                istorija.DatumPoc = DateTime.Now;
+                istorija.DatumKraj = null;
                 await sesija.SaveAsync(k);
                 await sesija.SaveAsync(istorija);
                 await sesija.FlushAsync();
@@ -312,7 +312,7 @@ namespace VanredneSituacije
                 throw new Exception("Greska u try blocku", ex);
             }
         }
-        public static async Task<IList<DTOKoordinator>> VratiKordinatora()
+        public static async Task<IList<DTOKoordinator>> KoordinatorVratii()
         {
             List<DTOKoordinator> koordinatori = new List<DTOKoordinator>();
             try
@@ -336,7 +336,7 @@ namespace VanredneSituacije
             return koordinatori;
         }
 
-        public static async Task<DTOKoordinator> VratiKordinator(string maticniBroj)
+        public static async Task<DTOKoordinator> KoordinatorVratiPoJMBG(string maticniBroj)
         {
             DTOKoordinator k = new DTOKoordinator();
             try
@@ -354,13 +354,13 @@ namespace VanredneSituacije
                 k.JMBG = koordinator.JMBG;
                 k.Ime = koordinator.Ime;
                 k.Prezime = koordinator.Prezime;
-                k.Datum_Rodjenja = koordinator.Datum_Rodjenja;
+                k.DatumRodj = koordinator.DatumRodj;
                 k.Pol = koordinator.Pol;
                 k.BrojTelefona = koordinator.BrojTelefona;
                 k.Email = koordinator.Email;
-                k.AdresaStanovanja = koordinator.AdresaStanovanja;
-                k.Datum_Zaposlenja = koordinator.Datum_Zaposlenja;
-                k.BrojTimova = koordinator.BrojTimova;
+                k.AdresaStan = koordinator.AdresaStan;
+                k.DatumZap = koordinator.DatumZap;
+                k.BrTimova = koordinator.BrTimova;
 
                 sesija.Close();
             }
@@ -372,7 +372,7 @@ namespace VanredneSituacije
         }
         #endregion
         #region IstorijaUloga
-        public static async Task ObrisiIstorijuUloga(int istorijaId)
+        public static async Task IstorijaObrisii(int istorijaId)
         {
             try
             {
@@ -388,20 +388,20 @@ namespace VanredneSituacije
                 throw new Exception("Greska u try blocku", ex);
             }
         }
-        public static async Task DodajIstorijuUloga(DTODodajIstorijuUloga istorija)
+        public static async Task IstorijaDodajj(DTOIstorijaDodajj istorija)
         {
             try
             {
                 ISession sesija = DataLayer.GetSession();
                 IstorijaUloga iu = new IstorijaUloga();
                 iu.Uloga = istorija.Uloga;
-                iu.Zaposleni = await sesija.LoadAsync<Zaposleni>(istorija.JMBGZaposlenog);
-                if (istorija.Datum_Do <= istorija.Datum_Od)
+                iu.Zaposleni = await sesija.LoadAsync<Zaposleni>(istorija.JMBGZap);
+                if (istorija.DatumKraj <= istorija.DatumPoc)
                 {
                     throw new Exception("Datum je neodgovarajuci");
                 }
-                iu.Datum_Od = istorija.Datum_Od;
-                iu.Datum_Do = istorija.Datum_Do;
+                iu.DatumPoc = istorija.DatumPoc;
+                iu.DatumKraj = istorija.DatumKraj;
 
                 await sesija.SaveAsync(iu);
                 await sesija.FlushAsync();
@@ -413,16 +413,16 @@ namespace VanredneSituacije
                 throw new Exception();
             }
         }
-        public static async Task IzmeniIstorijuUloga(DTODodajIstorijuUloga istorija, int istorijaId)
+        public static async Task IstorijaIzmenii(DTOIstorijaDodajj istorija, int istorijaId)
         {
             try
             {
                 ISession sesija = DataLayer.GetSession();
                 IstorijaUloga iu = await sesija.LoadAsync<IstorijaUloga>(istorijaId);
 
-                iu.Zaposleni = await sesija.LoadAsync<Zaposleni>(istorija.JMBGZaposlenog);
-                iu.Datum_Od = istorija.Datum_Od;
-                iu.Datum_Do = istorija.Datum_Do;
+                iu.Zaposleni = await sesija.LoadAsync<Zaposleni>(istorija.JMBGZap);
+                iu.DatumPoc = istorija.DatumPoc;
+                iu.DatumKraj = istorija.DatumKraj;
                 iu.Uloga = istorija.Uloga;
                 await sesija.UpdateAsync(iu);
                 await sesija.FlushAsync();
@@ -433,7 +433,7 @@ namespace VanredneSituacije
                 throw new Exception("Greska u try blocku", ex);
             }
         }
-        public static async Task<IList<DTOIstorijaUloga>> VratiIstoriju()
+        public static async Task<IList<DTOIstorijaUloga>> IstorijaVratii()
         {
             List<DTOIstorijaUloga> iu = new List<DTOIstorijaUloga>();
             try
@@ -444,9 +444,9 @@ namespace VanredneSituacije
                                 {
                                     Id = i.Id,
                                     Uloga = i.Uloga,
-                                    JMBGZaposlenog = i.Zaposleni.JMBG,
-                                    Datum_Od = i.Datum_Od,
-                                    Datum_Do = i.Datum_Do
+                                    JMBGZap = i.Zaposleni.JMBG,
+                                    DatumPoc = i.DatumPoc,
+                                    DatumKraj = i.DatumKraj
                                 })
                                 .ToListAsync();
                 sesija.Close();
@@ -457,7 +457,7 @@ namespace VanredneSituacije
             }
             return iu;
         }
-        public static async Task ObrisiCeluIstorijuKorisnika(string maticniBroj)
+        public static async Task IstorijaObrisiPoJMBG(string maticniBroj)
         {
             List<IstorijaUloga> iu = new List<IstorijaUloga>();
             try
@@ -480,20 +480,20 @@ namespace VanredneSituacije
                 throw new Exception("Greska u try blocku", ex);
             }
         }
-        public static IList<DTODodajIstorijuUloga> VratiIstorijuu()
+        public static IList<DTOIstorijaDodajj> IstorijaVratiiu()
         {
-            List<DTODodajIstorijuUloga> iu = new List<DTODodajIstorijuUloga>();
+            List<DTOIstorijaDodajj> iu = new List<DTOIstorijaDodajj>();
             try
             {
                 ISession sesija = DataLayer.GetSession();
                 iu = sesija.Query<IstorijaUloga>()
-                                .Select(x => new DTODodajIstorijuUloga
+                                .Select(x => new DTOIstorijaDodajj
                                 {
 
                                     Uloga = x.Uloga,
-                                    JMBGZaposlenog = x.Zaposleni.JMBG,
-                                    Datum_Od = x.Datum_Od,
-                                    Datum_Do = x.Datum_Do
+                                    JMBGZap = x.Zaposleni.JMBG,
+                                    DatumPoc = x.DatumPoc,
+                                    DatumKraj = x.DatumKraj
                                 })
                                 .ToList();
                 sesija.Close();
@@ -503,7 +503,7 @@ namespace VanredneSituacije
             }
             return iu;
         }
-        public static async Task<DTOIstorijaUloga> VratiIstorijuU(int istorijaId)
+        public static async Task<DTOIstorijaUloga> IstorijaVratiiU(int istorijaId)
         {
             DTOIstorijaUloga iu = null;
             try
@@ -520,7 +520,7 @@ namespace VanredneSituacije
             return iu;
         }
 
-        public static async Task<IList<DTOIstorijaUloga>> VratiIstorijuUZaposlenog(string maticniBroj)
+        public static async Task<IList<DTOIstorijaUloga>> IstorijaVratiPoJMBG(string maticniBroj)
         {
             List<DTOIstorijaUloga> iu = new List<DTOIstorijaUloga>();
             try
@@ -543,7 +543,7 @@ namespace VanredneSituacije
         }
         #endregion
         #region Intervenise
-        public static async Task<IList<DTOVratiIntervenise>> VratiSvaUcestvovanja()
+        public static async Task<IList<DTOVratiIntervenise>> UcestvovanjaVratii()
         {
             List<DTOVratiIntervenise> i = new List<DTOVratiIntervenise>();
             try
@@ -562,7 +562,7 @@ namespace VanredneSituacije
 
             return i;
         }
-        public static async Task ObrisiUcestvuje(int interveniseId)
+        public static async Task InterveniseObrisii(int interveniseId)
         {
             try
             {
@@ -577,16 +577,16 @@ namespace VanredneSituacije
                 throw new Exception("Greska u try blocku", ex);
             }
         }
-        public static async Task IzmeniUcestvuje(DTODodajIntervenise intervenise, int interveniseId)
+        public static async Task InterveniseIzmenii(DTODodajIntervenise intervenise, int interveniseId)
         {
             try
             {
                 ISession sesija = DataLayer.GetSession();
                 Intervenise i = await sesija.LoadAsync<Intervenise>(interveniseId);
 
-                i.IdInterventneJed = await sesija.LoadAsync<InterventnaJedinica>(intervenise.IdInterventneJed);
-                i.IdVandredneSituacije = await sesija.LoadAsync<VanrednaSituacija>(intervenise.IdVanredneSituacije);
-                i.IdIntervencije = await sesija.LoadAsync<Intervencija>(intervenise.IdIntervencije);
+                i.IdInterventnee = await sesija.LoadAsync<InterventnaJedinica>(intervenise.IdInterventnee);
+                i.IdVanrednee = await sesija.LoadAsync<VanrednaSituacija>(intervenise.IdVanredneSituacije);
+                i.IdIntervencijee = await sesija.LoadAsync<Intervencija>(intervenise.IdIntervencijee);
 
                 await sesija.UpdateAsync(i);
                 await sesija.FlushAsync();
@@ -597,15 +597,15 @@ namespace VanredneSituacije
                 throw new Exception("Greska u try blocku", ex);
             }
         }
-        public static async Task DodajUcestvuje(DTODodajIntervenise intervenise)
+        public static async Task InterveniseDodajj(DTODodajIntervenise intervenise)
         {
             try
             {
                 ISession sesija = DataLayer.GetSession();
                 Intervenise i = new Intervenise();
-                i.IdInterventneJed = await sesija.LoadAsync<InterventnaJedinica>(intervenise.IdInterventneJed);
-                i.IdVandredneSituacije = await sesija.LoadAsync<VanrednaSituacija>(intervenise.IdVanredneSituacije);
-                i.IdIntervencije = await sesija.LoadAsync<Intervencija>(intervenise.IdIntervencije);
+                i.IdInterventnee = await sesija.LoadAsync<InterventnaJedinica>(intervenise.IdInterventnee);
+                i.IdVanrednee = await sesija.LoadAsync<VanrednaSituacija>(intervenise.IdVanredneSituacije);
+                i.IdIntervencijee = await sesija.LoadAsync<Intervencija>(intervenise.IdIntervencijee);
 
                 await sesija.SaveAsync(i);
                 await sesija.FlushAsync();
@@ -616,7 +616,7 @@ namespace VanredneSituacije
                 throw new Exception("Greska u try blocku", ex);
             }
         }
-        public static async Task<DTOVratiIntervenise> VratiUcestvuje(int interveniseId)
+        public static async Task<DTOVratiIntervenise> InterveniseVratii(int interveniseId)
         {
             DTOVratiIntervenise i = new DTOVratiIntervenise();
             try
@@ -638,7 +638,7 @@ namespace VanredneSituacije
             return i;
         }
 
-        public static async Task<IList<DTOVratiIntervenise>> VratiSvaUcestvovanjaUVanrednojSituaciji(int situacijaId)
+        public static async Task<IList<DTOVratiIntervenise>> VanrednaUcestvovanjaVratii(int situacijaId)
         {
             List<DTOVratiIntervenise> i = new List<DTOVratiIntervenise>();
             try
@@ -649,8 +649,8 @@ namespace VanredneSituacije
                     throw new SessionException("Greska u kreiranju sesije");
                 }
                 var intervenise = await sesija.Query<Intervenise>()
-                                 .Fetch(i => i.IdInterventneJed)
-                                 .Where(i => i.IdVandredneSituacije.Id == situacijaId)
+                                 .Fetch(i => i.IdInterventnee)
+                                 .Where(i => i.IdVanrednee.Id == situacijaId)
                                  .ToListAsync();
                 foreach (var interv in intervenise)
                 {
@@ -666,7 +666,7 @@ namespace VanredneSituacije
 
         }
 
-        public static async Task<IList<DTOVratiIntervenise>> VratiSvaUcestvovanjaUIntervenciji(int id)
+        public static async Task<IList<DTOVratiIntervenise>> IntervencijaUcestvovanjaVratii(int id)
         {
             List<DTOVratiIntervenise> i = new List<DTOVratiIntervenise>();
             try
@@ -677,8 +677,8 @@ namespace VanredneSituacije
                     throw new SessionException("Greska u kreiranju sesije");
                 }
                 var intervenise = await sesija.Query<Intervenise>()
-                                 .Fetch(i => i.IdInterventneJed)
-                                 .Where(i => i.IdIntervencije.Id == id)
+                                 .Fetch(i => i.IdInterventnee)
+                                 .Where(i => i.IdIntervencijee.Id == id)
                                  .ToListAsync();
                 foreach (var interv in intervenise)
                 {
@@ -694,7 +694,7 @@ namespace VanredneSituacije
 
         }
 
-        public static async Task<IList<DTOVratiIntervenise>> VratiSvaUcestvovanjaJedinice(int jedinicaId)
+        public static async Task<IList<DTOVratiIntervenise>> UcestvovanjaVratiiJedinice(int jedinicaId)
         {
             List<DTOVratiIntervenise> i = new List<DTOVratiIntervenise>();
             try
@@ -705,8 +705,8 @@ namespace VanredneSituacije
                     throw new SessionException("Greska u kreiranju sesije");
                 }
                 var intervenise = await sesija.Query<Intervenise>()
-                                 .Fetch(i => i.IdInterventneJed)
-                                 .Where(i => i.IdInterventneJed.Jedinstveni_Broj == jedinicaId)
+                                 .Fetch(i => i.IdInterventnee)
+                                 .Where(i => i.IdInterventnee.Jedinstveni_Broj == jedinicaId)
                                  .ToListAsync();
                 foreach (var interv in intervenise)
                 {
@@ -723,7 +723,7 @@ namespace VanredneSituacije
         }
         #endregion
         #region Softveri
-        public static async Task<IList<DTOSoftveri>> VratiSoftvere()
+        public static async Task<IList<DTOSoftveri>> SoftveriVratii()
         {
             List<DTOSoftveri> s = new List<DTOSoftveri>();
             try
@@ -741,13 +741,13 @@ namespace VanredneSituacije
             }
             return s;
         }
-        public static async Task DodajSoftver(DTODodajSoftver softver)
+        public static async Task SoftveriDodajj(DTOSoftveriDodajj softver)
         {
             try
             {
                 ISession sesija = DataLayer.GetSession();
                 Softveri s = new Softveri();
-                s.Analiticar = await sesija.LoadAsync<Analiticar>(softver.JMBG_Analiticar);
+                s.Analiticar = await sesija.LoadAsync<Analiticar>(softver.JMBGAnaliticaraa);
 
                 s.Naziv = softver.Naziv;
                 await sesija.SaveAsync(s);
@@ -759,7 +759,7 @@ namespace VanredneSituacije
                 throw new Exception("Greska u try blocku", ex);
             }
         }
-        public static async Task ObrisiSoftver(int id)
+        public static async Task SoftveriObrisii(int id)
         {
             try
             {
@@ -776,13 +776,13 @@ namespace VanredneSituacije
             }
         }
 
-        public static async Task IzmeniSoftver(DTODodajSoftver softver, int softverId)
+        public static async Task SoftverIzmenii(DTOSoftveriDodajj softver, int softverId)
         {
             try
             {
                 ISession sesija = DataLayer.GetSession();
                 Softveri s = await sesija.LoadAsync<Softveri>(softverId);
-                s.Analiticar = await sesija.LoadAsync<Analiticar>(softver.JMBG_Analiticar);
+                s.Analiticar = await sesija.LoadAsync<Analiticar>(softver.JMBGAnaliticaraa);
                 s.Naziv = softver.Naziv;
                 await sesija.UpdateAsync(s);
                 await sesija.FlushAsync();
@@ -794,7 +794,7 @@ namespace VanredneSituacije
             }
         }
 
-        public static async Task<DTOSoftveri> VratiSoftver(int softverId)
+        public static async Task<DTOSoftveri> SoftverVratiPoID(int softverId)
         {
             DTOSoftveri s = new DTOSoftveri();
             try
@@ -813,7 +813,7 @@ namespace VanredneSituacije
             return s;
         }
 
-        public static async Task<IList<DTOSoftveri>> VratiSoftvereAnaliticara(string maticniBroj)
+        public static async Task<IList<DTOSoftveri>> SoftverVratiPoJMBG(string maticniBroj)
         {
             List<DTOSoftveri> s = new List<DTOSoftveri>();
             try
@@ -838,7 +838,7 @@ namespace VanredneSituacije
         }
         #endregion
         #region Ekspertize
-        public static async Task<DTOEkspertize> VratiEkspertizu(int idEkspertize)
+        public static async Task<DTOEkspertize> EkspertizaVratii(int idEkspertize)
         {
             DTOEkspertize e = new DTOEkspertize();
             try
@@ -854,7 +854,7 @@ namespace VanredneSituacije
             }
             return e;
         }
-        public static async Task DodajEkspertizu(DTOIzmeniEkspertizu ekspertiza)
+        public static async Task EkspertizaDodajj(DTOEkspertizaIzmenii ekspertiza)
         {
             try
             {
@@ -872,7 +872,7 @@ namespace VanredneSituacije
                 throw new Exception("Greska u try blocku", ex);
             }
         }
-        public static async Task ObrisiEkspertizu(int ekspertizaId)
+        public static async Task EkspertizaObrisii(int ekspertizaId)
         {
             try
             {
@@ -888,7 +888,7 @@ namespace VanredneSituacije
                 throw new Exception("Greska u try blocku", ex);
             }
         }
-        public static async Task IzmeniEkspertizu(DTOIzmeniEkspertizu ekspertiza, int idEkspertize)
+        public static async Task EkspertizaIzmenii(DTOEkspertizaIzmenii ekspertiza, int idEkspertize)
         {
             try
             {
@@ -908,7 +908,7 @@ namespace VanredneSituacije
             }
         }
 
-        public static async Task<IList<DTOEkspertize>> VratiEkspertize()
+        public static async Task<IList<DTOEkspertize>> EkspertizeVratii()
         {
             List<DTOEkspertize> ekspertize = new List<DTOEkspertize>();
             try
@@ -928,7 +928,7 @@ namespace VanredneSituacije
             return ekspertize;
         }
 
-        public static async Task<IList<DTOEkspertize>> VratiEkspertizeAnaliticara(string maticniBroj)
+        public static async Task<IList<DTOEkspertize>> EkspertizeVratiPoJMBG(string maticniBroj)
         {
             List<DTOEkspertize> ekspertize = new List<DTOEkspertize>();
             try
@@ -950,7 +950,7 @@ namespace VanredneSituacije
         }
         #endregion
         #region Saradnja
-        public static async Task IzmeniSaradnju(DTODodajSaradnju saradnja, int saradnjaId)
+        public static async Task SaradnjaIzmenii(DTOSaradnjaDodajj saradnja, int saradnjaId)
         {
             try
             {
@@ -959,7 +959,7 @@ namespace VanredneSituacije
 
                 s.Uloga = saradnja.Uloga;
                 s.Sektor = await sesija.LoadAsync<Sluzba>(saradnja.SektorID);
-                s.VandrednaSituacija = await sesija.LoadAsync<VanrednaSituacija>(saradnja.VanrednaSituacijaID);
+                s.Vanredna_Sit = await sesija.LoadAsync<VanrednaSituacija>(saradnja.IDVanSituacije);
 
                 await sesija.UpdateAsync(s);
                 await sesija.FlushAsync();
@@ -970,7 +970,7 @@ namespace VanredneSituacije
                 throw new Exception("Greska u try blocku", ex);
             }
         }
-        public static async Task DodajSaradnju(DTODodajSaradnju saradnja)
+        public static async Task SaradnjaDodajj(DTOSaradnjaDodajj saradnja)
         {
             try
             {
@@ -978,7 +978,7 @@ namespace VanredneSituacije
                 Saradnja s = new Saradnja();
                 s.Uloga = saradnja.Uloga;
                 s.Sektor = await sesija.LoadAsync<Sluzba>(saradnja.SektorID);
-                s.VandrednaSituacija = await sesija.LoadAsync<VanrednaSituacija>(saradnja.VanrednaSituacijaID);
+                s.Vanredna_Sit = await sesija.LoadAsync<VanrednaSituacija>(saradnja.IDVanSituacije);
                 await sesija.SaveAsync(s);
                 await sesija.FlushAsync();
                 sesija.Close();
@@ -989,7 +989,7 @@ namespace VanredneSituacije
             }
         }
 
-        public static async Task ObrisiSaradnju(int saradnjaId)
+        public static async Task SaradnjaObrisii(int saradnjaId)
         {
             try
             {
@@ -1005,7 +1005,7 @@ namespace VanredneSituacije
                 throw new Exception("Greska u try blocku", ex);
             }
         }
-        public static async Task<IList<DTOVanrednaSituacija>> VratiSveUVanredneSituacijeUKojojJeUcestvovalaSluzba(int id)
+        public static async Task<IList<DTOVanrednaSituacija>> VanredneSaradnjaSaSluzbomVratii(int id)
         {
             List<DTOVanrednaSituacija> v = new List<DTOVanrednaSituacija>();
             try
@@ -1013,13 +1013,13 @@ namespace VanredneSituacije
                 ISession sesija = DataLayer.GetSession();
 
                 var s = await sesija.Query<Saradnja>()
-                               .Where(v => v.Sektor.Id_Sektora == id)
-                               .Fetch(v => v.VandrednaSituacija)
+                               .Where(v => v.Sektor.SektorrId == id)
+                               .Fetch(v => v.Vanredna_Sit)
                                .ToListAsync();
 
                 foreach (var saradnja in s)
                 {
-                    v.Add(new DTOVanrednaSituacija(saradnja.VandrednaSituacija));
+                    v.Add(new DTOVanrednaSituacija(saradnja.Vanredna_Sit));
                 }
             }
             catch (Exception ex)
@@ -1030,16 +1030,16 @@ namespace VanredneSituacije
             return v;
 
         }
-        public static async Task<IList<DTOVratiSaradnju>> VratiSaradnje()
+        public static async Task<IList<DTOSaradnjeVratiPoId>> SaradnjeVratii()
         {
-            List<DTOVratiSaradnju> s = new List<DTOVratiSaradnju>();
+            List<DTOSaradnjeVratiPoId> s = new List<DTOSaradnjeVratiPoId>();
             try
             {
                 ISession sesija = DataLayer.GetSession();
                 s = await sesija.Query<Saradnja>()
-                         .Fetch(v => v.VandrednaSituacija)
+                         .Fetch(v => v.Vanredna_Sit)
                          .Fetch(v => v.Sektor)
-                         .Select(v => new DTOVratiSaradnju(v))
+                         .Select(v => new DTOSaradnjeVratiPoId(v))
                          .ToListAsync();
                 sesija.Close();
             }
@@ -1050,7 +1050,7 @@ namespace VanredneSituacije
             return s;
         }
 
-        public static async Task<DTOSaradnja> VratiSaradnju(int saradnjaId)
+        public static async Task<DTOSaradnja> SaradnjeVratiPoId(int saradnjaId)
         {
             DTOSaradnja s = new DTOSaradnja();
             try
@@ -1068,7 +1068,7 @@ namespace VanredneSituacije
             }
             return s;
         }
-        public static async Task<IList<DTOSluzba>> VratiSveSluzbeUVandrednojSituaciji(int situacijaId)
+        public static async Task<IList<DTOSluzba>> SluzbeUVanrednojVratii(int situacijaId)
         {
             List<DTOSluzba> s = new List<DTOSluzba>();
             try
@@ -1076,7 +1076,7 @@ namespace VanredneSituacije
                 ISession sesija = DataLayer.GetSession();
 
                 var sa = await sesija.Query<Saradnja>()
-                               .Where(v => v.VandrednaSituacija.Id == situacijaId)
+                               .Where(v => v.Vanredna_Sit.Id == situacijaId)
                                .Fetch(v => v.Sektor)
                                .ToListAsync();
 
@@ -1255,9 +1255,9 @@ namespace VanredneSituacije
                 radnik.Prezime = opRadnik.Prezime;
                 radnik.JMBG = opRadnik.JMBG;
                 radnik.Email = opRadnik.Email;
-                radnik.AdresaStanovanja = opRadnik.AdresaStanovanja;
-                radnik.Datum_Zaposlenja = opRadnik.Datum_Zaposlenja;
-                radnik.Datum_Rodjenja = opRadnik.Datum_Rodjenja;
+                radnik.AdresaStan = opRadnik.AdresaStan;
+                radnik.DatumZap = opRadnik.DatumZap;
+                radnik.DatumRodj = opRadnik.DatumRodj;
                 radnik.Pol = opRadnik.Pol;
                 radnik.BrojTelefona = opRadnik.BrojTelefona;
                 radnik.Broj_Sati = opRadnik.Broj_Sati;
@@ -1279,8 +1279,8 @@ namespace VanredneSituacije
                 {
                     Zaposleni = radnik,
                     Uloga = radnik.GetType().Name,
-                    Datum_Od = DateTime.Now,
-                    Datum_Do = null
+                    DatumPoc = DateTime.Now,
+                    DatumKraj = null
                 };
                 await sesija.SaveAsync(radnik);
                 await sesija.SaveAsync(istorija);
@@ -1306,9 +1306,9 @@ namespace VanredneSituacije
                 radnik.Pol = opRadnik.Pol;
                 radnik.BrojTelefona = opRadnik.BrojTelefona;
                 radnik.Email = opRadnik.Email;
-                radnik.AdresaStanovanja = opRadnik.AdresaStanovanja;
-                radnik.Datum_Zaposlenja = opRadnik.Datum_Zaposlenja;
-                radnik.Datum_Rodjenja = opRadnik.Datum_Rodjenja;
+                radnik.AdresaStan = opRadnik.AdresaStan;
+                radnik.DatumZap = opRadnik.DatumZap;
+                radnik.DatumRodj = opRadnik.DatumRodj;
 
                 InterventnaJedinica interventna = radnik.InterventnaJedinica;
                 InterventnaJedinica novaInterventna = await sesija.GetAsync<InterventnaJedinica>(opRadnik.InterventnaJedinica);
@@ -2065,8 +2065,8 @@ namespace VanredneSituacije
             {
                 ISession sesija = DataLayer.GetSession();
                 var saradnje = await sesija.Query<Saradnja>()
-                             .Where(v => v.VandrednaSituacija.Id == situacijaId)
-                             .Fetch(v => v.VandrednaSituacija)
+                             .Where(v => v.Vanredna_Sit.Id == situacijaId)
+                             .Fetch(v => v.Vanredna_Sit)
                              .ToListAsync();
                 s = saradnje.Select(v => new DTOSluzba(v.Sektor))
                                             .Distinct()
@@ -2153,7 +2153,7 @@ namespace VanredneSituacije
             {
                 ISession sesija = DataLayer.GetSession();
                 Sluzba sluzba = await sesija.LoadAsync<Sluzba>(id);
-                s.Id_Sektora = sluzba.Id_Sektora;
+                s.SektorrId = sluzba.SektorrId;
                 s.TipSektora = sluzba.TipSektora;
                 DTOPredstavnikSluzbe predstavnik = new DTOPredstavnikSluzbe();
                 predstavnik = await DTOManager.VratiPredstavnika(sluzba.Predstavnik.JMBG);
@@ -2174,10 +2174,10 @@ namespace VanredneSituacije
             {
                 ISession sesija = DataLayer.GetSession();
                 var saradnje = await sesija.Query<Saradnja>()
-                             .Where(s => s.Sektor.Id_Sektora == id)
+                             .Where(s => s.Sektor.SektorrId == id)
                              .Fetch(s => s.Sektor)
                              .ToListAsync();
-                v = saradnje.Select(s => new DTOVanrednaSituacija(s.VandrednaSituacija))
+                v = saradnje.Select(s => new DTOVanrednaSituacija(s.Vanredna_Sit))
                                             .Distinct()
                                             .ToList();
                 sesija.Close();
@@ -2396,19 +2396,19 @@ namespace VanredneSituacije
                 Angazovano a = new Angazovano();
                 a.Vozilo = await sesija.LoadAsync<Vozilo>(angazovano.VoziloReg);
                 a.Intervencija = await sesija.LoadAsync<Intervencija>(angazovano.IntervencijaID);
-                if (angazovano.Datum_Od >= DateTime.Now)
+                if (angazovano.DatumPoc >= DateTime.Now)
                 {
-                    a.Datum_Od = DateTime.Now;
-                    a.Datum_Do = null;
+                    a.DatumPoc = DateTime.Now;
+                    a.DatumKraj = null;
                 }
                 else
-                    a.Datum_Od = angazovano.Datum_Od;
-                if (angazovano.Datum_Do <= angazovano.Datum_Od)
+                    a.DatumPoc = angazovano.DatumPoc;
+                if (angazovano.DatumKraj <= angazovano.DatumPoc)
                 {
                     throw new Exception("Promeniti datum");
                 }
                 else
-                    a.Datum_Do = a.Datum_Do;
+                    a.DatumKraj = a.DatumKraj;
                 await sesija.SaveAsync(a);
                 await sesija.FlushAsync();
                 sesija.Close();
@@ -2441,8 +2441,8 @@ namespace VanredneSituacije
                 Angazovano a = await sesija.LoadAsync<Angazovano>(angazovanoId);
                 a.Vozilo = await sesija.LoadAsync<Vozilo>(angazovano.VoziloReg);
                 a.Intervencija = await sesija.LoadAsync<Intervencija>(angazovano.IntervencijaID);
-                a.Datum_Do = angazovano.Datum_Do;
-                a.Datum_Od = angazovano.Datum_Od;
+                a.DatumKraj = angazovano.DatumKraj;
+                a.DatumPoc = angazovano.DatumPoc;
                 await sesija.UpdateAsync(a);
                 await sesija.FlushAsync();
                 sesija.Close();
@@ -2553,8 +2553,8 @@ namespace VanredneSituacije
                 situacija.Lokacija = vanrednaSituacija.Lokacija;
                 situacija.Tip = vanrednaSituacija.Tip;
                 situacija.Opis = vanrednaSituacija.Opis;
-                situacija.Datum_Od = vanrednaSituacija.Datum_Od;
-                situacija.Datum_Do = vanrednaSituacija.Datum_Do;
+                situacija.DatumPoc = vanrednaSituacija.DatumPoc;
+                situacija.DatumKraj = vanrednaSituacija.DatumKraj;
                 situacija.Prijava_ID = await sesija.GetAsync<Prijava>(vanrednaSituacija.IdPrijave);
                 await sesija.UpdateAsync(situacija);
                 await sesija.FlushAsync();
@@ -2571,17 +2571,17 @@ namespace VanredneSituacije
             {
                 ISession sesija = DataLayer.GetSession();
                 VanrednaSituacija situacija = new VanrednaSituacija();
-                if (vanrednaSituacija.Datum_Od >= DateTime.Now)
+                if (vanrednaSituacija.DatumPoc >= DateTime.Now)
                 {
-                    situacija.Datum_Od = DateTime.Now;
-                    situacija.Datum_Do = null;
+                    situacija.DatumPoc = DateTime.Now;
+                    situacija.DatumKraj = null;
                 }
-                else situacija.Datum_Od = vanrednaSituacija.Datum_Od;
-                if (vanrednaSituacija.Datum_Do <= vanrednaSituacija.Datum_Od)
+                else situacija.DatumPoc = vanrednaSituacija.DatumPoc;
+                if (vanrednaSituacija.DatumKraj <= vanrednaSituacija.DatumPoc)
                 {
                     throw new Exception("Lose izabran datum");
                 }
-                else situacija.Datum_Do = vanrednaSituacija.Datum_Do;
+                else situacija.DatumKraj = vanrednaSituacija.DatumKraj;
                 situacija.Opis = vanrednaSituacija.Opis;
                 situacija.Prijava_ID = await sesija.GetAsync<Prijava>(vanrednaSituacija.IdPrijave);
                 situacija.Broj_Ugrozenih_Osoba = vanrednaSituacija.Broj_Ugrozenih_Osoba;

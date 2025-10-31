@@ -20,12 +20,12 @@ namespace VanredneSituacije.DTO
             {
                 Predstavnik = new DTOPredstavnikSluzbe(sl.Predstavnik);
             }
-            Id_Sektora = sl.Id_Sektora;
+            SektorrId = sl.SektorrId;
             TipSektora = sl.TipSektora;
          
         }
         public DTOPredstavnikSluzbe? Predstavnik { get; set; }
-        public virtual int Id_Sektora { get; set; }
+        public virtual int SektorrId { get; set; }
         public virtual string TipSektora { get; set; }
 
 
@@ -42,7 +42,7 @@ namespace VanredneSituacije.DTO
 
         public DTOVratiSluzbu(Sluzba sl)
         {
-            Id_Sektora = sl.Id_Sektora;
+            SektorrId = sl.SektorrId;
             TipSektora = sl.TipSektora;
             if (sl.Predstavnik != null)
             {
@@ -55,7 +55,7 @@ namespace VanredneSituacije.DTO
         public string ImePredstavnika { get; set; }
         public virtual string TipSektora { get; set; }
         public string PrezimePredstavnika { get; set; }
-        public virtual int Id_Sektora { get; set; }
+        public virtual int SektorrId { get; set; }
 
 
 

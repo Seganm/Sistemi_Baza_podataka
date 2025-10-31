@@ -33,15 +33,15 @@ namespace VanredneSituacije.Forme
             textJmbg.Text = _analiticar!.JMBG;
             textIme.Text = _analiticar.Ime;
             textPrezime.Text = _analiticar.Prezime;
-            dateRodjenja.Value = _analiticar.Datum_Rodjenja;
+            dateRodjenja.Value = _analiticar.DatumRodj;
 
             checkMusko.Checked = _analiticar.Pol == "M";
             checkZensko.Checked = _analiticar.Pol == "Z";
 
             textKontakt.Text = _analiticar.BrojTelefona;
             textEmail.Text = _analiticar.Email;
-            textAdresa.Text = _analiticar.AdresaStanovanja;
-            dateZaposlenje.Value = _analiticar.Datum_Zaposlenja;
+            textAdresa.Text = _analiticar.AdresaStan;
+            dateZaposlenje.Value = _analiticar.DatumZap;
         }
 
         private void buttonReset_Click(object sender, EventArgs e)
@@ -111,18 +111,18 @@ namespace VanredneSituacije.Forme
                     JMBG = textJmbg.Text,
                     Ime = textIme.Text,
                     Prezime = textPrezime.Text,
-                    Datum_Rodjenja = dateRodjenja.Value,
+                    DatumRodj = dateRodjenja.Value,
                     Pol = pol,
                     BrojTelefona = textKontakt.Text,
                     Email = textEmail.Text,
-                    AdresaStanovanja = textAdresa.Text,
-                    Datum_Zaposlenja = dateZaposlenje.Value
+                    AdresaStan = textAdresa.Text,
+                    DatumZap = dateZaposlenje.Value
                 };
 
                 if (_analiticar == null)
-                    await DTOManager.DodajAnalitcar(novi);
+                    await DTOManager.AnaliticarDodajj(novi);
                 else
-                    await DTOManager.IzmeniAnaliticar(novi, _analiticar.JMBG);
+                    await DTOManager.AnaliticarIzmenii(novi, _analiticar.JMBG);
 
                 MessageBox.Show("Podaci su sačuvani.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

@@ -13,11 +13,11 @@ namespace VanredneSituacijeWebAPI.Controllers
         [Route("SaradnjaAdd")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> SaradnjaAdd([FromBody] DTODodajSaradnju saradnja)
+        public async Task<IActionResult> SaradnjaAdd([FromBody] DTOSaradnjaDodajj saradnja)
         {
             try
             {
-                await DTOManager.DodajSaradnju(saradnja);
+                await DTOManager.SaradnjaDodajj(saradnja);
                 return Ok();
             }
             catch (Exception ex)
@@ -33,7 +33,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                return new JsonResult(await DTOManager.VratiSaradnje());
+                return new JsonResult(await DTOManager.SaradnjeVratii());
             }
             catch (Exception ex)
             {
@@ -49,7 +49,7 @@ namespace VanredneSituacijeWebAPI.Controllers
         {
             try
             {
-                return new JsonResult(await DTOManager.VratiSaradnju(saradnjaId));
+                return new JsonResult(await DTOManager.SaradnjeVratiPoId(saradnjaId));
             }
             catch (Exception ex)
             {
@@ -61,11 +61,11 @@ namespace VanredneSituacijeWebAPI.Controllers
         [Route("SaradnjaDelete/{saradnjaId}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> ObrisiSaradnju(int saradnjaId)
+        public async Task<IActionResult> SaradnjaObrisii(int saradnjaId)
         {
             try
             {
-                await DTOManager.ObrisiSaradnju(saradnjaId);
+                await DTOManager.SaradnjaObrisii(saradnjaId);
                 return Ok();
             }
             catch (Exception ex)
@@ -78,11 +78,11 @@ namespace VanredneSituacijeWebAPI.Controllers
         [Route("SaradnjaChange/{saradnjaId}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> IzmeniSaradnju([FromBody] DTODodajSaradnju sertifikat, int saradnjaId)
+        public async Task<IActionResult> SaradnjaIzmenii([FromBody] DTOSaradnjaDodajj sertifikat, int saradnjaId)
         {
             try
             {
-                await DTOManager.IzmeniSaradnju(sertifikat, saradnjaId);
+                await DTOManager.SaradnjaIzmenii(sertifikat, saradnjaId);
                 return Ok();
             }
             catch (Exception ex)

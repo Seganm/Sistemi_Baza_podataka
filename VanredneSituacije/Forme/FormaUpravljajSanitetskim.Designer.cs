@@ -61,21 +61,21 @@
             dugmeReset.Location = new Point(124, 183);
             dugmeReset.Name = "dugmeReset";
             dugmeReset.Size = new Size(90, 24);
-            dugmeReset.Text = "🔄 Reset";
+            dugmeReset.Text = "Reset";
             dugmeReset.UseVisualStyleBackColor = false;
             dugmeReset.Click += buttonRst_Click;
 
             dugmeOdustani.Location = new Point(220, 183);
             dugmeOdustani.Name = "dugmeOdustani";
             dugmeOdustani.Size = new Size(82, 24);
-            dugmeOdustani.Text = "❌ Odustani";
+            dugmeOdustani.Text = "Odustani";
             dugmeOdustani.UseVisualStyleBackColor = false;
             dugmeOdustani.Click += buttonCnc_Click;
 
             dugmeSacuvaj.Location = new Point(36, 183);
             dugmeSacuvaj.Name = "dugmeSacuvaj";
             dugmeSacuvaj.Size = new Size(82, 24);
-            dugmeSacuvaj.Text = "💾 Sačuvaj";
+            dugmeSacuvaj.Text = "Sačuvaj";
             dugmeSacuvaj.UseVisualStyleBackColor = false;
             dugmeSacuvaj.Click += buttonSv_Click;
 

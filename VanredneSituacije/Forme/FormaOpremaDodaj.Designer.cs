@@ -50,7 +50,7 @@
             dugmeZalihe.Name = "dugmeZalihe";
             dugmeZalihe.Size = new Size(200, 40);
             dugmeZalihe.TabIndex = 4;
-            dugmeZalihe.Text = "📦 Zalihe";
+            dugmeZalihe.Text = "Zalihe";
             dugmeZalihe.UseVisualStyleBackColor = false;
             dugmeZalihe.Click += buttonOpsta_Click;
 
@@ -62,7 +62,7 @@
             dugmeMedicinska.Name = "dugmeMedicinska";
             dugmeMedicinska.Size = new Size(200, 40);
             dugmeMedicinska.TabIndex = 5;
-            dugmeMedicinska.Text = "💉 Medicinska oprema";
+            dugmeMedicinska.Text = "Medicinska oprema";
             dugmeMedicinska.UseVisualStyleBackColor = false;
             dugmeMedicinska.Click += buttonSpec_Click;
 
@@ -74,7 +74,7 @@
             dugmeTehnicka.Name = "dugmeTehnicka";
             dugmeTehnicka.Size = new Size(200, 40);
             dugmeTehnicka.TabIndex = 6;
-            dugmeTehnicka.Text = "⚙️ Tehnička oprema";
+            dugmeTehnicka.Text = "Tehnička oprema";
             dugmeTehnicka.UseVisualStyleBackColor = false;
             dugmeTehnicka.Click += buttonOdustani_Click;
 
@@ -86,7 +86,7 @@
             dugmeLicna.Name = "dugmeLicna";
             dugmeLicna.Size = new Size(200, 40);
             dugmeLicna.TabIndex = 8;
-            dugmeLicna.Text = "🦺 Lična zaštita";
+            dugmeLicna.Text = "Lična zaštita";
             dugmeLicna.UseVisualStyleBackColor = false;
             dugmeLicna.Click += button2_Click;
 
@@ -98,7 +98,7 @@
             dugmeOdustani.Name = "dugmeOdustani";
             dugmeOdustani.Size = new Size(200, 40);
             dugmeOdustani.TabIndex = 9;
-            dugmeOdustani.Text = "✖ Zatvori";
+            dugmeOdustani.Text = "Zatvori";
             dugmeOdustani.UseVisualStyleBackColor = false;
             dugmeOdustani.Click += button1_Click;
 

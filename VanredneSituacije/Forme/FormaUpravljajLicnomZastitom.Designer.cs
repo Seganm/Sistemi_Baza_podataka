@@ -35,25 +35,19 @@ namespace VanredneSituacije.Forme
             label3 = new Label();
             label4 = new Label();
             SuspendLayout();
-            // 
-            // dateNabavka
-            // 
+     
             dateNabavka.Location = new Point(383, 15);
             dateNabavka.Name = "dateNabavka";
             dateNabavka.Size = new Size(148, 23);
             dateNabavka.TabIndex = 0;
-            // 
-            // comboTip
-            // 
+        
             comboTip.DropDownStyle = ComboBoxStyle.DropDownList;
             comboTip.FormattingEnabled = true;
             comboTip.Location = new Point(383, 77);
             comboTip.Name = "comboTip";
             comboTip.Size = new Size(147, 23);
             comboTip.TabIndex = 1;
-            // 
-            // label6
-            // 
+        
             label6.ForeColor = Color.FromArgb(40, 40, 40);
             label6.Location = new Point(280, 80);
             label6.Name = "label6";
@@ -61,18 +55,14 @@ namespace VanredneSituacije.Forme
             label6.TabIndex = 2;
             label6.Text = "Tip:";
             label6.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // comboJedinica
-            // 
+        
             comboJedinica.DropDownStyle = ComboBoxStyle.DropDownList;
             comboJedinica.FormattingEnabled = true;
             comboJedinica.Location = new Point(383, 45);
             comboJedinica.Name = "comboJedinica";
             comboJedinica.Size = new Size(147, 23);
             comboJedinica.TabIndex = 3;
-            // 
-            // label1
-            // 
+      
             label1.ForeColor = Color.FromArgb(40, 40, 40);
             label1.Location = new Point(280, 47);
             label1.Name = "label1";
@@ -80,9 +70,7 @@ namespace VanredneSituacije.Forme
             label1.TabIndex = 4;
             label1.Text = "Jedinica:";
             label1.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
+        
             label2.ForeColor = Color.FromArgb(40, 40, 40);
             label2.Location = new Point(280, 19);
             label2.Name = "label2";
@@ -90,34 +78,26 @@ namespace VanredneSituacije.Forme
             label2.TabIndex = 5;
             label2.Text = "Datum nabavke:";
             label2.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // textNaziv
-            // 
+         
             textNaziv.BackColor = Color.White;
             textNaziv.Location = new Point(120, 44);
             textNaziv.Name = "textNaziv";
             textNaziv.Size = new Size(147, 23);
             textNaziv.TabIndex = 6;
-            // 
-            // comboStatus
-            // 
+       
             comboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             comboStatus.FormattingEnabled = true;
             comboStatus.Location = new Point(120, 72);
             comboStatus.Name = "comboStatus";
             comboStatus.Size = new Size(147, 23);
             comboStatus.TabIndex = 7;
-            // 
-            // textSb
-            // 
+        
             textSb.BackColor = Color.White;
             textSb.Location = new Point(120, 16);
             textSb.Name = "textSb";
             textSb.Size = new Size(147, 23);
             textSb.TabIndex = 8;
-            // 
-            // buttonRst
-            // 
+       
             buttonRst.BackColor = Color.FromArgb(255, 210, 90);
             buttonRst.FlatAppearance.BorderSize = 0;
             buttonRst.FlatStyle = FlatStyle.Flat;
@@ -128,9 +108,7 @@ namespace VanredneSituacije.Forme
             buttonRst.TabIndex = 9;
             buttonRst.Text = "Reset";
             buttonRst.UseVisualStyleBackColor = false;
-            // 
-            // buttonCancel
-            // 
+           
             buttonCancel.BackColor = Color.FromArgb(230, 80, 80);
             buttonCancel.FlatAppearance.BorderSize = 0;
             buttonCancel.FlatStyle = FlatStyle.Flat;
@@ -142,9 +120,7 @@ namespace VanredneSituacije.Forme
             buttonCancel.TabIndex = 10;
             buttonCancel.Text = "Odustani";
             buttonCancel.UseVisualStyleBackColor = false;
-            // 
-            // buttonSave
-            // 
+         
             buttonSave.BackColor = Color.FromArgb(60, 120, 200);
             buttonSave.FlatAppearance.BorderSize = 0;
             buttonSave.FlatStyle = FlatStyle.Flat;
@@ -157,9 +133,7 @@ namespace VanredneSituacije.Forme
             buttonSave.Text = "Sačuvaj";
             buttonSave.UseVisualStyleBackColor = false;
             buttonSave.Click += buttonSave_Click;
-            // 
-            // label5
-            // 
+      
             label5.ForeColor = Color.FromArgb(40, 40, 40);
             label5.Location = new Point(16, 78);
             label5.Name = "label5";
@@ -167,9 +141,7 @@ namespace VanredneSituacije.Forme
             label5.TabIndex = 12;
             label5.Text = "Status:";
             label5.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
+       
             label3.ForeColor = Color.FromArgb(40, 40, 40);
             label3.Location = new Point(16, 50);
             label3.Name = "label3";
@@ -177,9 +149,7 @@ namespace VanredneSituacije.Forme
             label3.TabIndex = 13;
             label3.Text = "Naziv:";
             label3.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
+    
             label4.ForeColor = Color.FromArgb(40, 40, 40);
             label4.Location = new Point(16, 21);
             label4.Name = "label4";
@@ -187,9 +157,7 @@ namespace VanredneSituacije.Forme
             label4.TabIndex = 14;
             label4.Text = "Serijski broj:";
             label4.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // FormaUpravljajLicnomZastitom
-            // 
+       
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 247, 250);

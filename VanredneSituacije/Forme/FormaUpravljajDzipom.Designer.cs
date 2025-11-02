@@ -118,7 +118,7 @@ namespace VanredneSituacije.Forme
             buttonSacuvaj.Name = "buttonSacuvaj";
             buttonSacuvaj.Size = new Size(149, 38);
             buttonSacuvaj.TabIndex = 9;
-            buttonSacuvaj.Text = "💾 Sačuvaj";
+            buttonSacuvaj.Text = "Sačuvaj";
             buttonSacuvaj.UseVisualStyleBackColor = false;
             buttonSacuvaj.Click += buttonSacuvaj_Click;
              
@@ -131,7 +131,7 @@ namespace VanredneSituacije.Forme
             buttonReset.Name = "buttonReset";
             buttonReset.Size = new Size(138, 38);
             buttonReset.TabIndex = 10;
-            buttonReset.Text = "🔄 Resetuj";
+            buttonReset.Text = "Resetuj";
             buttonReset.UseVisualStyleBackColor = false;
             buttonReset.Click += buttonReset_Click;
 
@@ -145,7 +145,7 @@ namespace VanredneSituacije.Forme
             buttonCancel.Name = "buttonCancel";
             buttonCancel.Size = new Size(139, 38);
             buttonCancel.TabIndex = 11;
-            buttonCancel.Text = "❌ Otkaži";
+            buttonCancel.Text = "Otkaži";
             buttonCancel.UseVisualStyleBackColor = false;
             buttonCancel.Click += buttonCancel_Click;
  

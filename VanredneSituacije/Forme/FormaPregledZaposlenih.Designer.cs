@@ -65,7 +65,7 @@ namespace VanredneSituacije.Forme
             dugmeDodajZaposlenog.Location = new Point(300, 12);
             dugmeDodajZaposlenog.Name = "dugmeDodajZaposlenog";
             dugmeDodajZaposlenog.Size = new Size(130, 32);
-            dugmeDodajZaposlenog.Text = "➕ Dodaj";
+            dugmeDodajZaposlenog.Text = "Dodaj";
             dugmeDodajZaposlenog.FlatStyle = FlatStyle.Flat;
             dugmeDodajZaposlenog.FlatAppearance.BorderSize = 0;
             dugmeDodajZaposlenog.BackColor = Color.FromArgb(0, 122, 204);
@@ -77,7 +77,7 @@ namespace VanredneSituacije.Forme
             dugmeIzmeniZaposlenog.Location = new Point(440, 12);
             dugmeIzmeniZaposlenog.Name = "dugmeIzmeniZaposlenog";
             dugmeIzmeniZaposlenog.Size = new Size(130, 32);
-            dugmeIzmeniZaposlenog.Text = "✏ Izmeni";
+            dugmeIzmeniZaposlenog.Text = "Izmeni";
             dugmeIzmeniZaposlenog.FlatStyle = FlatStyle.Flat;
             dugmeIzmeniZaposlenog.FlatAppearance.BorderSize = 0;
             dugmeIzmeniZaposlenog.BackColor = Color.FromArgb(255, 190, 80);
@@ -89,7 +89,7 @@ namespace VanredneSituacije.Forme
             dugmeObrisiZaposlenog.Location = new Point(580, 12);
             dugmeObrisiZaposlenog.Name = "dugmeObrisiZaposlenog";
             dugmeObrisiZaposlenog.Size = new Size(130, 32);
-            dugmeObrisiZaposlenog.Text = "🗑 Obriši";
+            dugmeObrisiZaposlenog.Text = "Obriši";
             dugmeObrisiZaposlenog.FlatStyle = FlatStyle.Flat;
             dugmeObrisiZaposlenog.FlatAppearance.BorderSize = 0;
             dugmeObrisiZaposlenog.BackColor = Color.FromArgb(220, 70, 70);
@@ -100,7 +100,7 @@ namespace VanredneSituacije.Forme
 
             dugmeSoftver.Location = new Point(720, 12);
             dugmeSoftver.Size = new Size(130, 32);
-            dugmeSoftver.Text = "💻 Softver";
+            dugmeSoftver.Text = "Softver";
             dugmeSoftver.BackColor = Color.FromArgb(0, 122, 204);
             dugmeSoftver.FlatStyle = FlatStyle.Flat;
             dugmeSoftver.FlatAppearance.BorderSize = 0;
@@ -111,7 +111,7 @@ namespace VanredneSituacije.Forme
 
             dugmeEkspertize.Location = new Point(860, 12);
             dugmeEkspertize.Size = new Size(130, 32);
-            dugmeEkspertize.Text = "🧠 Ekspertize";
+            dugmeEkspertize.Text = "Ekspertize";
             dugmeEkspertize.BackColor = Color.FromArgb(0, 122, 204);
             dugmeEkspertize.FlatStyle = FlatStyle.Flat;
             dugmeEkspertize.FlatAppearance.BorderSize = 0;
@@ -122,7 +122,7 @@ namespace VanredneSituacije.Forme
 
             dugmeSertifikati.Location = new Point(860, 12);
             dugmeSertifikati.Size = new Size(130, 32);
-            dugmeSertifikati.Text = "🎓 Sertifikati";
+            dugmeSertifikati.Text = "Sertifikati";
             dugmeSertifikati.BackColor = Color.FromArgb(0, 122, 204);
             dugmeSertifikati.FlatStyle = FlatStyle.Flat;
             dugmeSertifikati.FlatAppearance.BorderSize = 0;
@@ -133,7 +133,7 @@ namespace VanredneSituacije.Forme
 
             dugmeSpecijalizacije.Location = new Point(860, 12);
             dugmeSpecijalizacije.Size = new Size(130, 32);
-            dugmeSpecijalizacije.Text = "📘 Specijalizacije";
+            dugmeSpecijalizacije.Text = "Specijalizacije";
             dugmeSpecijalizacije.BackColor = Color.FromArgb(0, 122, 204);
             dugmeSpecijalizacije.FlatStyle = FlatStyle.Flat;
             dugmeSpecijalizacije.FlatAppearance.BorderSize = 0;
@@ -144,7 +144,7 @@ namespace VanredneSituacije.Forme
 
             dugmeDodelaVozila.Location = new Point(1000, 12);
             dugmeDodelaVozila.Size = new Size(130, 32);
-            dugmeDodelaVozila.Text = "🚗 Vozila";
+            dugmeDodelaVozila.Text = "Vozila";
             dugmeDodelaVozila.BackColor = Color.FromArgb(0, 122, 204);
             dugmeDodelaVozila.FlatStyle = FlatStyle.Flat;
             dugmeDodelaVozila.FlatAppearance.BorderSize = 0;
@@ -154,7 +154,7 @@ namespace VanredneSituacije.Forme
 
             dugmeIstorijaUloga.Location = new Point(1140, 12);
             dugmeIstorijaUloga.Size = new Size(130, 32);
-            dugmeIstorijaUloga.Text = "📜 Istorija uloga";
+            dugmeIstorijaUloga.Text = "Istorija uloga";
             dugmeIstorijaUloga.BackColor = Color.FromArgb(90, 90, 90);
             dugmeIstorijaUloga.FlatStyle = FlatStyle.Flat;
             dugmeIstorijaUloga.FlatAppearance.BorderSize = 0;
@@ -228,7 +228,7 @@ namespace VanredneSituacije.Forme
             Font = new Font("Segoe UI", 10F);
             Name = "FormaPregledZaposlenih";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "👥 Pregled zaposlenih";
+            Text = "Pregled zaposlenih";
             WindowState = FormWindowState.Maximized;
             Load += FormaPregledZaposlenih_Load;
 

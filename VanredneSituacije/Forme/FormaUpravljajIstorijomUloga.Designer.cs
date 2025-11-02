@@ -31,17 +31,13 @@ namespace VanredneSituacije.Forme
             label4 = new Label();
             comboBox1 = new ComboBox();
             SuspendLayout();
-            // 
-            // dateDatumDo
-            // 
+
             dateDatumDo.Format = DateTimePickerFormat.Short;
             dateDatumDo.Location = new Point(409, 51);
             dateDatumDo.Name = "dateDatumDo";
             dateDatumDo.Size = new Size(148, 23);
             dateDatumDo.TabIndex = 7;
-            // 
-            // label1
-            // 
+  
             label1.ForeColor = Color.FromArgb(40, 40, 40);
             label1.Location = new Point(304, 55);
             label1.Name = "label1";
@@ -49,17 +45,13 @@ namespace VanredneSituacije.Forme
             label1.TabIndex = 3;
             label1.Text = "Datum Do:";
             label1.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // dateDatumOf
-            // 
+
             dateDatumOf.Format = DateTimePickerFormat.Short;
             dateDatumOf.Location = new Point(409, 19);
             dateDatumOf.Name = "dateDatumOf";
             dateDatumOf.Size = new Size(148, 23);
             dateDatumOf.TabIndex = 6;
-            // 
-            // label2
-            // 
+
             label2.ForeColor = Color.FromArgb(40, 40, 40);
             label2.Location = new Point(304, 22);
             label2.Name = "label2";
@@ -67,16 +59,12 @@ namespace VanredneSituacije.Forme
             label2.TabIndex = 2;
             label2.Text = "Datum Od:";
             label2.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // textJmbg
-            // 
+  
             textJmbg.Location = new Point(143, 19);
             textJmbg.Name = "textJmbg";
             textJmbg.Size = new Size(147, 23);
             textJmbg.TabIndex = 4;
-            // 
-            // buttonReset
-            // 
+    
             buttonReset.BackColor = Color.FromArgb(255, 200, 80);
             buttonReset.FlatAppearance.BorderSize = 0;
             buttonReset.FlatStyle = FlatStyle.Flat;
@@ -87,9 +75,7 @@ namespace VanredneSituacije.Forme
             buttonReset.Text = "Reset";
             buttonReset.UseVisualStyleBackColor = false;
             buttonReset.Click += buttonReset_Click;
-            // 
-            // buttonOdustani
-            // 
+         
             buttonOdustani.BackColor = Color.FromArgb(220, 70, 70);
             buttonOdustani.FlatAppearance.BorderSize = 0;
             buttonOdustani.FlatStyle = FlatStyle.Flat;
@@ -101,9 +87,7 @@ namespace VanredneSituacije.Forme
             buttonOdustani.Text = "Odustani";
             buttonOdustani.UseVisualStyleBackColor = false;
             buttonOdustani.Click += buttonOdustani_Click;
-            // 
-            // buttonSacuvaj
-            // 
+       
             buttonSacuvaj.BackColor = Color.FromArgb(0, 122, 204);
             buttonSacuvaj.FlatAppearance.BorderSize = 0;
             buttonSacuvaj.FlatStyle = FlatStyle.Flat;
@@ -115,9 +99,7 @@ namespace VanredneSituacije.Forme
             buttonSacuvaj.Text = "Sačuvaj";
             buttonSacuvaj.UseVisualStyleBackColor = false;
             buttonSacuvaj.Click += buttonSacuvaj_Click;
-            // 
-            // label3
-            // 
+      
             label3.ForeColor = Color.FromArgb(40, 40, 40);
             label3.Location = new Point(38, 51);
             label3.Name = "label3";
@@ -125,9 +107,7 @@ namespace VanredneSituacije.Forme
             label3.TabIndex = 1;
             label3.Text = "Uloga:";
             label3.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
+       
             label4.ForeColor = Color.FromArgb(40, 40, 40);
             label4.Location = new Point(38, 23);
             label4.Name = "label4";
@@ -135,18 +115,14 @@ namespace VanredneSituacije.Forme
             label4.TabIndex = 0;
             label4.Text = "JMBG:";
             label4.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // comboBox1
-            // 
+      
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.Items.AddRange(new object[] { "Operativni Radnik", "Koordinator", "Analitičar" });
             comboBox1.Location = new Point(143, 47);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(147, 23);
             comboBox1.TabIndex = 5;
-            // 
-            // FormaUpravljajIstorijomUloga
-            // 
+        
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 247, 251);

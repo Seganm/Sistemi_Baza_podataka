@@ -42,9 +42,7 @@ namespace VanredneSituacije.Forme
             textAdresa = new TextBox();
             dateZaposlenje = new DateTimePicker();
             SuspendLayout();
-            // 
-            // label4
-            // 
+      
             label4.ForeColor = Color.FromArgb(40, 40, 40);
             label4.Location = new Point(33, 100);
             label4.Name = "label4";
@@ -52,9 +50,7 @@ namespace VanredneSituacije.Forme
             label4.TabIndex = 3;
             label4.Text = "Prezime:";
             label4.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label1
-            // 
+   
             label1.ForeColor = Color.FromArgb(40, 40, 40);
             label1.Location = new Point(33, 69);
             label1.Name = "label1";
@@ -62,9 +58,7 @@ namespace VanredneSituacije.Forme
             label1.TabIndex = 0;
             label1.Text = "Ime:";
             label1.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
+     
             label2.ForeColor = Color.FromArgb(40, 40, 40);
             label2.Location = new Point(33, 40);
             label2.Name = "label2";
@@ -72,9 +66,7 @@ namespace VanredneSituacije.Forme
             label2.TabIndex = 1;
             label2.Text = "JMBG:";
             label2.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
+     
             label3.ForeColor = Color.FromArgb(40, 40, 40);
             label3.Location = new Point(33, 128);
             label3.Name = "label3";
@@ -82,9 +74,7 @@ namespace VanredneSituacije.Forme
             label3.TabIndex = 2;
             label3.Text = "Datum rođenja:";
             label3.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
+        
             label5.ForeColor = Color.FromArgb(40, 40, 40);
             label5.Location = new Point(49, 181);
             label5.Name = "label5";
@@ -92,9 +82,7 @@ namespace VanredneSituacije.Forme
             label5.TabIndex = 4;
             label5.Text = "Pol:";
             label5.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
+    
             label6.ForeColor = Color.FromArgb(40, 40, 40);
             label6.Location = new Point(311, 37);
             label6.Name = "label6";
@@ -102,9 +90,7 @@ namespace VanredneSituacije.Forme
             label6.TabIndex = 5;
             label6.Text = "Kontakt:";
             label6.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
+     
             label7.ForeColor = Color.FromArgb(40, 40, 40);
             label7.Location = new Point(311, 69);
             label7.Name = "label7";
@@ -112,9 +98,7 @@ namespace VanredneSituacije.Forme
             label7.TabIndex = 6;
             label7.Text = "Email:";
             label7.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label8
-            // 
+     
             label8.ForeColor = Color.FromArgb(40, 40, 40);
             label8.Location = new Point(311, 97);
             label8.Name = "label8";
@@ -122,9 +106,7 @@ namespace VanredneSituacije.Forme
             label8.TabIndex = 7;
             label8.Text = "Adresa:";
             label8.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label9
-            // 
+      
             label9.ForeColor = Color.FromArgb(40, 40, 40);
             label9.Location = new Point(297, 126);
             label9.Name = "label9";
@@ -132,9 +114,7 @@ namespace VanredneSituacije.Forme
             label9.TabIndex = 8;
             label9.Text = "Datum zaposlenja:";
             label9.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // buttonSacuvaj
-            // 
+     
             buttonSacuvaj.BackColor = Color.FromArgb(0, 122, 204);
             buttonSacuvaj.FlatAppearance.BorderSize = 0;
             buttonSacuvaj.FlatStyle = FlatStyle.Flat;
@@ -146,9 +126,7 @@ namespace VanredneSituacije.Forme
             buttonSacuvaj.Text = "Sačuvaj";
             buttonSacuvaj.UseVisualStyleBackColor = false;
             buttonSacuvaj.Click += buttonSacuvaj_Click;
-            // 
-            // buttonOdustani
-            // 
+ 
             buttonOdustani.BackColor = Color.FromArgb(220, 70, 70);
             buttonOdustani.FlatAppearance.BorderSize = 0;
             buttonOdustani.FlatStyle = FlatStyle.Flat;
@@ -160,9 +138,7 @@ namespace VanredneSituacije.Forme
             buttonOdustani.Text = "Odustani";
             buttonOdustani.UseVisualStyleBackColor = false;
             buttonOdustani.Click += buttonOdustani_Click;
-            // 
-            // buttonRst
-            // 
+   
             buttonRst.BackColor = Color.FromArgb(255, 200, 80);
             buttonRst.FlatAppearance.BorderSize = 0;
             buttonRst.FlatStyle = FlatStyle.Flat;
@@ -173,82 +149,60 @@ namespace VanredneSituacije.Forme
             buttonRst.Text = "Reset";
             buttonRst.UseVisualStyleBackColor = false;
             buttonRst.Click += buttonRst_Click;
-            // 
-            // textJmbg
-            // 
+    
             textJmbg.Location = new Point(137, 35);
             textJmbg.MaxLength = 13;
             textJmbg.Name = "textJmbg";
             textJmbg.Size = new Size(147, 23);
             textJmbg.TabIndex = 9;
-            // 
-            // textIme
-            // 
+    
             textIme.Location = new Point(137, 66);
             textIme.Name = "textIme";
             textIme.Size = new Size(147, 23);
             textIme.TabIndex = 10;
-            // 
-            // textPrezime
-            // 
+    
             textPrezime.Location = new Point(137, 98);
             textPrezime.Name = "textPrezime";
             textPrezime.Size = new Size(147, 23);
             textPrezime.TabIndex = 11;
-            // 
-            // checkMusko
-            // 
+   
             checkMusko.Location = new Point(137, 180);
             checkMusko.Name = "checkMusko";
             checkMusko.Size = new Size(33, 24);
             checkMusko.TabIndex = 17;
             checkMusko.Text = "M";
-            // 
-            // checkZensko
-            // 
+      
             checkZensko.Location = new Point(176, 179);
             checkZensko.Name = "checkZensko";
             checkZensko.Size = new Size(33, 24);
             checkZensko.TabIndex = 18;
             checkZensko.Text = "Z";
-            // 
-            // dateRodjenje
-            // 
+        
             dateRodjenje.Location = new Point(137, 128);
             dateRodjenje.Name = "dateRodjenje";
             dateRodjenje.Size = new Size(147, 23);
             dateRodjenje.TabIndex = 15;
-            // 
-            // textKontakt
-            // 
+     
             textKontakt.Location = new Point(415, 35);
             textKontakt.Name = "textKontakt";
             textKontakt.Size = new Size(147, 23);
             textKontakt.TabIndex = 12;
-            // 
-            // textEmail
-            // 
+        
             textEmail.Location = new Point(415, 69);
             textEmail.Name = "textEmail";
             textEmail.Size = new Size(147, 23);
             textEmail.TabIndex = 13;
-            // 
-            // textAdresa
-            // 
+         
             textAdresa.Location = new Point(415, 97);
             textAdresa.Name = "textAdresa";
             textAdresa.Size = new Size(147, 23);
             textAdresa.TabIndex = 14;
-            // 
-            // dateZaposlenje
-            // 
+        
             dateZaposlenje.Location = new Point(415, 126);
             dateZaposlenje.Name = "dateZaposlenje";
             dateZaposlenje.Size = new Size(147, 23);
             dateZaposlenje.TabIndex = 16;
-            // 
-            // FormaUpravljajKoordinatorom
-            // 
+      
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 247, 251);

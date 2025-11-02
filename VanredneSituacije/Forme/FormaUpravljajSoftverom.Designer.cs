@@ -55,7 +55,7 @@
             txtNazivSoftvera.Size = new Size(140, 27);
             txtNazivSoftvera.BorderStyle = BorderStyle.FixedSingle;
 
-            btnSacuvaj.Text = "💾 Sačuvaj";
+            btnSacuvaj.Text = "Sačuvaj";
             btnSacuvaj.BackColor = Color.FromArgb(72, 156, 86);
             btnSacuvaj.ForeColor = Color.White;
             btnSacuvaj.FlatStyle = FlatStyle.Flat;
@@ -63,14 +63,14 @@
             btnSacuvaj.Size = new Size(90, 35);
             btnSacuvaj.Click += btnSacuvaj_Click;
 
-            btnOcisti.Text = "↺ Očisti";
+            btnOcisti.Text = "Očisti";
             btnOcisti.BackColor = Color.FromArgb(255, 196, 66);
             btnOcisti.FlatStyle = FlatStyle.Flat;
             btnOcisti.Location = new Point(140, 170);
             btnOcisti.Size = new Size(90, 35);
             btnOcisti.Click += btnOcisti_Click;
 
-            btnIzlaz.Text = "✖ Zatvori";
+            btnIzlaz.Text = "Zatvori";
             btnIzlaz.BackColor = Color.FromArgb(200, 60, 60);
             btnIzlaz.ForeColor = Color.White;
             btnIzlaz.FlatStyle = FlatStyle.Flat;

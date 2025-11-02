@@ -240,3 +240,24 @@ C:\Users\Marko\Desktop\KlonSBP\Sistemi_Baza_podataka\VanredneSituacije\obj\Debug
 C:\Users\Marko\Desktop\KlonSBP\Sistemi_Baza_podataka\VanredneSituacije\obj\Debug\net8.0-windows\VanredneSituacije.pdb
 C:\Users\Marko\Desktop\KlonSBP\Sistemi_Baza_podataka\VanredneSituacije\obj\Debug\net8.0-windows\VanredneSituacije.genruntimeconfig.cache
 C:\Users\Marko\Desktop\KlonSBP\Sistemi_Baza_podataka\VanredneSituacije\obj\Debug\net8.0-windows\ref\VanredneSituacije.dll
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\VanredneSituacije.exe
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\VanredneSituacije.deps.json
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\VanredneSituacije.runtimeconfig.json
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\VanredneSituacije.dll
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\VanredneSituacije.pdb
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\Antlr3.Runtime.dll
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\FluentNHibernate.dll
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\Iesi.Collections.dll
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\NHibernate.dll
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\Oracle.ManagedDataAccess.dll
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\Remotion.Linq.dll
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\Remotion.Linq.EagerFetching.dll
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\System.DirectoryServices.Protocols.dll
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\runtimes\linux\lib\net8.0\System.DirectoryServices.Protocols.dll
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\runtimes\osx\lib\net8.0\System.DirectoryServices.Protocols.dll
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.DirectoryServices.Protocols.dll
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\obj\Debug\net8.0-windows\Vanredne.BFC4A7DB.Up2Date
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\obj\Debug\net8.0-windows\VanredneSituacije.genruntimeconfig.cache
+C:\Users\Milos Milenkovic\Desktop\Baze\Sistemi_Baza_podataka\VanredneSituacije\obj\Debug\net8.0-windows\ref\VanredneSituacije.dll

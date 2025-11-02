@@ -38,7 +38,7 @@
             btnOperativni.Name = "btnOperativni";
             btnOperativni.Size = new Size(250, 35);
             btnOperativni.TabIndex = 2;
-            btnOperativni.Text = "👷 Operativni radnik";
+            btnOperativni.Text = "Operativni radnik";
             btnOperativni.UseVisualStyleBackColor = false;
             btnOperativni.Click += btnOperativni_Click;
 
@@ -50,7 +50,7 @@
             btnKoordinator.Name = "btnKoordinator";
             btnKoordinator.Size = new Size(250, 35);
             btnKoordinator.TabIndex = 3;
-            btnKoordinator.Text = "🧭 Koordinator";
+            btnKoordinator.Text = "Koordinator";
             btnKoordinator.UseVisualStyleBackColor = false;
             btnKoordinator.Click += btnKoordinator_Click;
 
@@ -62,7 +62,7 @@
             btnAnaliticar.Name = "btnAnaliticar";
             btnAnaliticar.Size = new Size(250, 35);
             btnAnaliticar.TabIndex = 4;
-            btnAnaliticar.Text = "📊 Analitičar";
+            btnAnaliticar.Text = "Analitičar";
             btnAnaliticar.UseVisualStyleBackColor = false;
             btnAnaliticar.Click += btnAnaliticar_Click;
 
@@ -74,7 +74,7 @@
             btnZatvori.Name = "btnZatvori";
             btnZatvori.Size = new Size(250, 35);
             btnZatvori.TabIndex = 5;
-            btnZatvori.Text = "❌ Zatvori";
+            btnZatvori.Text = "Zatvori";
             btnZatvori.UseVisualStyleBackColor = false;
             btnZatvori.Click += btnZatvori_Click;
 

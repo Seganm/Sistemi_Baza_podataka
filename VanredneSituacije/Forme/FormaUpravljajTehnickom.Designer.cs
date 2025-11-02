@@ -124,7 +124,7 @@
             btnSnimi.Location = new Point(142, 310);
             btnSnimi.Name = "btnSnimi";
             btnSnimi.Size = new Size(128, 45);
-            btnSnimi.Text = "💾 Sačuvaj podatke";
+            btnSnimi.Text = "Sačuvaj podatke";
             btnSnimi.UseVisualStyleBackColor = false;
             btnSnimi.Click += btnSacuvaj_Click;
 
@@ -134,7 +134,7 @@
             btnResetuj.Location = new Point(344, 310);
             btnResetuj.Name = "btnResetuj";
             btnResetuj.Size = new Size(120, 45);
-            btnResetuj.Text = "🔁 Očisti polja";
+            btnResetuj.Text = "Očisti polja";
             btnResetuj.UseVisualStyleBackColor = false;
             btnResetuj.Click += btnReset_Click;
 
@@ -144,7 +144,7 @@
             btnZatvoriFormu.Location = new Point(545, 310);
             btnZatvoriFormu.Name = "btnZatvoriFormu";
             btnZatvoriFormu.Size = new Size(137, 45);
-            btnZatvoriFormu.Text = "✖ Zatvori formu";
+            btnZatvoriFormu.Text = "Zatvori formu";
             btnZatvoriFormu.UseVisualStyleBackColor = false;
             btnZatvoriFormu.Click += btnZatvori_Click;
 

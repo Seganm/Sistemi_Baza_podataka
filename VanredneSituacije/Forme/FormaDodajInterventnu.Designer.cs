@@ -22,9 +22,7 @@
             panelLevi = new Panel();
             panelDesni = new Panel();
             SuspendLayout();
-            // 
-            // naslovLabel
-            // 
+
             naslovLabel.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             naslovLabel.ForeColor = Color.FromArgb(35, 60, 110);
             naslovLabel.Location = new Point(222, 26);
@@ -33,9 +31,7 @@
             naslovLabel.TabIndex = 2;
             naslovLabel.Text = "Odaberite tip jedinice:";
             naslovLabel.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // dugmeOpsta
-            // 
+
             dugmeOpsta.BackColor = Color.MediumSlateBlue;
             dugmeOpsta.FlatStyle = FlatStyle.Flat;
             dugmeOpsta.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
@@ -44,12 +40,10 @@
             dugmeOpsta.Name = "dugmeOpsta";
             dugmeOpsta.Size = new Size(160, 45);
             dugmeOpsta.TabIndex = 3;
-            dugmeOpsta.Text = "🚒 Opšta jedinica";
+            dugmeOpsta.Text = "Opšta jedinica";
             dugmeOpsta.UseVisualStyleBackColor = false;
             dugmeOpsta.Click += dugmeOpsta_Click;
-            // 
-            // dugmeSpecijalna
-            // 
+
             dugmeSpecijalna.BackColor = Color.Teal;
             dugmeSpecijalna.FlatStyle = FlatStyle.Flat;
             dugmeSpecijalna.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
@@ -58,12 +52,10 @@
             dugmeSpecijalna.Name = "dugmeSpecijalna";
             dugmeSpecijalna.Size = new Size(160, 45);
             dugmeSpecijalna.TabIndex = 4;
-            dugmeSpecijalna.Text = "🎯 Specijalna jedinica";
+            dugmeSpecijalna.Text = "Specijalna jedinica";
             dugmeSpecijalna.UseVisualStyleBackColor = false;
             dugmeSpecijalna.Click += dugmeSpecijalna_Click;
-            // 
-            // dugmeZatvori
-            // 
+
             dugmeZatvori.BackColor = Color.Firebrick;
             dugmeZatvori.FlatStyle = FlatStyle.Flat;
             dugmeZatvori.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
@@ -75,27 +67,21 @@
             dugmeZatvori.Text = "Odustani";
             dugmeZatvori.UseVisualStyleBackColor = false;
             dugmeZatvori.Click += dugmeZatvori_Click;
-            // 
-            // panelLevi
-            // 
+
             panelLevi.BackColor = Color.FromArgb(220, 230, 255);
             panelLevi.Dock = DockStyle.Left;
             panelLevi.Location = new Point(0, 0);
             panelLevi.Name = "panelLevi";
             panelLevi.Size = new Size(10, 366);
             panelLevi.TabIndex = 0;
-            // 
-            // panelDesni
-            // 
+
             panelDesni.BackColor = Color.FromArgb(220, 230, 255);
             panelDesni.Dock = DockStyle.Right;
             panelDesni.Location = new Point(807, 0);
             panelDesni.Name = "panelDesni";
             panelDesni.Size = new Size(10, 366);
             panelDesni.TabIndex = 1;
-            // 
-            // FormaDodajInterventnu
-            // 
+
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 252, 255);

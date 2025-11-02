@@ -52,19 +52,19 @@
             btnSacuvajSertifikat.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnSacuvajSertifikat.Location = new Point(84, 206);
             btnSacuvajSertifikat.Size = new Size(82, 30);
-            btnSacuvajSertifikat.Text = "💾 Sačuvaj";
+            btnSacuvajSertifikat.Text = "Sačuvaj";
             btnSacuvajSertifikat.Click += btnSacuvajSertifikat_Click;
 
             btnPonistiUnos.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnPonistiUnos.Location = new Point(181, 208);
             btnPonistiUnos.Size = new Size(90, 28);
-            btnPonistiUnos.Text = "🔄 Poništi";
+            btnPonistiUnos.Text = "Poništi";
             btnPonistiUnos.Click += btnPonistiUnos_Click;
 
             btnZatvoriFormu.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnZatvoriFormu.Location = new Point(277, 206);
             btnZatvoriFormu.Size = new Size(84, 30);
-            btnZatvoriFormu.Text = "❌ Zatvori";
+            btnZatvoriFormu.Text = "Zatvori";
             btnZatvoriFormu.Click += btnZatvoriFormu_Click;
 
             lblJmbgRadnika.AutoSize = true;

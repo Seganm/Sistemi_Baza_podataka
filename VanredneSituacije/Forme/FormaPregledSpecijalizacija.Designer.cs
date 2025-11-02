@@ -38,7 +38,7 @@ namespace VanredneSituacije.Forme
             dugmeSpecijalizacijaDodajj.ForeColor = Color.White;
             dugmeSpecijalizacijaDodajj.Location = new Point(12, 12);
             dugmeSpecijalizacijaDodajj.Size = new Size(150, 35);
-            dugmeSpecijalizacijaDodajj.Text = "➕ Dodaj novu";
+            dugmeSpecijalizacijaDodajj.Text = "Dodaj novu";
             dugmeSpecijalizacijaDodajj.UseVisualStyleBackColor = false;
             dugmeSpecijalizacijaDodajj.Click += dugmeSpecijalizacijaDodajj_Click;
 
@@ -48,7 +48,7 @@ namespace VanredneSituacije.Forme
             dugmeSpecijalizacijaIzmenii.ForeColor = Color.Black;
             dugmeSpecijalizacijaIzmenii.Location = new Point(168, 12);
             dugmeSpecijalizacijaIzmenii.Size = new Size(150, 35);
-            dugmeSpecijalizacijaIzmenii.Text = "✏ Izmeni podatke";
+            dugmeSpecijalizacijaIzmenii.Text = "Izmeni podatke";
             dugmeSpecijalizacijaIzmenii.UseVisualStyleBackColor = false;
             dugmeSpecijalizacijaIzmenii.Click += dugmeSpecijalizacijaIzmenii_Click;
 
@@ -58,7 +58,7 @@ namespace VanredneSituacije.Forme
             dugmeSpecijalizacijaObrisii.ForeColor = Color.White;
             dugmeSpecijalizacijaObrisii.Location = new Point(1022, 11);
             dugmeSpecijalizacijaObrisii.Size = new Size(150, 35);
-            dugmeSpecijalizacijaObrisii.Text = "🗑 Obriši zapis";
+            dugmeSpecijalizacijaObrisii.Text = "Obriši zapis";
             dugmeSpecijalizacijaObrisii.UseVisualStyleBackColor = false;
             dugmeSpecijalizacijaObrisii.Click += dugmeSpecijalizacijaObrisii_Click;
 
@@ -92,7 +92,7 @@ namespace VanredneSituacije.Forme
             naslovLabela.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold);
             naslovLabela.ForeColor = Color.FromArgb(52, 73, 94);
             naslovLabela.Location = new Point(410, 9);
-            naslovLabela.Text = "📘 Evidencija specijalizacija";
+            naslovLabela.Text = "Evidencija specijalizacija";
 
             BackColor = Color.FromArgb(250, 250, 250);
             ClientSize = new Size(1184, 661);

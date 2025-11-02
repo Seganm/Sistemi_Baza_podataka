@@ -48,7 +48,7 @@ namespace VanredneSituacije.Forme
             dugmeSoftveriDodajj.ForeColor = Color.White;
             dugmeSoftveriDodajj.Location = new Point(12, 11);
             dugmeSoftveriDodajj.Size = new Size(150, 32);
-            dugmeSoftveriDodajj.Text = "➕ Dodaj softver";
+            dugmeSoftveriDodajj.Text = "Dodaj softver";
             dugmeSoftveriDodajj.UseVisualStyleBackColor = false;
             dugmeSoftveriDodajj.Click += dugmeSoftveriDodajj_Click;
 
@@ -60,7 +60,7 @@ namespace VanredneSituacije.Forme
             dugmeSoftverIzmenii.ForeColor = Color.Black;
             dugmeSoftverIzmenii.Location = new Point(168, 11);
             dugmeSoftverIzmenii.Size = new Size(150, 32);
-            dugmeSoftverIzmenii.Text = "✏ Izmeni podatke";
+            dugmeSoftverIzmenii.Text = "Izmeni podatke";
             dugmeSoftverIzmenii.UseVisualStyleBackColor = false;
             dugmeSoftverIzmenii.Click += dugmeSoftverIzmenii_Click;
 
@@ -71,7 +71,7 @@ namespace VanredneSituacije.Forme
             dugmeSoftveriObrisii.ForeColor = Color.White;
             dugmeSoftveriObrisii.Location = new Point(1022, 11);
             dugmeSoftveriObrisii.Size = new Size(150, 32);
-            dugmeSoftveriObrisii.Text = "🗑 Obriši zapis";
+            dugmeSoftveriObrisii.Text = "Obriši zapis";
             dugmeSoftveriObrisii.UseVisualStyleBackColor = false;
             dugmeSoftveriObrisii.Click += dugmeSoftveriObrisii_Click;
 
@@ -125,7 +125,7 @@ namespace VanredneSituacije.Forme
             naslovLabela.Font = new Font("Segoe UI Semibold", 14F);
             naslovLabela.ForeColor = Color.FromArgb(45, 45, 45);
             naslovLabela.Location = new Point(500, 13);
-            naslovLabela.Text = "💻 Softverski alati analitičara";
+            naslovLabela.Text = "Softverski alati analitičara";
 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;

@@ -32,18 +32,14 @@ namespace VanredneSituacije.Forme
             buttonDodaj = new Button();
             buttonReset = new Button();
             SuspendLayout();
-            // 
-            // dateDo
-            // 
+       
             dateDo.Font = new Font("Segoe UI", 10F);
             dateDo.Format = DateTimePickerFormat.Short;
             dateDo.Location = new Point(495, 77);
             dateDo.Name = "dateDo";
             dateDo.Size = new Size(200, 25);
             dateDo.TabIndex = 9;
-            // 
-            // label1
-            // 
+      
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(45, 45, 45);
@@ -52,18 +48,14 @@ namespace VanredneSituacije.Forme
             label1.Size = new Size(74, 19);
             label1.TabIndex = 8;
             label1.Text = "Datum do:";
-            // 
-            // dateOd
-            // 
+          
             dateOd.Font = new Font("Segoe UI", 10F);
             dateOd.Format = DateTimePickerFormat.Short;
             dateOd.Location = new Point(495, 42);
             dateOd.Name = "dateOd";
             dateOd.Size = new Size(200, 25);
             dateOd.TabIndex = 7;
-            // 
-            // label2
-            // 
+       
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             label2.ForeColor = Color.FromArgb(45, 45, 45);
@@ -72,9 +64,7 @@ namespace VanredneSituacije.Forme
             label2.Size = new Size(74, 19);
             label2.TabIndex = 6;
             label2.Text = "Datum od:";
-            // 
-            // btnCancel
-            // 
+     
             btnCancel.BackColor = Color.FromArgb(220, 70, 70);
             btnCancel.FlatAppearance.BorderSize = 0;
             btnCancel.FlatStyle = FlatStyle.Flat;
@@ -87,9 +77,7 @@ namespace VanredneSituacije.Forme
             btnCancel.Text = "Odustani";
             btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
-            // 
-            // label3
-            // 
+    
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(45, 45, 45);
@@ -98,9 +86,7 @@ namespace VanredneSituacije.Forme
             label3.Size = new Size(56, 19);
             label3.TabIndex = 2;
             label3.Text = "Radnik:";
-            // 
-            // label4
-            // 
+    
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             label4.ForeColor = Color.FromArgb(45, 45, 45);
@@ -109,9 +95,7 @@ namespace VanredneSituacije.Forme
             label4.Size = new Size(63, 19);
             label4.TabIndex = 4;
             label4.Text = "Jedinica:";
-            // 
-            // label5
-            // 
+   
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             label5.ForeColor = Color.FromArgb(45, 45, 45);
@@ -120,9 +104,7 @@ namespace VanredneSituacije.Forme
             label5.Size = new Size(51, 19);
             label5.TabIndex = 0;
             label5.Text = "Vozilo:";
-            // 
-            // comboJedinica
-            // 
+ 
             comboJedinica.DropDownStyle = ComboBoxStyle.DropDownList;
             comboJedinica.Font = new Font("Segoe UI", 10F);
             comboJedinica.Location = new Point(150, 122);
@@ -130,9 +112,7 @@ namespace VanredneSituacije.Forme
             comboJedinica.Size = new Size(200, 25);
             comboJedinica.TabIndex = 5;
             comboJedinica.SelectedIndexChanged += comboJedinica_SelectedIndexChanged;
-            // 
-            // comboRadnik
-            // 
+
             comboRadnik.DropDownStyle = ComboBoxStyle.DropDownList;
             comboRadnik.Font = new Font("Segoe UI", 10F);
             comboRadnik.Location = new Point(150, 82);
@@ -140,9 +120,7 @@ namespace VanredneSituacije.Forme
             comboRadnik.Size = new Size(200, 25);
             comboRadnik.TabIndex = 3;
             comboRadnik.SelectedIndexChanged += comboRadnik_SelectedIndexChanged;
-            // 
-            // comboVozilo
-            // 
+
             comboVozilo.DropDownStyle = ComboBoxStyle.DropDownList;
             comboVozilo.Font = new Font("Segoe UI", 10F);
             comboVozilo.Location = new Point(150, 42);
@@ -150,9 +128,7 @@ namespace VanredneSituacije.Forme
             comboVozilo.Size = new Size(200, 25);
             comboVozilo.TabIndex = 1;
             comboVozilo.SelectedIndexChanged += comboVozilo_SelectedIndexChanged;
-            // 
-            // buttonDodaj
-            // 
+
             buttonDodaj.BackColor = Color.FromArgb(0, 120, 215);
             buttonDodaj.FlatAppearance.BorderSize = 0;
             buttonDodaj.FlatStyle = FlatStyle.Flat;
@@ -165,9 +141,7 @@ namespace VanredneSituacije.Forme
             buttonDodaj.Text = "Dodaj";
             buttonDodaj.UseVisualStyleBackColor = false;
             buttonDodaj.Click += btnSave_Click;
-            // 
-            // buttonReset
-            // 
+
             buttonReset.BackColor = Color.FromArgb(255, 210, 80);
             buttonReset.FlatAppearance.BorderSize = 0;
             buttonReset.FlatStyle = FlatStyle.Flat;
@@ -180,9 +154,7 @@ namespace VanredneSituacije.Forme
             buttonReset.Text = "Reset";
             buttonReset.UseVisualStyleBackColor = false;
             buttonReset.Click += btnRst_Click;
-            // 
-            // FormaUpravljajDodeljenim
-            // 
+
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 247, 250);

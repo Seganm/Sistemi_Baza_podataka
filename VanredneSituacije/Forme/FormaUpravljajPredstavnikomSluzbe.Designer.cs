@@ -101,7 +101,7 @@ namespace VanredneSituacije.Forme
             btnSacuvaj.ForeColor = Color.White;
             btnSacuvaj.Location = new Point(190, 191);
             btnSacuvaj.Size = new Size(90, 35);
-            btnSacuvaj.Text = "💾 Sačuvaj";
+            btnSacuvaj.Text = "Sačuvaj";
             btnSacuvaj.UseVisualStyleBackColor = false;
             btnSacuvaj.Click += btnSacuvaj_Click;
 
@@ -111,7 +111,7 @@ namespace VanredneSituacije.Forme
             btnReset.ForeColor = Color.Black;
             btnReset.Location = new Point(290, 191);
             btnReset.Size = new Size(90, 35);
-            btnReset.Text = "🔄 Reset";
+            btnReset.Text = "Reset";
             btnReset.UseVisualStyleBackColor = false;
             btnReset.Click += btnReset_Click;
 
@@ -121,7 +121,7 @@ namespace VanredneSituacije.Forme
             btnOdustani.ForeColor = Color.White;
             btnOdustani.Location = new Point(390, 191);
             btnOdustani.Size = new Size(90, 35);
-            btnOdustani.Text = "❌ Otkaži";
+            btnOdustani.Text = "Otkaži";
             btnOdustani.UseVisualStyleBackColor = false;
             btnOdustani.Click += btnOdustani_Click;
 

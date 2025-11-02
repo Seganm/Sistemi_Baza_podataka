@@ -80,7 +80,7 @@
             btnReset.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnReset.Location = new Point(139, 386);
             btnReset.Size = new Size(90, 28);
-            btnReset.Text = "🔄 Resetuj";
+            btnReset.Text = "Resetuj";
             btnReset.Click += btnReset_Click;
 
             btnOdustani.BackColor = Color.FromArgb(239, 83, 80);
@@ -89,7 +89,7 @@
             btnOdustani.ForeColor = Color.White;
             btnOdustani.Location = new Point(235, 386);
             btnOdustani.Size = new Size(82, 30);
-            btnOdustani.Text = "❌ Odustani";
+            btnOdustani.Text = "Odustani";
             btnOdustani.Click += btnOdustani_Click;
 
             btnSacuvaj.BackColor = Color.FromArgb(76, 175, 80);
@@ -98,7 +98,7 @@
             btnSacuvaj.ForeColor = Color.White;
             btnSacuvaj.Location = new Point(55, 386);
             btnSacuvaj.Size = new Size(82, 30);
-            btnSacuvaj.Text = "💾 Sačuvaj";
+            btnSacuvaj.Text = "Sačuvaj";
             btnSacuvaj.Click += btnSacuvaj_Click;
 
             lblPrijava.Text = "Prijava:";

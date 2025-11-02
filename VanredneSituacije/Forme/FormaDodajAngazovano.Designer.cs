@@ -25,26 +25,20 @@
             dugmePonisti = new Button();
             dugmeZatvori = new Button();
             SuspendLayout();
-            // 
-            // listaIntervencija
-            // 
+  
             listaIntervencija.DropDownStyle = ComboBoxStyle.DropDownList;
             listaIntervencija.Location = new Point(120, 30);
             listaIntervencija.Name = "listaIntervencija";
             listaIntervencija.Size = new Size(230, 23);
             listaIntervencija.TabIndex = 0;
             listaIntervencija.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-            // 
-            // listaVozila
-            // 
+   
             listaVozila.DropDownStyle = ComboBoxStyle.DropDownList;
             listaVozila.Location = new Point(420, 30);
             listaVozila.Name = "listaVozila";
             listaVozila.Size = new Size(230, 23);
             listaVozila.TabIndex = 1;
-            // 
-            // lblIntervencija
-            // 
+     
             lblIntervencija.AutoSize = true;
             lblIntervencija.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblIntervencija.Location = new Point(40, 35);
@@ -52,9 +46,7 @@
             lblIntervencija.Size = new Size(77, 15);
             lblIntervencija.TabIndex = 7;
             lblIntervencija.Text = "Intervencija:";
-            // 
-            // lblVozilo
-            // 
+    
             lblVozilo.AutoSize = true;
             lblVozilo.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblVozilo.Location = new Point(360, 35);
@@ -62,9 +54,7 @@
             lblVozilo.Size = new Size(43, 15);
             lblVozilo.TabIndex = 8;
             lblVozilo.Text = "Vozilo:";
-            // 
-            // lblDatumOd
-            // 
+   
             lblDatumOd.AutoSize = true;
             lblDatumOd.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblDatumOd.Location = new Point(120, 90);
@@ -72,9 +62,7 @@
             lblDatumOd.Size = new Size(72, 15);
             lblDatumOd.TabIndex = 9;
             lblDatumOd.Text = "Početak od:";
-            // 
-            // lblDatumDo
-            // 
+  
             lblDatumDo.AutoSize = true;
             lblDatumDo.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblDatumDo.Location = new Point(400, 90);
@@ -82,25 +70,19 @@
             lblDatumDo.Size = new Size(54, 15);
             lblDatumDo.TabIndex = 10;
             lblDatumDo.Text = "Traje do:";
-            // 
-            // datumOdPicker
-            // 
+
             datumOdPicker.Format = DateTimePickerFormat.Short;
             datumOdPicker.Location = new Point(200, 85);
             datumOdPicker.Name = "datumOdPicker";
             datumOdPicker.Size = new Size(130, 23);
             datumOdPicker.TabIndex = 2;
-            // 
-            // datumDoPicker
-            // 
+ 
             datumDoPicker.Format = DateTimePickerFormat.Short;
             datumDoPicker.Location = new Point(470, 85);
             datumDoPicker.Name = "datumDoPicker";
             datumDoPicker.Size = new Size(130, 23);
             datumDoPicker.TabIndex = 3;
-            // 
-            // dugmeSacuvaj
-            // 
+  
             dugmeSacuvaj.BackColor = Color.MediumSeaGreen;
             dugmeSacuvaj.FlatStyle = FlatStyle.Flat;
             dugmeSacuvaj.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -112,9 +94,7 @@
             dugmeSacuvaj.Text = "Sačuvaj";
             dugmeSacuvaj.UseVisualStyleBackColor = false;
             dugmeSacuvaj.Click += dugmeSacuvaj_Click;
-            // 
-            // dugmePonisti
-            // 
+
             dugmePonisti.BackColor = Color.Goldenrod;
             dugmePonisti.FlatStyle = FlatStyle.Flat;
             dugmePonisti.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -126,9 +106,7 @@
             dugmePonisti.Text = " Poništi";
             dugmePonisti.UseVisualStyleBackColor = false;
             dugmePonisti.Click += dugmePonisti_Click;
-            // 
-            // dugmeZatvori
-            // 
+
             dugmeZatvori.BackColor = Color.IndianRed;
             dugmeZatvori.FlatStyle = FlatStyle.Flat;
             dugmeZatvori.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -140,9 +118,7 @@
             dugmeZatvori.Text = " Zatvori";
             dugmeZatvori.UseVisualStyleBackColor = false;
             dugmeZatvori.Click += dugmeZatvori_Click;
-            // 
-            // FormaDodajAngazovano
-            // 
+
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Honeydew;

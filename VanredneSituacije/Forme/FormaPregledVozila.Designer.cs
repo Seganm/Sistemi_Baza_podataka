@@ -48,7 +48,7 @@ namespace VanredneSituacije.Forme
             izborTipaVozila.Size = new Size(160, 28);
             izborTipaVozila.SelectedIndexChanged += izborTipaVozila_SelectedIndexChanged;
 
-            dugmeDodajVozilo.Text = "➕ Dodaj vozilo";
+            dugmeDodajVozilo.Text = "Dodaj vozilo";
             dugmeDodajVozilo.BackColor = Color.FromArgb(0, 122, 204);
             dugmeDodajVozilo.ForeColor = Color.White;
             dugmeDodajVozilo.FlatStyle = FlatStyle.Flat;
@@ -57,7 +57,7 @@ namespace VanredneSituacije.Forme
             dugmeDodajVozilo.Size = new Size(171, 40);
             dugmeDodajVozilo.Click += dugmeDodajVozilo_Click;
 
-            dugmeIzmeniVozilo.Text = "✏ Izmeni vozilo";
+            dugmeIzmeniVozilo.Text = "Izmeni vozilo";
             dugmeIzmeniVozilo.BackColor = Color.FromArgb(255, 193, 7);
             dugmeIzmeniVozilo.FlatStyle = FlatStyle.Flat;
             dugmeIzmeniVozilo.Font = new Font("Segoe UI", 9F);
@@ -66,7 +66,7 @@ namespace VanredneSituacije.Forme
             dugmeIzmeniVozilo.Size = new Size(171, 40);
             dugmeIzmeniVozilo.Click += dugmeIzmeniVozilo_Click;
 
-            dugmeObrisiVozilo.Text = "🗑 Obriši vozilo";
+            dugmeObrisiVozilo.Text = "Obriši vozilo";
             dugmeObrisiVozilo.BackColor = Color.FromArgb(220, 70, 70);
             dugmeObrisiVozilo.FlatStyle = FlatStyle.Flat;
             dugmeObrisiVozilo.Font = new Font("Segoe UI", 9F);
@@ -75,7 +75,7 @@ namespace VanredneSituacije.Forme
             dugmeObrisiVozilo.Size = new Size(171, 40);
             dugmeObrisiVozilo.Click += dugmeObrisiVozilo_Click;
 
-            dugmeIntervencije.Text = "📋 Intervencije";
+            dugmeIntervencije.Text = "Intervencije";
             dugmeIntervencije.BackColor = Color.FromArgb(90, 90, 90);
             dugmeIntervencije.ForeColor = Color.White;
             dugmeIntervencije.FlatStyle = FlatStyle.Flat;
@@ -84,7 +84,7 @@ namespace VanredneSituacije.Forme
             dugmeIntervencije.Size = new Size(171, 40);
             dugmeIntervencije.Click += dugmeIntervencije_Click;
 
-            dugmeServisi.Text = "🔧 Servisi vozila";
+            dugmeServisi.Text = "Servisi vozila";
             dugmeServisi.BackColor = Color.FromArgb(0, 122, 204);
             dugmeServisi.ForeColor = Color.White;
             dugmeServisi.FlatStyle = FlatStyle.Flat;
@@ -96,7 +96,7 @@ namespace VanredneSituacije.Forme
             BackColor = Color.FromArgb(245, 247, 250);
             ClientSize = new Size(1353, 881);
             Controls.AddRange(new Control[] { izborTipaVozila, dugmeDodajVozilo, dugmeIzmeniVozilo, dugmeObrisiVozilo, dugmeIntervencije, dugmeServisi, tabelaVozila });
-            Text = "🚗 Pregled vozila";
+            Text = "Pregled vozila";
             WindowState = FormWindowState.Maximized;
             Load += FormaPregledVozila_Load;
 

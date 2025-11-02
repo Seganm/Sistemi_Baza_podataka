@@ -41,7 +41,7 @@
             btnIzmeni.Name = "btnIzmeni";
             btnIzmeni.Size = new Size(145, 35);
             btnIzmeni.TabIndex = 0;
-            btnIzmeni.Text = "✏️ Izmeni";
+            btnIzmeni.Text = "Izmeni";
             btnIzmeni.UseVisualStyleBackColor = false;
             btnIzmeni.Click += btnIzmeni_Click;
 
@@ -53,7 +53,7 @@
             btnObrisi.Name = "btnObrisi";
             btnObrisi.Size = new Size(145, 35);
             btnObrisi.TabIndex = 1;
-            btnObrisi.Text = "🗑️ Obriši";
+            btnObrisi.Text = "Obriši";
             btnObrisi.UseVisualStyleBackColor = false;
             btnObrisi.Click += btnObrisi_Click;
 

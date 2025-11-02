@@ -42,7 +42,7 @@ namespace VanredneSituacije.Forme
             naslovLabela.Font = new Font("Segoe UI Semibold", 16F);
             naslovLabela.ForeColor = Color.FromArgb(45, 45, 45);
             naslovLabela.Location = new Point(20, 12);
-            naslovLabela.Text = "📋 Pregled svih službi";
+            naslovLabela.Text = "Pregled svih službi";
 
             dugmeSluzbaDodajj.BackColor = Color.FromArgb(0, 122, 204);
             dugmeSluzbaDodajj.FlatAppearance.BorderSize = 0;
@@ -51,7 +51,7 @@ namespace VanredneSituacije.Forme
             dugmeSluzbaDodajj.ForeColor = Color.White;
             dugmeSluzbaDodajj.Location = new Point(710, 12);
             dugmeSluzbaDodajj.Size = new Size(150, 32);
-            dugmeSluzbaDodajj.Text = "➕ Dodaj službu";
+            dugmeSluzbaDodajj.Text = "Dodaj službu";
             dugmeSluzbaDodajj.UseVisualStyleBackColor = false;
             dugmeSluzbaDodajj.Click += dugmeSluzbaDodajj_Click;
 
@@ -63,7 +63,7 @@ namespace VanredneSituacije.Forme
             dugmeSluzbaIzmenii.ForeColor = Color.Black;
             dugmeSluzbaIzmenii.Location = new Point(866, 12);
             dugmeSluzbaIzmenii.Size = new Size(150, 32);
-            dugmeSluzbaIzmenii.Text = "✏ Izmeni službu";
+            dugmeSluzbaIzmenii.Text = "Izmeni službu";
             dugmeSluzbaIzmenii.UseVisualStyleBackColor = false;
             dugmeSluzbaIzmenii.Click += dugmeSluzbaIzmenii_Click;
 
@@ -74,7 +74,7 @@ namespace VanredneSituacije.Forme
             dugmeSluzbaObrisii.ForeColor = Color.White;
             dugmeSluzbaObrisii.Location = new Point(1022, 12);
             dugmeSluzbaObrisii.Size = new Size(150, 32);
-            dugmeSluzbaObrisii.Text = "🗑 Obriši službu";
+            dugmeSluzbaObrisii.Text = "Obriši službu";
             dugmeSluzbaObrisii.UseVisualStyleBackColor = false;
             dugmeSluzbaObrisii.Click += dugmeSluzbaObrisii_Click;
 

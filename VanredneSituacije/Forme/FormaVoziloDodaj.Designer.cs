@@ -39,7 +39,7 @@
             btnSanitetsko.Name = "btnSanitetsko";
             btnSanitetsko.Size = new Size(240, 40);
             btnSanitetsko.TabIndex = 1;
-            btnSanitetsko.Text = "🚑 Sanitetsko vozilo";
+            btnSanitetsko.Text = "Sanitetsko vozilo";
             btnSanitetsko.UseVisualStyleBackColor = false;
             btnSanitetsko.Click += btnSanitetsko_Click;
 
@@ -51,7 +51,7 @@
             btnSpecijalnoVozilo.Name = "btnSpecijalnoVozilo";
             btnSpecijalnoVozilo.Size = new Size(240, 40);
             btnSpecijalnoVozilo.TabIndex = 2;
-            btnSpecijalnoVozilo.Text = "🚒 Specijalno vozilo";
+            btnSpecijalnoVozilo.Text = "Specijalno vozilo";
             btnSpecijalnoVozilo.UseVisualStyleBackColor = false;
             btnSpecijalnoVozilo.Click += btnSpecijalnoVozilo_Click;
 
@@ -63,7 +63,7 @@
             btnDzipVozilo.Name = "btnDzipVozilo";
             btnDzipVozilo.Size = new Size(240, 40);
             btnDzipVozilo.TabIndex = 3;
-            btnDzipVozilo.Text = "🚙 Terensko vozilo";
+            btnDzipVozilo.Text = "Terensko vozilo";
             btnDzipVozilo.UseVisualStyleBackColor = false;
             btnDzipVozilo.Click += btnDzipVozilo_Click;
 
@@ -75,7 +75,7 @@
             btnKamionVozilo.Name = "btnKamionVozilo";
             btnKamionVozilo.Size = new Size(240, 40);
             btnKamionVozilo.TabIndex = 4;
-            btnKamionVozilo.Text = "🚛 Kamion";
+            btnKamionVozilo.Text = "Kamion";
             btnKamionVozilo.UseVisualStyleBackColor = false;
             btnKamionVozilo.Click += btnKamionVozilo_Click;
 
@@ -87,7 +87,7 @@
             btnOdustani.Name = "btnOdustani";
             btnOdustani.Size = new Size(240, 40);
             btnOdustani.TabIndex = 5;
-            btnOdustani.Text = "❌ Zatvori formu";
+            btnOdustani.Text = "Zatvori formu";
             btnOdustani.UseVisualStyleBackColor = false;
             btnOdustani.Click += btnOdustani_Click;
 

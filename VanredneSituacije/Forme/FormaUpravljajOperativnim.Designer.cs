@@ -83,7 +83,7 @@ namespace VanredneSituacije.Forme
             btnReset.FlatStyle = FlatStyle.Flat;
             btnReset.Location = new Point(265, 239);
             btnReset.Size = new Size(90, 28);
-            btnReset.Text = "🔄 Reset";
+            btnReset.Text = "Reset";
             btnReset.Click += btnReset_Click;
 
             btnOdustani.BackColor = Color.FromArgb(220, 70, 70);
@@ -91,7 +91,7 @@ namespace VanredneSituacije.Forme
             btnOdustani.ForeColor = Color.White;
             btnOdustani.Location = new Point(390, 239);
             btnOdustani.Size = new Size(82, 28);
-            btnOdustani.Text = "✖ Odustani";
+            btnOdustani.Text = "Odustani";
             btnOdustani.Click += btnOdustani_Click;
 
             btnSacuvaj.BackColor = Color.FromArgb(0, 122, 204);
@@ -99,7 +99,7 @@ namespace VanredneSituacije.Forme
             btnSacuvaj.ForeColor = Color.White;
             btnSacuvaj.Location = new Point(149, 239);
             btnSacuvaj.Size = new Size(82, 28);
-            btnSacuvaj.Text = "💾 Sačuvaj";
+            btnSacuvaj.Text = "Sačuvaj";
             btnSacuvaj.Click += btnSacuvaj_Click;
 
             lblDatumZaposlenja.Location = new Point(319, 113);

@@ -51,7 +51,7 @@ namespace VanredneSituacije.Forme
             labelNaslov.Font = new Font("Segoe UI Black", 16F, FontStyle.Bold);
             labelNaslov.ForeColor = Color.FromArgb(41, 128, 185);
             labelNaslov.Location = new Point(150, 15);
-            labelNaslov.Text = "🧠 Upravljanje analitičarem";
+            labelNaslov.Text = "Upravljanje analitičarem";
 
     
             Font labelFont = new Font("Segoe UI Semibold", 10F);
@@ -131,7 +131,7 @@ namespace VanredneSituacije.Forme
             dateZaposlenje.Size = new Size(textWidth, 25);
 
     
-            buttonSave.Text = "💾 Sačuvaj";
+            buttonSave.Text = "Sačuvaj";
             buttonSave.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             buttonSave.BackColor = Color.FromArgb(0, 122, 204);
             buttonSave.ForeColor = Color.White;
@@ -141,7 +141,7 @@ namespace VanredneSituacije.Forme
             buttonSave.Location = new Point(60, 280);
             buttonSave.Click += buttonSave_Click;
 
-            buttonReset.Text = "🔄 Resetuj";
+            buttonReset.Text = "Resetuj";
             buttonReset.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             buttonReset.BackColor = Color.FromArgb(255, 190, 80);
             buttonReset.ForeColor = Color.Black;
@@ -151,7 +151,7 @@ namespace VanredneSituacije.Forme
             buttonReset.Location = new Point(230, 280);
             buttonReset.Click += buttonReset_Click;
 
-            buttonCancel.Text = "❌ Otkaži";
+            buttonCancel.Text = "Otkaži";
             buttonCancel.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             buttonCancel.BackColor = Color.FromArgb(220, 70, 70);
             buttonCancel.ForeColor = Color.White;

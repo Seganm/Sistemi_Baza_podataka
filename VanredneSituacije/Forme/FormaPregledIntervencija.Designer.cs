@@ -31,7 +31,7 @@
             naslovLabel.Name = "naslovLabel";
             naslovLabel.Size = new Size(203, 25);
             naslovLabel.TabIndex = 0;
-            naslovLabel.Text = "🚒 Istorija intervencija";
+            naslovLabel.Text = "Istorija intervencija";
 
             dugmeDodaj.BackColor = Color.FromArgb(0, 122, 204);
             dugmeDodaj.FlatAppearance.BorderSize = 0;
@@ -42,7 +42,7 @@
             dugmeDodaj.Name = "dugmeDodaj";
             dugmeDodaj.Size = new Size(150, 32);
             dugmeDodaj.TabIndex = 1;
-            dugmeDodaj.Text = "➕ Dodaj";
+            dugmeDodaj.Text = "Dodaj";
             dugmeDodaj.UseVisualStyleBackColor = false;
             dugmeDodaj.Click += dugmeDodaj_Click;
 
@@ -55,7 +55,7 @@
             dugmeIzmeni.Name = "dugmeIzmeni";
             dugmeIzmeni.Size = new Size(150, 32);
             dugmeIzmeni.TabIndex = 2;
-            dugmeIzmeni.Text = "✏ Izmeni";
+            dugmeIzmeni.Text = "Izmeni";
             dugmeIzmeni.UseVisualStyleBackColor = false;
             dugmeIzmeni.Click += dugmeIzmeni_Click;
 
@@ -68,7 +68,7 @@
             dugmeObrisi.Name = "dugmeObrisi";
             dugmeObrisi.Size = new Size(150, 32);
             dugmeObrisi.TabIndex = 3;
-            dugmeObrisi.Text = "🗑 Obriši";
+            dugmeObrisi.Text = "Obriši";
             dugmeObrisi.UseVisualStyleBackColor = false;
             dugmeObrisi.Click += dugmeObrisi_Click;
 

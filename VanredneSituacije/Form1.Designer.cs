@@ -38,9 +38,7 @@ namespace VanredneSituacije
             btnVs = new Button();
             panelDugmici.SuspendLayout();
             SuspendLayout();
-            // 
-            // panelDugmici
-            // 
+   
             panelDugmici.AutoSize = true;
             panelDugmici.BackColor = Color.FromArgb(245, 247, 250);
             panelDugmici.Controls.Add(lblNaslov);
@@ -63,9 +61,7 @@ namespace VanredneSituacije
             panelDugmici.Name = "panelDugmici";
             panelDugmici.Size = new Size(1223, 644);
             panelDugmici.TabIndex = 0;
-            // 
-            // lblNaslov
-            // 
+  
             lblNaslov.AutoSize = true;
             lblNaslov.Font = new Font("Segoe UI Semibold", 14F);
             lblNaslov.ForeColor = Color.FromArgb(45, 45, 45);
@@ -73,10 +69,8 @@ namespace VanredneSituacije
             lblNaslov.Name = "lblNaslov";
             lblNaslov.Size = new Size(414, 25);
             lblNaslov.TabIndex = 0;
-            lblNaslov.Text = "📋 Sistem za upravljanje vanrednim situacijama";
-            // 
-            // panelPrikaz
-            // 
+            lblNaslov.Text = "Sistem za upravljanje vanrednim situacijama";
+  
             panelPrikaz.BackColor = Color.White;
             panelPrikaz.BorderStyle = BorderStyle.FixedSingle;
             panelPrikaz.Location = new Point(13, 165);
@@ -84,9 +78,7 @@ namespace VanredneSituacije
             panelPrikaz.Size = new Size(1179, 476);
             panelPrikaz.TabIndex = 15;
             panelPrikaz.Paint += panelPrikaz_Paint;
-            // 
-            // button3
-            // 
+ 
             button3.AutoSize = true;
             button3.BackColor = Color.FromArgb(255, 190, 80);
             button3.FlatAppearance.BorderSize = 0;
@@ -97,12 +89,10 @@ namespace VanredneSituacije
             button3.Name = "button3";
             button3.Size = new Size(146, 38);
             button3.TabIndex = 16;
-            button3.Text = "🕓 Istorija vozila";
+            button3.Text = "Istorija vozila";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click_1;
-            // 
-            // btnJedinice
-            // 
+
             btnJedinice.AutoSize = true;
             btnJedinice.BackColor = Color.FromArgb(0, 122, 204);
             btnJedinice.FlatAppearance.BorderSize = 0;
@@ -113,12 +103,10 @@ namespace VanredneSituacije
             btnJedinice.Name = "btnJedinice";
             btnJedinice.Size = new Size(146, 38);
             btnJedinice.TabIndex = 17;
-            btnJedinice.Text = "🏢 Jedinice";
+            btnJedinice.Text = "Jedinice";
             btnJedinice.UseVisualStyleBackColor = false;
             btnJedinice.Click += btnJedinice_Click_1;
-            // 
-            // button2
-            // 
+
             button2.AutoSize = true;
             button2.BackColor = Color.FromArgb(0, 122, 204);
             button2.FlatAppearance.BorderSize = 0;
@@ -129,12 +117,10 @@ namespace VanredneSituacije
             button2.Name = "button2";
             button2.Size = new Size(156, 38);
             button2.TabIndex = 18;
-            button2.Text = "👨‍✈️ Predstavnici službi";
+            button2.Text = "Predstavnici službi";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click_1;
-            // 
-            // btnIntervencije
-            // 
+
             btnIntervencije.AutoSize = true;
             btnIntervencije.BackColor = Color.FromArgb(0, 122, 204);
             btnIntervencije.FlatAppearance.BorderSize = 0;
@@ -145,12 +131,10 @@ namespace VanredneSituacije
             btnIntervencije.Name = "btnIntervencije";
             btnIntervencije.Size = new Size(146, 38);
             btnIntervencije.TabIndex = 19;
-            btnIntervencije.Text = "🚒 Intervencije";
+            btnIntervencije.Text = "Intervencije";
             btnIntervencije.UseVisualStyleBackColor = false;
             btnIntervencije.Click += btnIntervencije_Click_1;
-            // 
-            // button1
-            // 
+
             button1.AutoSize = true;
             button1.BackColor = Color.FromArgb(0, 122, 204);
             button1.FlatAppearance.BorderSize = 0;
@@ -161,12 +145,10 @@ namespace VanredneSituacije
             button1.Name = "button1";
             button1.Size = new Size(146, 38);
             button1.TabIndex = 20;
-            button1.Text = "🏛️ Službe";
+            button1.Text = "Službe";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
-            // 
-            // btnPrijava
-            // 
+ 
             btnPrijava.AutoSize = true;
             btnPrijava.BackColor = Color.FromArgb(0, 122, 204);
             btnPrijava.FlatAppearance.BorderSize = 0;
@@ -177,12 +159,10 @@ namespace VanredneSituacije
             btnPrijava.Name = "btnPrijava";
             btnPrijava.Size = new Size(146, 38);
             btnPrijava.TabIndex = 21;
-            btnPrijava.Text = "➕ Nova prijava";
+            btnPrijava.Text = "Nova prijava";
             btnPrijava.UseVisualStyleBackColor = false;
             btnPrijava.Click += btnPrijava_Click_1;
-            // 
-            // buttonSaradnje
-            // 
+
             buttonSaradnje.AutoSize = true;
             buttonSaradnje.BackColor = Color.FromArgb(0, 122, 204);
             buttonSaradnje.FlatAppearance.BorderSize = 0;
@@ -193,12 +173,10 @@ namespace VanredneSituacije
             buttonSaradnje.Name = "buttonSaradnje";
             buttonSaradnje.Size = new Size(146, 38);
             buttonSaradnje.TabIndex = 22;
-            buttonSaradnje.Text = "\U0001f91d Saradnje";
+            buttonSaradnje.Text = "Saradnje";
             buttonSaradnje.UseVisualStyleBackColor = false;
             buttonSaradnje.Click += buttonSaradnje_Click_1;
-            // 
-            // btnZaposleni
-            // 
+
             btnZaposleni.AutoSize = true;
             btnZaposleni.BackColor = Color.FromArgb(0, 122, 204);
             btnZaposleni.FlatAppearance.BorderSize = 0;
@@ -209,12 +187,10 @@ namespace VanredneSituacije
             btnZaposleni.Name = "btnZaposleni";
             btnZaposleni.Size = new Size(146, 38);
             btnZaposleni.TabIndex = 23;
-            btnZaposleni.Text = "👷 Zaposleni";
+            btnZaposleni.Text = "Zaposleni";
             btnZaposleni.UseVisualStyleBackColor = false;
             btnZaposleni.Click += btnZaposleni_Click_1;
-            // 
-            // btnOprema
-            // 
+
             btnOprema.AutoSize = true;
             btnOprema.BackColor = Color.FromArgb(0, 122, 204);
             btnOprema.FlatAppearance.BorderSize = 0;
@@ -225,12 +201,10 @@ namespace VanredneSituacije
             btnOprema.Name = "btnOprema";
             btnOprema.Size = new Size(148, 38);
             btnOprema.TabIndex = 24;
-            btnOprema.Text = "⚙️ Oprema agencije";
+            btnOprema.Text = "Oprema agencije";
             btnOprema.UseVisualStyleBackColor = false;
             btnOprema.Click += btnOprema_Click_1;
-            // 
-            // btnVozila
-            // 
+
             btnVozila.AutoSize = true;
             btnVozila.BackColor = Color.FromArgb(0, 122, 204);
             btnVozila.FlatAppearance.BorderSize = 0;
@@ -241,12 +215,10 @@ namespace VanredneSituacije
             btnVozila.Name = "btnVozila";
             btnVozila.Size = new Size(156, 38);
             btnVozila.TabIndex = 25;
-            btnVozila.Text = "🚗 Vozila";
+            btnVozila.Text = "Vozila";
             btnVozila.UseVisualStyleBackColor = false;
             btnVozila.Click += btnVozila_Click_1;
-            // 
-            // btnIstorija
-            // 
+
             btnIstorija.AutoSize = true;
             btnIstorija.BackColor = Color.FromArgb(255, 190, 80);
             btnIstorija.FlatAppearance.BorderSize = 0;
@@ -257,12 +229,10 @@ namespace VanredneSituacije
             btnIstorija.Name = "btnIstorija";
             btnIstorija.Size = new Size(154, 38);
             btnIstorija.TabIndex = 26;
-            btnIstorija.Text = "\U0001f9fe Istorija zaposlenih";
+            btnIstorija.Text = "Istorija zaposlenih";
             btnIstorija.UseVisualStyleBackColor = false;
             btnIstorija.Click += btnIstorija_Click_1;
-            // 
-            // button8
-            // 
+
             button8.AutoSize = true;
             button8.BackColor = Color.FromArgb(255, 190, 80);
             button8.FlatAppearance.BorderSize = 0;
@@ -273,12 +243,10 @@ namespace VanredneSituacije
             button8.Name = "button8";
             button8.Size = new Size(146, 38);
             button8.TabIndex = 27;
-            button8.Text = "📜 Istorija učešća";
+            button8.Text = "Istorija učešća";
             button8.UseVisualStyleBackColor = false;
             button8.Click += button8_Click_1;
-            // 
-            // buttonUcestvuje
-            // 
+
             buttonUcestvuje.AutoSize = true;
             buttonUcestvuje.BackColor = Color.FromArgb(0, 122, 204);
             buttonUcestvuje.FlatAppearance.BorderSize = 0;
@@ -289,12 +257,10 @@ namespace VanredneSituacije
             buttonUcestvuje.Name = "buttonUcestvuje";
             buttonUcestvuje.Size = new Size(146, 38);
             buttonUcestvuje.TabIndex = 28;
-            buttonUcestvuje.Text = "\U0001f91d Učešća u V.S.";
+            buttonUcestvuje.Text = "Učešća u V.S.";
             buttonUcestvuje.UseVisualStyleBackColor = false;
             buttonUcestvuje.Click += buttonUcestvuje_Click_1;
-            // 
-            // btnVs
-            // 
+
             btnVs.AutoSize = true;
             btnVs.BackColor = Color.FromArgb(0, 122, 204);
             btnVs.FlatAppearance.BorderSize = 0;
@@ -305,12 +271,10 @@ namespace VanredneSituacije
             btnVs.Name = "btnVs";
             btnVs.Size = new Size(155, 38);
             btnVs.TabIndex = 29;
-            btnVs.Text = "🌐 Vanredne situacije";
+            btnVs.Text = "Vanredne situacije";
             btnVs.UseVisualStyleBackColor = false;
             btnVs.Click += btnVs_Click_1;
-            // 
-            // Form1
-            // 
+
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;

@@ -85,7 +85,7 @@
             cmbNamenaVozila.Size = new Size(170, 28);
             cmbNamenaVozila.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            btnSacuvajPodatke.Text = "💾 Sačuvaj";
+            btnSacuvajPodatke.Text = "Sačuvaj";
             btnSacuvajPodatke.BackColor = Color.FromArgb(72, 156, 86);
             btnSacuvajPodatke.ForeColor = Color.White;
             btnSacuvajPodatke.FlatStyle = FlatStyle.Flat;
@@ -93,14 +93,14 @@
             btnSacuvajPodatke.Size = new Size(100, 35);
             btnSacuvajPodatke.Click += btnSacuvajPodatke_Click;
 
-            btnResetujPolja.Text = "↺ Resetuj";
+            btnResetujPolja.Text = "Resetuj";
             btnResetujPolja.BackColor = Color.FromArgb(255, 196, 66);
             btnResetujPolja.FlatStyle = FlatStyle.Flat;
             btnResetujPolja.Location = new Point(160, 300);
             btnResetujPolja.Size = new Size(100, 35);
             btnResetujPolja.Click += btnResetujPolja_Click;
 
-            btnZatvoriFormu.Text = "✖ Zatvori";
+            btnZatvoriFormu.Text = "Zatvori";
             btnZatvoriFormu.BackColor = Color.FromArgb(200, 60, 60);
             btnZatvoriFormu.ForeColor = Color.White;
             btnZatvoriFormu.FlatStyle = FlatStyle.Flat;

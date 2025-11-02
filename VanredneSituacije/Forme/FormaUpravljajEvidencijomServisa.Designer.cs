@@ -29,25 +29,19 @@ namespace VanredneSituacije.Forme
             dateDatum = new DateTimePicker();
             label2 = new Label();
             SuspendLayout();
-            // 
-            // txtVozilo
-            // 
+
             txtVozilo.Location = new Point(125, 20);
             txtVozilo.Margin = new Padding(3, 2, 3, 2);
             txtVozilo.Name = "txtVozilo";
             txtVozilo.Size = new Size(145, 23);
             txtVozilo.TabIndex = 2;
-            // 
-            // txtTip
-            // 
+
             txtTip.Location = new Point(125, 48);
             txtTip.Margin = new Padding(3, 2, 3, 2);
             txtTip.Name = "txtTip";
             txtTip.Size = new Size(145, 23);
             txtTip.TabIndex = 3;
-            // 
-            // label1
-            // 
+
             label1.ForeColor = Color.FromArgb(40, 40, 40);
             label1.Location = new Point(21, 51);
             label1.Name = "label1";
@@ -55,9 +49,7 @@ namespace VanredneSituacije.Forme
             label1.TabIndex = 4;
             label1.Text = "Tip servisa:";
             label1.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // buttonReset
-            // 
+
             buttonReset.BackColor = Color.FromArgb(255, 200, 80);
             buttonReset.FlatAppearance.BorderSize = 0;
             buttonReset.FlatStyle = FlatStyle.Flat;
@@ -69,9 +61,7 @@ namespace VanredneSituacije.Forme
             buttonReset.Text = "Reset";
             buttonReset.UseVisualStyleBackColor = false;
             buttonReset.Click += button3_Click;
-            // 
-            // buttonOdustani
-            // 
+
             buttonOdustani.BackColor = Color.FromArgb(220, 70, 70);
             buttonOdustani.FlatAppearance.BorderSize = 0;
             buttonOdustani.FlatStyle = FlatStyle.Flat;
@@ -84,9 +74,7 @@ namespace VanredneSituacije.Forme
             buttonOdustani.Text = "Odustani";
             buttonOdustani.UseVisualStyleBackColor = false;
             buttonOdustani.Click += button2_Click;
-            // 
-            // buttonSacuvaj
-            // 
+
             buttonSacuvaj.BackColor = Color.FromArgb(0, 122, 204);
             buttonSacuvaj.FlatAppearance.BorderSize = 0;
             buttonSacuvaj.FlatStyle = FlatStyle.Flat;
@@ -99,9 +87,7 @@ namespace VanredneSituacije.Forme
             buttonSacuvaj.Text = "Sačuvaj";
             buttonSacuvaj.UseVisualStyleBackColor = false;
             buttonSacuvaj.Click += button1_Click;
-            // 
-            // label5
-            // 
+
             label5.ForeColor = Color.FromArgb(40, 40, 40);
             label5.Location = new Point(21, 22);
             label5.Name = "label5";
@@ -109,18 +95,14 @@ namespace VanredneSituacije.Forme
             label5.TabIndex = 8;
             label5.Text = "Vozilo:";
             label5.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // dateDatum
-            // 
+
             dateDatum.Format = DateTimePickerFormat.Short;
             dateDatum.Location = new Point(388, 20);
             dateDatum.Margin = new Padding(3, 2, 3, 2);
             dateDatum.Name = "dateDatum";
             dateDatum.Size = new Size(145, 23);
             dateDatum.TabIndex = 1;
-            // 
-            // label2
-            // 
+ 
             label2.ForeColor = Color.FromArgb(40, 40, 40);
             label2.Location = new Point(284, 23);
             label2.Name = "label2";
@@ -128,9 +110,7 @@ namespace VanredneSituacije.Forme
             label2.TabIndex = 0;
             label2.Text = "Datum:";
             label2.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // FormaUpravljajEvidencijomServisa
-            // 
+
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 247, 251);

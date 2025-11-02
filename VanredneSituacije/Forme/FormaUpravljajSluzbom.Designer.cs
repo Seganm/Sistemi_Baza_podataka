@@ -55,7 +55,7 @@
             cmbPredstavnici.Size = new Size(160, 28);
             cmbPredstavnici.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            btnSnimi.Text = "💾 Sačuvaj";
+            btnSnimi.Text = "Sačuvaj";
             btnSnimi.BackColor = Color.FromArgb(72, 156, 86);
             btnSnimi.ForeColor = Color.White;
             btnSnimi.FlatStyle = FlatStyle.Flat;
@@ -63,14 +63,14 @@
             btnSnimi.Size = new Size(90, 35);
             btnSnimi.Click += btnSnimi_Click;
 
-            btnResetuj.Text = "↺ Očisti";
+            btnResetuj.Text = "Očisti";
             btnResetuj.BackColor = Color.FromArgb(255, 196, 66);
             btnResetuj.FlatStyle = FlatStyle.Flat;
             btnResetuj.Location = new Point(160, 180);
             btnResetuj.Size = new Size(90, 35);
             btnResetuj.Click += btnResetuj_Click;
 
-            btnZatvori.Text = "✖ Zatvori";
+            btnZatvori.Text = "Zatvori";
             btnZatvori.BackColor = Color.FromArgb(200, 60, 60);
             btnZatvori.ForeColor = Color.White;
             btnZatvori.FlatStyle = FlatStyle.Flat;

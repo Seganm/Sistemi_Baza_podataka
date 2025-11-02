@@ -69,7 +69,7 @@ namespace VanredneSituacije.Forme
             btnReset.ForeColor = Color.Black;
             btnReset.Location = new Point(467, 257);
             btnReset.Size = new Size(90, 30);
-            btnReset.Text = "🔄 Reset";
+            btnReset.Text = "Reset";
             btnReset.UseVisualStyleBackColor = false;
             btnReset.Click += btnReset_Click;
 
@@ -79,7 +79,7 @@ namespace VanredneSituacije.Forme
             btnOdustani.ForeColor = Color.White;
             btnOdustani.Location = new Point(567, 257);
             btnOdustani.Size = new Size(104, 30);
-            btnOdustani.Text = "✖ Odustani";
+            btnOdustani.Text = "Odustani";
             btnOdustani.UseVisualStyleBackColor = false;
             btnOdustani.Click += btnOdustani_Click;
 
@@ -89,7 +89,7 @@ namespace VanredneSituacije.Forme
             btnSacuvaj.ForeColor = Color.White;
             btnSacuvaj.Location = new Point(367, 257);
             btnSacuvaj.Size = new Size(90, 30);
-            btnSacuvaj.Text = "💾 Sačuvaj";
+            btnSacuvaj.Text = "Sačuvaj";
             btnSacuvaj.UseVisualStyleBackColor = false;
             btnSacuvaj.Click += btnSacuvaj_Click;
 
@@ -151,7 +151,7 @@ namespace VanredneSituacije.Forme
             lblNaslov.ForeColor = Color.FromArgb(45, 45, 45);
             lblNaslov.Location = new Point(268, 28);
             lblNaslov.Size = new Size(225, 25);
-            lblNaslov.Text = "📝 Upravljanje prijavama";
+            lblNaslov.Text = "Upravljanje prijavama";
 
             pnlGlavni.BackColor = Color.FromArgb(245, 247, 250);
             pnlGlavni.Controls.Add(lblNaslov);

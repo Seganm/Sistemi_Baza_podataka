@@ -50,7 +50,7 @@ namespace VanredneSituacije.Forme
             oznakaNaslov.Font = new Font("Segoe UI Semibold", 14F);
             oznakaNaslov.ForeColor = Color.FromArgb(45, 45, 45);
             oznakaNaslov.Location = new Point(516, 13);
-            oznakaNaslov.Text = "📋 Lista prijava";
+            oznakaNaslov.Text = "Lista prijava";
 
       
             dugmeObrisi.BackColor = Color.FromArgb(220, 70, 70);
@@ -60,7 +60,7 @@ namespace VanredneSituacije.Forme
             dugmeObrisi.ForeColor = Color.White;
             dugmeObrisi.Location = new Point(1022, 12);
             dugmeObrisi.Size = new Size(150, 32);
-            dugmeObrisi.Text = "🗑 Obriši prijavu";
+            dugmeObrisi.Text = "Obriši prijavu";
             dugmeObrisi.UseVisualStyleBackColor = false;
             dugmeObrisi.Click += dugmeObrisi_Click;
 
@@ -72,7 +72,7 @@ namespace VanredneSituacije.Forme
             dugmeIzmeni.ForeColor = Color.Black;
             dugmeIzmeni.Location = new Point(168, 13);
             dugmeIzmeni.Size = new Size(150, 32);
-            dugmeIzmeni.Text = "✏ Izmeni podatke";
+            dugmeIzmeni.Text = "Izmeni podatke";
             dugmeIzmeni.UseVisualStyleBackColor = false;
             dugmeIzmeni.Click += dugmeIzmeni_Click;
 
@@ -83,7 +83,7 @@ namespace VanredneSituacije.Forme
             dugmeDodaj.ForeColor = Color.White;
             dugmeDodaj.Location = new Point(12, 12);
             dugmeDodaj.Size = new Size(150, 32);
-            dugmeDodaj.Text = "➕ Nova prijava";
+            dugmeDodaj.Text = "Nova prijava";
             dugmeDodaj.UseVisualStyleBackColor = false;
             dugmeDodaj.Click += dugmeDodaj_Click;
 

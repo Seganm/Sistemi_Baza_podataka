@@ -63,7 +63,7 @@
             cmbVanrednaSituacija.BackColor = Color.White;
             cmbVanrednaSituacija.FlatStyle = FlatStyle.Flat;
 
-            btnSave.Text = "💾 Sačuvaj";
+            btnSave.Text = "Sačuvaj";
             btnSave.BackColor = Color.FromArgb(76, 175, 80);
             btnSave.ForeColor = Color.White;
             btnSave.FlatStyle = FlatStyle.Flat;
@@ -71,14 +71,14 @@
             btnSave.Size = new Size(84, 30);
             btnSave.Click += btnSave_Click;
 
-            btnReset.Text = "🔄 Reset";
+            btnReset.Text = "Reset";
             btnReset.BackColor = Color.FromArgb(255, 213, 79);
             btnReset.FlatStyle = FlatStyle.Flat;
             btnReset.Location = new Point(181, 189);
             btnReset.Size = new Size(90, 30);
             btnReset.Click += btnReset_Click;
 
-            btnCancel.Text = "❌ Odustani";
+            btnCancel.Text = "Odustani";
             btnCancel.BackColor = Color.FromArgb(229, 57, 53);
             btnCancel.ForeColor = Color.White;
             btnCancel.FlatStyle = FlatStyle.Flat;

@@ -96,7 +96,7 @@
             btnSacuvaj.Location = new Point(122, 212);
             btnSacuvaj.Name = "btnSacuvaj";
             btnSacuvaj.Size = new Size(101, 47);
-            btnSacuvaj.Text = "💾 Sačuvaj";
+            btnSacuvaj.Text = "Sačuvaj";
             btnSacuvaj.UseVisualStyleBackColor = false;
             btnSacuvaj.Click += btnSacuvaj_Click;
 
@@ -106,7 +106,7 @@
             btnResetuj.Location = new Point(322, 212);
             btnResetuj.Name = "btnResetuj";
             btnResetuj.Size = new Size(104, 47);
-            btnResetuj.Text = "🔁 Očisti";
+            btnResetuj.Text = "Očisti";
             btnResetuj.UseVisualStyleBackColor = false;
             btnResetuj.Click += btnResetuj_Click;
 
@@ -116,7 +116,7 @@
             btnZatvori.Location = new Point(539, 212);
             btnZatvori.Name = "btnZatvori";
             btnZatvori.Size = new Size(103, 47);
-            btnZatvori.Text = "✖ Zatvori";
+            btnZatvori.Text = "Zatvori";
             btnZatvori.UseVisualStyleBackColor = false;
             btnZatvori.Click += btnZatvori_Click;
 

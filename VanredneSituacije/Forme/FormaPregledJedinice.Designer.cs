@@ -65,7 +65,7 @@ namespace VanredneSituacije.Forme
             dugmeDodaj.Location = new Point(398, 11);
             dugmeDodaj.Name = "dugmeDodaj";
             dugmeDodaj.Size = new Size(150, 30);
-            dugmeDodaj.Text = "➕ Dodaj";
+            dugmeDodaj.Text = "Dodaj";
             dugmeDodaj.UseVisualStyleBackColor = false;
             dugmeDodaj.Click += dugmeDodaj_Click;
 
@@ -77,7 +77,7 @@ namespace VanredneSituacije.Forme
             dugmeIzmeni.Location = new Point(554, 11);
             dugmeIzmeni.Name = "dugmeIzmeni";
             dugmeIzmeni.Size = new Size(150, 30);
-            dugmeIzmeni.Text = "✏ Izmeni";
+            dugmeIzmeni.Text = "Izmeni";
             dugmeIzmeni.UseVisualStyleBackColor = false;
             dugmeIzmeni.Click += dugmeIzmeni_Click;
 
@@ -89,7 +89,7 @@ namespace VanredneSituacije.Forme
             dugmeObrisi.Location = new Point(710, 11);
             dugmeObrisi.Name = "dugmeObrisi";
             dugmeObrisi.Size = new Size(150, 30);
-            dugmeObrisi.Text = "🗑 Obriši";
+            dugmeObrisi.Text = "Obriši";
             dugmeObrisi.UseVisualStyleBackColor = false;
             dugmeObrisi.Click += dugmeObrisi_Click;
 
@@ -101,7 +101,7 @@ namespace VanredneSituacije.Forme
             dugmeVozila.Location = new Point(866, 11);
             dugmeVozila.Name = "dugmeVozila";
             dugmeVozila.Size = new Size(150, 30);
-            dugmeVozila.Text = "🚗 Vozila";
+            dugmeVozila.Text = "Vozila";
             dugmeVozila.UseVisualStyleBackColor = false;
             dugmeVozila.Click += dugmeVozila_Click;
 
@@ -113,7 +113,7 @@ namespace VanredneSituacije.Forme
             dugmeClanovi.Location = new Point(1022, 11);
             dugmeClanovi.Name = "dugmeClanovi";
             dugmeClanovi.Size = new Size(150, 30);
-            dugmeClanovi.Text = "👥 Članovi";
+            dugmeClanovi.Text = "Članovi";
             dugmeClanovi.UseVisualStyleBackColor = false;
             dugmeClanovi.Click += dugmeClanovi_Click;
 

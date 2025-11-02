@@ -45,7 +45,7 @@ namespace VanredneSituacije.Forme
             dugmeObrisi.ForeColor = Color.White;
             dugmeObrisi.Location = new Point(1022, 7);
             dugmeObrisi.Size = new Size(150, 32);
-            dugmeObrisi.Text = "🗑 Obriši";
+            dugmeObrisi.Text = "Obriši";
             dugmeObrisi.UseVisualStyleBackColor = false;
             dugmeObrisi.Click += dugmeObrisi_Click;
 
@@ -56,7 +56,7 @@ namespace VanredneSituacije.Forme
             dugmeIzmeni.ForeColor = Color.Black;
             dugmeIzmeni.Location = new Point(168, 11);
             dugmeIzmeni.Size = new Size(150, 32);
-            dugmeIzmeni.Text = "✏ Izmeni";
+            dugmeIzmeni.Text = "Izmeni";
             dugmeIzmeni.UseVisualStyleBackColor = false;
             dugmeIzmeni.Click += dugmeIzmeni_Click;
  
@@ -67,7 +67,7 @@ namespace VanredneSituacije.Forme
             dugmeDodaj.ForeColor = Color.White;
             dugmeDodaj.Location = new Point(12, 11);
             dugmeDodaj.Size = new Size(150, 32);
-            dugmeDodaj.Text = "➕ Dodaj";
+            dugmeDodaj.Text = "Dodaj";
             dugmeDodaj.UseVisualStyleBackColor = false;
             dugmeDodaj.Click += dugmeDodaj_Click;
 
@@ -127,7 +127,7 @@ namespace VanredneSituacije.Forme
             oznakaNaslov.Font = new Font("Segoe UI Semibold", 14F);
             oznakaNaslov.ForeColor = Color.FromArgb(45, 45, 45);
             oznakaNaslov.Location = new Point(512, 14);
-            oznakaNaslov.Text = "👔 Predstavnici službi";
+            oznakaNaslov.Text = "Predstavnici službi";
 
       
             AutoScaleDimensions = new SizeF(7F, 17F);

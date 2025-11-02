@@ -55,7 +55,7 @@
             txtOblastSpecijalizacije.Size = new Size(140, 27);
             txtOblastSpecijalizacije.BorderStyle = BorderStyle.FixedSingle;
 
-            btnSacuvajSpecijalizaciju.Text = "💾 Sačuvaj";
+            btnSacuvajSpecijalizaciju.Text = "Sačuvaj";
             btnSacuvajSpecijalizaciju.BackColor = Color.FromArgb(72, 156, 86);
             btnSacuvajSpecijalizaciju.ForeColor = Color.White;
             btnSacuvajSpecijalizaciju.FlatStyle = FlatStyle.Flat;
@@ -63,14 +63,14 @@
             btnSacuvajSpecijalizaciju.Size = new Size(90, 35);
             btnSacuvajSpecijalizaciju.Click += btnSacuvajSpecijalizaciju_Click;
 
-            btnOcistiPolja.Text = "↺ Očisti";
+            btnOcistiPolja.Text = "Očisti";
             btnOcistiPolja.BackColor = Color.FromArgb(255, 196, 66);
             btnOcistiPolja.FlatStyle = FlatStyle.Flat;
             btnOcistiPolja.Location = new Point(150, 180);
             btnOcistiPolja.Size = new Size(90, 35);
             btnOcistiPolja.Click += btnOcistiPolja_Click;
 
-            btnZatvoriFormu.Text = "✖ Zatvori";
+            btnZatvoriFormu.Text = "Zatvori";
             btnZatvoriFormu.BackColor = Color.FromArgb(200, 60, 60);
             btnZatvoriFormu.ForeColor = Color.White;
             btnZatvoriFormu.FlatStyle = FlatStyle.Flat;

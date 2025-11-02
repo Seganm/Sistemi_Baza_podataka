@@ -33,9 +33,7 @@
             lblKolicina = new Label();
             ((System.ComponentModel.ISupportInitialize)numKolicina).BeginInit();
             SuspendLayout();
-            // 
-            // lblNaslov
-            // 
+          
             lblNaslov.Dock = DockStyle.Top;
             lblNaslov.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             lblNaslov.ForeColor = Color.FromArgb(20, 40, 80);
@@ -45,59 +43,43 @@
             lblNaslov.TabIndex = 0;
             lblNaslov.Text = "📦 Upravljanje zalihama";
             lblNaslov.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // txtSerijski
-            // 
+        
             txtSerijski.Location = new Point(135, 119);
             txtSerijski.Name = "txtSerijski";
             txtSerijski.Size = new Size(149, 23);
             txtSerijski.TabIndex = 3;
-            // 
-            // txtNaziv
-            // 
+         
             txtNaziv.Location = new Point(423, 119);
             txtNaziv.Name = "txtNaziv";
             txtNaziv.Size = new Size(149, 23);
             txtNaziv.TabIndex = 5;
-            // 
-            // cmbStatus
-            // 
+     
             cmbStatus.Location = new Point(423, 163);
             cmbStatus.Name = "cmbStatus";
             cmbStatus.Size = new Size(149, 23);
             cmbStatus.TabIndex = 7;
-            // 
-            // dtpDatum
-            // 
+    
             dtpDatum.Location = new Point(135, 166);
             dtpDatum.Name = "dtpDatum";
             dtpDatum.Size = new Size(149, 23);
             dtpDatum.TabIndex = 9;
-            // 
-            // cmbJedinica
-            // 
+       
             cmbJedinica.Location = new Point(135, 213);
             cmbJedinica.Name = "cmbJedinica";
             cmbJedinica.Size = new Size(149, 23);
             cmbJedinica.TabIndex = 11;
-            // 
-            // cmbTip
-            // 
+  
             cmbTip.Location = new Point(423, 213);
             cmbTip.Name = "cmbTip";
             cmbTip.Size = new Size(149, 23);
             cmbTip.TabIndex = 13;
-            // 
-            // numKolicina
-            // 
+  
             numKolicina.Location = new Point(301, 273);
             numKolicina.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             numKolicina.Name = "numKolicina";
             numKolicina.Size = new Size(149, 23);
             numKolicina.TabIndex = 15;
-            // 
-            // btnSacuvaj
-            // 
+       
             btnSacuvaj.BackColor = Color.SteelBlue;
             btnSacuvaj.FlatStyle = FlatStyle.Popup;
             btnSacuvaj.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
@@ -106,12 +88,10 @@
             btnSacuvaj.Name = "btnSacuvaj";
             btnSacuvaj.Size = new Size(96, 26);
             btnSacuvaj.TabIndex = 16;
-            btnSacuvaj.Text = "💾 Sačuvaj";
+            btnSacuvaj.Text = "Sačuvaj";
             btnSacuvaj.UseVisualStyleBackColor = false;
             btnSacuvaj.Click += btnSacuvaj_Click;
-            // 
-            // btnReset
-            // 
+
             btnReset.BackColor = Color.LightSteelBlue;
             btnReset.FlatStyle = FlatStyle.Popup;
             btnReset.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
@@ -120,12 +100,10 @@
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(96, 26);
             btnReset.TabIndex = 17;
-            btnReset.Text = "🔄 Očisti";
+            btnReset.Text = "Očisti";
             btnReset.UseVisualStyleBackColor = false;
             btnReset.Click += btnReset_Click;
-            // 
-            // btnZatvori
-            // 
+ 
             btnZatvori.BackColor = Color.LightCoral;
             btnZatvori.FlatStyle = FlatStyle.Popup;
             btnZatvori.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
@@ -134,68 +112,52 @@
             btnZatvori.Name = "btnZatvori";
             btnZatvori.Size = new Size(96, 26);
             btnZatvori.TabIndex = 18;
-            btnZatvori.Text = "❌ Izlaz";
+            btnZatvori.Text = "Izlaz";
             btnZatvori.UseVisualStyleBackColor = false;
             btnZatvori.Click += btnZatvori_Click;
-            // 
-            // lblSerijski
-            // 
+         
             lblSerijski.Location = new Point(41, 119);
             lblSerijski.Name = "lblSerijski";
             lblSerijski.Size = new Size(88, 17);
             lblSerijski.TabIndex = 2;
             lblSerijski.Text = "Broj serije:";
-            // 
-            // lblNaziv
-            // 
+             
             lblNaziv.Location = new Point(329, 119);
             lblNaziv.Name = "lblNaziv";
             lblNaziv.Size = new Size(88, 17);
             lblNaziv.TabIndex = 4;
             lblNaziv.Text = "Naziv stavke:";
-            // 
-            // lblStatus
-            // 
+           
             lblStatus.Location = new Point(329, 169);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(88, 17);
             lblStatus.TabIndex = 6;
             lblStatus.Text = "Trenutno stanje:";
-            // 
-            // lblDatum
-            // 
+           
             lblDatum.Location = new Point(41, 169);
             lblDatum.Name = "lblDatum";
             lblDatum.Size = new Size(88, 17);
             lblDatum.TabIndex = 8;
             lblDatum.Text = "Datum nabavke:";
-            // 
-            // lblJedinica
-            // 
+       
             lblJedinica.Location = new Point(41, 219);
             lblJedinica.Name = "lblJedinica";
             lblJedinica.Size = new Size(88, 17);
             lblJedinica.TabIndex = 10;
             lblJedinica.Text = "Tip jedinice:";
-            // 
-            // lblTip
-            // 
+         
             lblTip.Location = new Point(329, 213);
             lblTip.Name = "lblTip";
             lblTip.Size = new Size(88, 17);
             lblTip.TabIndex = 12;
             lblTip.Text = "Kategorija:";
-            // 
-            // lblKolicina
-            // 
+      
             lblKolicina.Location = new Point(207, 279);
             lblKolicina.Name = "lblKolicina";
             lblKolicina.Size = new Size(88, 17);
             lblKolicina.TabIndex = 14;
             lblKolicina.Text = "Količina:";
-            // 
-            // FormaUpravljajZalihama
-            // 
+       
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;

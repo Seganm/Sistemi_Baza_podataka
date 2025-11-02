@@ -53,12 +53,12 @@ namespace VanredneSituacije.Forme
             }
             if (servis == null)
             {
-                await DTOManager.DodajServis(servisi);
+                await DTOManager.EvidencijaServisDodajj(servisi);
                 MessageBox.Show("Uspesno ste dodali servis");
             }
             else
             {
-                await DTOManager.IzmeniServis(servisi, servis.Id);
+                await DTOManager.ServisIzmenii(servisi, servis.Id);
                 MessageBox.Show("Uspesno ste izmenili servis");
             }
 

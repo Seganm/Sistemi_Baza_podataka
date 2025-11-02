@@ -22,7 +22,7 @@ namespace VanredneSituacije.Forme
 
         public async void UcitajPrijave()
         {
-            var lista = await DTOManager.VratiPrijave();
+            var lista = await DTOManager.PrijaveVratii();
             mrezaPrijave.DataSource = lista;
             mrezaPrijave.Refresh();
             mrezaPrijave.ClearSelection();
@@ -67,7 +67,7 @@ namespace VanredneSituacije.Forme
 
             if (potvrda == DialogResult.OK)
             {
-                await DTOManager.ObrisiPrijavu(prijava.Id);
+                await DTOManager.PrijavaObrisii(prijava.Id);
                 MessageBox.Show("Prijava obrisana.", "Info");
                 UcitajPrijave();
             }

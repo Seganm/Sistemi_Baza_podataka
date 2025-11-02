@@ -31,12 +31,12 @@ namespace VanredneSituacije.Forme
 
         public void PopuniPodacima()
         {
-            dateDatumVreme.Value = intervencijaa.Datum_I_Vreme;
+            dateDatumVreme.Value = intervencijaa.DatumVremee;
             textLokacija.Text = intervencijaa.Lokacija;
             comboStatus.Text = intervencijaa.Status;
             textResursi.Text = intervencijaa.Resursi;
-            numericSpaseni.Value = intervencijaa.Broj_Spasenih;
-            numericPovredjeni.Value = intervencijaa.Broj_Povredjenih;
+            numericSpaseni.Value = intervencijaa.BrSpasenih;
+            numericPovredjeni.Value = intervencijaa.BrPovredjenih;
             numericUspesnost.Value = intervencijaa.Uspesnost;
         }
 
@@ -58,12 +58,12 @@ namespace VanredneSituacije.Forme
         private async void buttonSave_Click_1(object sender, EventArgs e)
         {
             DTOOsnovnaIntervencija intervencija = new DTOOsnovnaIntervencija();
-            intervencija.Datum_I_Vreme = dateDatumVreme.Value;
+            intervencija.DatumVremee = dateDatumVreme.Value;
             intervencija.Lokacija = textLokacija.Text; ;
             intervencija.Status = (Status)Enum.Parse(typeof(Status), comboStatus.Text);
             intervencija.Resursi = textResursi.Text;
-            intervencija.Broj_Spasenih = (int)numericSpaseni.Value;
-            intervencija.Broj_Povredjenih = (int)numericPovredjeni.Value;
+            intervencija.BrSpasenih = (int)numericSpaseni.Value;
+            intervencija.BrPovredjenih = (int)numericPovredjeni.Value;
             intervencija.Uspesnost = (int)numericUspesnost.Value;
 
             if (comboStatus.SelectedIndex == -1 || string.IsNullOrEmpty(textLokacija.Text) || string.IsNullOrEmpty(textResursi.Text))
@@ -74,12 +74,12 @@ namespace VanredneSituacije.Forme
 
             if (intervencijaa == null)
             {
-                await DTOManager.DodajIntervenciju(intervencija);
+                await DTOManager.IntervencijaDodajj(intervencija);
                 MessageBox.Show("Uspesno ste dodali Intervenciju!", "Uspeh", MessageBoxButtons.OK);
             }
             else
             {
-                await DTOManager.IzmeniIntervenciju(intervencija, intervencijaa.Id);
+                await DTOManager.IntervencijaIzmenii(intervencija, intervencijaa.Id);
             }
             this.DialogResult = DialogResult.OK;
             this.Close();

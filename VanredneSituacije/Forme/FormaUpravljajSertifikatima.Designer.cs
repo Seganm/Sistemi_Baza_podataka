@@ -13,8 +13,8 @@
 
         private void InitializeComponent()
         {
-            dtpDatumIzdavanja = new DateTimePicker();
-            dtpDatumVazenja = new DateTimePicker();
+            dtpDatIzdavanje = new DateTimePicker();
+            dtpDatVazenje = new DateTimePicker();
             txtNazivSertifikata = new TextBox();
             txtInstitucijaSertifikata = new TextBox();
             txtJmbgRadnika = new TextBox();
@@ -24,18 +24,18 @@
             lblNazivSertifikata = new Label();
             lblInstitucijaSertifikata = new Label();
             lblJmbgRadnika = new Label();
-            lblDatumIzdavanja = new Label();
-            lblDatumVazenja = new Label();
+            lblDatIzdavanje = new Label();
+            lblDatVazenje = new Label();
             lblNaslovForme = new Label();
             SuspendLayout();
 
-            dtpDatumIzdavanja.Font = new Font("Segoe UI", 9.75F);
-            dtpDatumIzdavanja.Location = new Point(205, 142);
-            dtpDatumIzdavanja.Size = new Size(148, 25);
+            dtpDatIzdavanje.Font = new Font("Segoe UI", 9.75F);
+            dtpDatIzdavanje.Location = new Point(205, 142);
+            dtpDatIzdavanje.Size = new Size(148, 25);
 
-            dtpDatumVazenja.Font = new Font("Segoe UI", 9.75F);
-            dtpDatumVazenja.Location = new Point(206, 173);
-            dtpDatumVazenja.Size = new Size(148, 25);
+            dtpDatVazenje.Font = new Font("Segoe UI", 9.75F);
+            dtpDatVazenje.Location = new Point(206, 173);
+            dtpDatVazenje.Size = new Size(148, 25);
 
             txtNazivSertifikata.Font = new Font("Segoe UI", 9.75F);
             txtNazivSertifikata.Location = new Point(206, 87);
@@ -79,13 +79,13 @@
             lblInstitucijaSertifikata.Location = new Point(101, 121);
             lblInstitucijaSertifikata.Text = "Institucija:";
 
-            lblDatumIzdavanja.AutoSize = true;
-            lblDatumIzdavanja.Location = new Point(101, 145);
-            lblDatumIzdavanja.Text = "Datum izdavanja:";
+            lblDatIzdavanje.AutoSize = true;
+            lblDatIzdavanje.Location = new Point(101, 145);
+            lblDatIzdavanje.Text = "Datum izdavanja:";
 
-            lblDatumVazenja.AutoSize = true;
-            lblDatumVazenja.Location = new Point(100, 170);
-            lblDatumVazenja.Text = "Datum važenja:";
+            lblDatVazenje.AutoSize = true;
+            lblDatVazenje.Location = new Point(100, 170);
+            lblDatVazenje.Text = "Datum važenja:";
 
             lblNaslovForme.BackColor = Color.FromArgb(224, 224, 224);
             lblNaslovForme.Dock = DockStyle.Top;
@@ -101,8 +101,8 @@
             ClientSize = new Size(466, 292);
             Controls.AddRange(new Control[]
             {
-                lblNaslovForme, dtpDatumVazenja, lblDatumVazenja, txtInstitucijaSertifikata,
-                dtpDatumIzdavanja, lblDatumIzdavanja, txtNazivSertifikata, txtJmbgRadnika,
+                lblNaslovForme, dtpDatVazenje, lblDatVazenje, txtInstitucijaSertifikata,
+                dtpDatIzdavanje, lblDatIzdavanje, txtNazivSertifikata, txtJmbgRadnika,
                 btnPonistiUnos, btnZatvoriFormu, btnSacuvajSertifikat,
                 lblInstitucijaSertifikata, lblNazivSertifikata, lblJmbgRadnika
             });
@@ -113,9 +113,9 @@
             PerformLayout();
         }
 
-        private DateTimePicker dtpDatumIzdavanja, dtpDatumVazenja;
+        private DateTimePicker dtpDatIzdavanje, dtpDatVazenje;
         private TextBox txtNazivSertifikata, txtInstitucijaSertifikata, txtJmbgRadnika;
         private Button btnSacuvajSertifikat, btnPonistiUnos, btnZatvoriFormu;
-        private Label lblNaslovForme, lblJmbgRadnika, lblNazivSertifikata, lblInstitucijaSertifikata, lblDatumIzdavanja, lblDatumVazenja;
+        private Label lblNaslovForme, lblJmbgRadnika, lblNazivSertifikata, lblInstitucijaSertifikata, lblDatIzdavanje, lblDatVazenje;
     }
 }

@@ -10,11 +10,11 @@ namespace VanredneSituacije.Entitet
     {
         public virtual int Id { get; set; }
         public virtual string Tip { get; set; }
-        public virtual string JMBG_Dispecer { get; set; }
+        public virtual string DispecerJMBG { get; set; }
 
         public virtual int? Prioritet { get; set; }
-        public virtual string Ime_Prijavioca { get; set; }
-        public virtual DateTime Datum_I_Vreme { get; set; }
+        public virtual string PrijavilacIme { get; set; }
+        public virtual DateTime DatumVremee { get; set; }
         public virtual string Lokacija { get; set; }
         public virtual string Opis { get; set; }
         public virtual string Kontakt { get; set; }

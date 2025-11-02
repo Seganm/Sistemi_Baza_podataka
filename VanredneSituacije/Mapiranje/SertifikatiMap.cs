@@ -20,8 +20,8 @@ namespace VanredneSituacije.Mapiranje
              .KeyProperty(x => x.Institucija, "Institucija")
              .KeyProperty(x => x.Naziv, "Naziv");
              
-            Map(x => x.DatumVazenja).Column("Datum_Vazenja");
-            Map(x => x.DatumIzdavanja).Column("Datum_Izdavanja");
+            Map(x => x.DatVazenje).Column("Datum_Vazenja");
+            Map(x => x.DatIzdavanje).Column("Datum_Izdavanja");
             
 
 

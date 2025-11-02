@@ -21,20 +21,20 @@ namespace VanredneSituacije.Forme
 
         public async void OsveziPrikazSpecijalizacija()
         {
-            var podaci = await DTOManager.VratiSpecijalizacijeKoordinatora(koordinator.JMBG);
+            var podaci = await DTOManager.SpecijalizacijeVratiPoJMBG(koordinator.JMBG);
             tabelaSpecijalizacija.DataSource = podaci;
             tabelaSpecijalizacija.Refresh();
             tabelaSpecijalizacija.ClearSelection();
         }
 
-        private void dugmeDodajSpecijalizaciju_Click(object sender, EventArgs e)
+        private void dugmeSpecijalizacijaDodajj_Click(object sender, EventArgs e)
         {
             var forma = new FormaUpravljajSpecijalizacijama(koordinator.JMBG);
             forma.ShowDialog();
             OsveziPrikazSpecijalizacija();
         }
 
-        private async void dugmeIzmeniSpecijalizaciju_Click(object sender, EventArgs e)
+        private async void dugmeSpecijalizacijaIzmenii_Click(object sender, EventArgs e)
         {
             if (tabelaSpecijalizacija.SelectedRows.Count == 0)
             {
@@ -44,14 +44,14 @@ namespace VanredneSituacije.Forme
             }
 
             int id = int.Parse(tabelaSpecijalizacija.SelectedRows[0].Cells["Id"].Value.ToString());
-            var specijalizacija = await DTOManager.VratiSpecijalizaciju(id);
+            var specijalizacija = await DTOManager.SpecijalizacijaVratii(id);
 
             var forma = new FormaUpravljajSpecijalizacijama(specijalizacija);
             forma.ShowDialog();
             OsveziPrikazSpecijalizacija();
         }
 
-        private async void dugmeObrisiSpecijalizaciju_Click(object sender, EventArgs e)
+        private async void dugmeSpecijalizacijaObrisii_Click(object sender, EventArgs e)
         {
             if (tabelaSpecijalizacija.SelectedRows.Count == 0)
             {
@@ -71,7 +71,7 @@ namespace VanredneSituacije.Forme
 
             if (potvrda == DialogResult.OK)
             {
-                await DTOManager.ObrisiSpecijalizaciju(id);
+                await DTOManager.SpecijalizacijaObrisii(id);
                 MessageBox.Show("Specijalizacija je obrisana.",
                     "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 OsveziPrikazSpecijalizacija();

@@ -15,7 +15,7 @@ namespace VanredneSituacije.DTO
         }
         public DTOVozilo(Vozilo v)
         {
-            Registarska_Oznaka = v.Registarska_Oznaka;
+            Registracijaa = v.Registracijaa;
             Proizvodjac = v.Proizvodjac;
             Status = v.Status;
             Lokacija = v.Lokacija;
@@ -24,7 +24,7 @@ namespace VanredneSituacije.DTO
         public virtual string Proizvodjac { get; set; }
 
         public virtual StatusVozila Status { get; set; }
-        public virtual string Registarska_Oznaka { get; set; }
+        public virtual string Registracijaa { get; set; }
 
 
 
@@ -41,13 +41,13 @@ namespace VanredneSituacije.DTO
         }
         public DTODodajVozilo(Vozilo vo)
         {
-            Registarska_Oznaka = vo.Registarska_Oznaka;
+            Registracijaa = vo.Registracijaa;
             Proizvodjac = vo.Proizvodjac;
             Status = vo.Status;
             Lokacija = vo.Lokacija;
 
         }
-        public virtual string Registarska_Oznaka { get; set; }
+        public virtual string Registracijaa { get; set; }
         public virtual string Proizvodjac { get; set; }
 
         public virtual StatusVozila Status { get; set; }

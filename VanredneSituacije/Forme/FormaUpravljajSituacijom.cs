@@ -27,7 +27,7 @@ namespace VanredneSituacije.Forme
 
         public async Task UcitajPrijave()
         {
-            cmbPrijave.DataSource = await DTOManager.VratiPrijave();
+            cmbPrijave.DataSource = await DTOManager.PrijaveVratii();
             cmbPrijave.DisplayMember = "Id";
             cmbPrijave.ValueMember = "Id";
             cmbPrijave.SelectedValue = vanrednaSituacija?.Prijava.Id;
@@ -42,8 +42,8 @@ namespace VanredneSituacije.Forme
                 dtpDatumDo.Value = (DateTime)vanrednaSituacija.DatumKraj;
 
             txtTipSituacije.Text = vanrednaSituacija.Tip;
-            numBrojUgrozenih.Value = vanrednaSituacija.Broj_Ugrozenih_Osoba ?? 0;
-            cmbNivoOpasnosti.Text = vanrednaSituacija.Nivo_Opasnosti.ToString();
+            numBrojUgrozenih.Value = vanrednaSituacija.BrojUgrozenih ?? 0;
+            cmbNivoOpasnosti.Text = vanrednaSituacija.NivoOpasnost.ToString();
             txtOpstina.Text = vanrednaSituacija.Opstina;
             txtLokacija.Text = vanrednaSituacija.Lokacija;
             txtOpis.Text = vanrednaSituacija.Opis;
@@ -105,12 +105,12 @@ namespace VanredneSituacije.Forme
                 return;
             }
 
-            var novaSituacija = new DTODodajVanrednuSituaciju
+            var novaSituacija = new DTOVanrednaDodajj
             {
                 DatumPoc = dtpDatumOd.Value,
                 DatumKraj = dtpDatumDo.Value,
                 Tip = txtTipSituacije.Text,
-                Broj_Ugrozenih_Osoba = (int)numBrojUgrozenih.Value,
+                BrojUgrozenih = (int)numBrojUgrozenih.Value,
                 IdPrijave = (int)cmbPrijave.SelectedValue,
                 Lokacija = txtLokacija.Text,
                 Opstina = txtOpstina.Text,
@@ -120,20 +120,20 @@ namespace VanredneSituacije.Forme
             switch (cmbNivoOpasnosti.Text)
             {
                 case "nizak":
-                    novaSituacija.Nivo_Opasnosti = Entitet.NivoOpasnosti.nizak;
+                    novaSituacija.NivoOpasnost = Entitet.NivoOpasnosti.nizak;
                     break;
                 case "srednji":
-                    novaSituacija.Nivo_Opasnosti = Entitet.NivoOpasnosti.srednji;
+                    novaSituacija.NivoOpasnost = Entitet.NivoOpasnosti.srednji;
                     break;
                 case "visok":
-                    novaSituacija.Nivo_Opasnosti = Entitet.NivoOpasnosti.visok;
+                    novaSituacija.NivoOpasnost = Entitet.NivoOpasnosti.visok;
                     break;
             }
 
             if (vanrednaSituacija != null)
-                await DTOManager.IzmeniVanrednuSituaciju(novaSituacija, vanrednaSituacija.Id);
+                await DTOManager.VanrednaIzmenii(novaSituacija, vanrednaSituacija.Id);
             else
-                await DTOManager.DodajVanrednuSituaciju(novaSituacija);
+                await DTOManager.VanrednaDodajj(novaSituacija);
 
             MessageBox.Show("Dodato!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DialogResult = DialogResult.OK;

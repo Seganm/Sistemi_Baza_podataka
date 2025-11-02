@@ -36,8 +36,8 @@ namespace VanredneSituacije.Forme
 
             if (_regOznaka != null)
             {
-                var vozilo = await DTOManager.VratiSpecijalnoVozilo(_regOznaka);
-                txtRegistarskaOznaka.Text = vozilo.Registarska_Oznaka;
+                var vozilo = await DTOManager.SpecijalnoVratii(_regOznaka);
+                txtRegistarskaOznaka.Text = vozilo.Registracijaa;
                 txtProizvodjac.Text = vozilo.Proizvodjac;
                 txtLokacija.Text = vozilo.Lokacija;
                 cmbStatusVozila.SelectedItem = vozilo.Status;
@@ -58,7 +58,7 @@ namespace VanredneSituacije.Forme
 
             DTODodajSpecijalno vozilo = new DTODodajSpecijalno
             {
-                Registarska_Oznaka = txtRegistarskaOznaka.Text,
+                Registracijaa = txtRegistarskaOznaka.Text,
                 Proizvodjac = txtProizvodjac.Text,
                 Lokacija = txtLokacija.Text,
                 Status = (StatusVozila)cmbStatusVozila.SelectedItem,
@@ -66,9 +66,9 @@ namespace VanredneSituacije.Forme
             };
 
             if (_regOznaka == null)
-                await DTOManager.DodajSpecijalnoVozilo(vozilo);
+                await DTOManager.SpecijalnoDodajj(vozilo);
             else
-                await DTOManager.IzmeniSpecijalnaVozila(vozilo, _regOznaka);
+                await DTOManager.SpecijalnaIzmenii(vozilo, _regOznaka);
 
             MessageBox.Show("Podaci su  sačuvani.", "Uspešno", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DialogResult = DialogResult.OK;

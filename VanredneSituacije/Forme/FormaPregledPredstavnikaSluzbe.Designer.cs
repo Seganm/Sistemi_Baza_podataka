@@ -37,10 +37,7 @@ namespace VanredneSituacije.Forme
             ((System.ComponentModel.ISupportInitialize)tabelaPredstavnici).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bindingPredstavnici).BeginInit();
             SuspendLayout();
-
-            // 
-            // dugmeObrisi
-            // 
+ 
             dugmeObrisi.BackColor = Color.FromArgb(220, 70, 70);
             dugmeObrisi.FlatStyle = FlatStyle.Flat;
             dugmeObrisi.FlatAppearance.BorderSize = 0;
@@ -52,9 +49,6 @@ namespace VanredneSituacije.Forme
             dugmeObrisi.UseVisualStyleBackColor = false;
             dugmeObrisi.Click += dugmeObrisi_Click;
 
-            // 
-            // dugmeIzmeni
-            // 
             dugmeIzmeni.BackColor = Color.FromArgb(255, 190, 80);
             dugmeIzmeni.FlatStyle = FlatStyle.Flat;
             dugmeIzmeni.FlatAppearance.BorderSize = 0;
@@ -65,10 +59,7 @@ namespace VanredneSituacije.Forme
             dugmeIzmeni.Text = "✏ Izmeni";
             dugmeIzmeni.UseVisualStyleBackColor = false;
             dugmeIzmeni.Click += dugmeIzmeni_Click;
-
-            // 
-            // dugmeDodaj
-            // 
+ 
             dugmeDodaj.BackColor = Color.FromArgb(0, 122, 204);
             dugmeDodaj.FlatStyle = FlatStyle.Flat;
             dugmeDodaj.FlatAppearance.BorderSize = 0;
@@ -80,9 +71,6 @@ namespace VanredneSituacije.Forme
             dugmeDodaj.UseVisualStyleBackColor = false;
             dugmeDodaj.Click += dugmeDodaj_Click;
 
-            // 
-            // tabelaPredstavnici
-            // 
             stilAlternacija.BackColor = Color.FromArgb(250, 250, 253);
             tabelaPredstavnici.AlternatingRowsDefaultCellStyle = stilAlternacija;
             tabelaPredstavnici.AutoGenerateColumns = false;
@@ -110,11 +98,10 @@ namespace VanredneSituacije.Forme
             tabelaPredstavnici.RowHeadersVisible = false;
             tabelaPredstavnici.RowTemplate.Height = 26;
             tabelaPredstavnici.Size = new Size(1160, 599);
+			tabelaPredstavnici.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+			tabelaPredstavnici.MultiSelect = false;
 
-            // 
-            // Kolone
-            // 
-            kolJMBG.DataPropertyName = "JMBG";
+			kolJMBG.DataPropertyName = "JMBG";
             kolJMBG.HeaderText = "JMBG";
 
             kolIme.DataPropertyName = "Ime";
@@ -132,23 +119,17 @@ namespace VanredneSituacije.Forme
             kolEmail.DataPropertyName = "Email";
             kolEmail.HeaderText = "Email adresa";
 
-            // 
-            // bindingPredstavnici
-            // 
+         
             bindingPredstavnici.DataSource = typeof(DTO.DTOPredstavnikSluzbe);
 
-            // 
-            // oznakaNaslov
-            // 
+          
             oznakaNaslov.AutoSize = true;
             oznakaNaslov.Font = new Font("Segoe UI Semibold", 14F);
             oznakaNaslov.ForeColor = Color.FromArgb(45, 45, 45);
             oznakaNaslov.Location = new Point(512, 14);
             oznakaNaslov.Text = "👔 Predstavnici službi";
 
-            // 
-            // FormaPregledPredstavnikaSluzbe
-            // 
+      
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 247, 250);

@@ -24,7 +24,7 @@ namespace VanredneSituacije.Forme
 
         public async void PopuniPodacima()
         {
-            var operativni = await DTOManager.VratiOperativneRadnike();
+            var operativni = await DTOManager.RadniciVratii();
             cmbKomandir.DataSource = operativni;
             cmbKomandir.DisplayMember = "PunoIme";
             cmbKomandir.ValueMember = "JMBG";
@@ -89,11 +89,11 @@ namespace VanredneSituacije.Forme
 
                 if (opsta == null)
                 {
-                    await DTOManager.DodajOpstuIntervetnuJedinicu(ops);
+                    await DTOManager.OpstaInterventnaDodajj(ops);
                 }
                 else
                 {
-                    await DTOManager.IzmeniOpstuInterventnuJedinicu(ops, opsta.Jedinstveni_Broj);
+                    await DTOManager.OpstaInterventnaIzmenii(ops, opsta.JedinstveniBroj);
                 }
 
                 this.DialogResult = DialogResult.OK;

@@ -16,7 +16,7 @@ namespace VanredneSituacije.DTO
         {
             if (es.Vozilo != null)
             {
-                RegistarskaOznakaVozila = es.Vozilo.Registarska_Oznaka;
+                RegistarskaOznakaVozila = es.Vozilo.Registracijaa;
                 Status = es.Vozilo.Status.ToString();
             }
             Id = es.Id;
@@ -42,7 +42,7 @@ namespace VanredneSituacije.DTO
         public DTODodajEvidencijuServis(EvidencijaServis es)
         {
       
-            RegistarskaOznakaVozila = es.Vozilo.Registarska_Oznaka;
+            RegistarskaOznakaVozila = es.Vozilo.Registracijaa;
             TipServisa = es.TipServisa;
             Datum = es.Datum;
 

@@ -23,8 +23,8 @@ namespace VanredneSituacije.Forme
 
         private async void FormaUpravljajSaradjivanjem_Load(object sender, EventArgs e)
         {
-            var sluzbe = await DTOManager.VratiSluzbe();
-            var vanredneSituacije = await DTOManager.VratiVanredneSituacije();
+            var sluzbe = await DTOManager.SluzbeVratii();
+            var vanredneSituacije = await DTOManager.VanredneVratii();
 
             cmbSluzba.DataSource = sluzbe;
             cmbVanrednaSituacija.DataSource = vanredneSituacije;

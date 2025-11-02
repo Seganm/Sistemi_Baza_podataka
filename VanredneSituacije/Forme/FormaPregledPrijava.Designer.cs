@@ -45,14 +45,14 @@ namespace VanredneSituacije.Forme
             ((System.ComponentModel.ISupportInitialize)bindingDodavanje).BeginInit();
             SuspendLayout();
 
-            // oznakaNaslov
+    
             oznakaNaslov.AutoSize = true;
             oznakaNaslov.Font = new Font("Segoe UI Semibold", 14F);
             oznakaNaslov.ForeColor = Color.FromArgb(45, 45, 45);
             oznakaNaslov.Location = new Point(516, 13);
             oznakaNaslov.Text = "📋 Lista prijava";
 
-            // dugmeObrisi
+      
             dugmeObrisi.BackColor = Color.FromArgb(220, 70, 70);
             dugmeObrisi.FlatStyle = FlatStyle.Flat;
             dugmeObrisi.FlatAppearance.BorderSize = 0;
@@ -64,7 +64,7 @@ namespace VanredneSituacije.Forme
             dugmeObrisi.UseVisualStyleBackColor = false;
             dugmeObrisi.Click += dugmeObrisi_Click;
 
-            // dugmeIzmeni
+ 
             dugmeIzmeni.BackColor = Color.FromArgb(255, 190, 80);
             dugmeIzmeni.FlatStyle = FlatStyle.Flat;
             dugmeIzmeni.FlatAppearance.BorderSize = 0;
@@ -76,7 +76,6 @@ namespace VanredneSituacije.Forme
             dugmeIzmeni.UseVisualStyleBackColor = false;
             dugmeIzmeni.Click += dugmeIzmeni_Click;
 
-            // dugmeDodaj
             dugmeDodaj.BackColor = Color.FromArgb(0, 122, 204);
             dugmeDodaj.FlatStyle = FlatStyle.Flat;
             dugmeDodaj.FlatAppearance.BorderSize = 0;
@@ -88,7 +87,7 @@ namespace VanredneSituacije.Forme
             dugmeDodaj.UseVisualStyleBackColor = false;
             dugmeDodaj.Click += dugmeDodaj_Click;
 
-            // mrezaPrijave
+           
             stilAlternacija.BackColor = Color.FromArgb(250, 250, 253);
             mrezaPrijave.AlternatingRowsDefaultCellStyle = stilAlternacija;
             mrezaPrijave.AutoGenerateColumns = false;
@@ -113,18 +112,19 @@ namespace VanredneSituacije.Forme
             mrezaPrijave.RowHeadersVisible = false;
             mrezaPrijave.RowTemplate.Height = 28;
             mrezaPrijave.Size = new Size(1160, 599);
+            mrezaPrijave.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            mrezaPrijave.MultiSelect = false;
 
-            // kolone
             kolId.DataPropertyName = "Id";
             kolId.HeaderText = "ID prijave";
 
-            kolDatum.DataPropertyName = "Datum_I_Vreme";
+            kolDatum.DataPropertyName = "DatumVremee";
             kolDatum.HeaderText = "Datum i vreme";
 
             kolTip.DataPropertyName = "Tip";
             kolTip.HeaderText = "Tip prijave";
 
-            kolIme.DataPropertyName = "Ime_Prijavioca";
+            kolIme.DataPropertyName = "PrijavilacIme";
             kolIme.HeaderText = "Prijavio";
 
             kolKontakt.DataPropertyName = "Kontakt";
@@ -136,17 +136,17 @@ namespace VanredneSituacije.Forme
             kolOpis.DataPropertyName = "Opis";
             kolOpis.HeaderText = "Opis situacije";
 
-            kolDispecer.DataPropertyName = "JMBG_Dispecer";
+            kolDispecer.DataPropertyName = "DispecerJMBG";
             kolDispecer.HeaderText = "JMBG dispečera";
 
             kolPrioritet.DataPropertyName = "Prioritet";
             kolPrioritet.HeaderText = "Prioritet";
 
-            // binding
+       
             bindingPrijave.DataSource = typeof(DTO.DTOPrijava);
-            bindingDodavanje.DataSource = typeof(DTO.DTODodajPrijavu);
+            bindingDodavanje.DataSource = typeof(DTO.DTOPrijavaDodajj);
 
-            // Forma
+          
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 247, 250);

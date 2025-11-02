@@ -20,14 +20,14 @@ namespace VanredneSituacije.Forme
         
         private async void FormaAngazovanostVozila_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = await DTOManager.VratiIntervencijeUKojimajeUcestvovaloVozilo(oznaka);
+            dataGridView1.DataSource = await DTOManager.IntervencijeSaVozilomVratii(oznaka);
             dataGridView1.Refresh();
             dataGridView1.ClearSelection();
         }
 
         public async void PopuniPodacima()
         {
-            dataGridView1.DataSource = await DTOManager.VratiIntervencijeUKojimajeUcestvovaloVozilo(oznaka);
+            dataGridView1.DataSource = await DTOManager.IntervencijeSaVozilomVratii(oznaka);
             dataGridView1.Refresh();
             dataGridView1.ClearSelection();
         }

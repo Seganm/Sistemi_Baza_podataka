@@ -22,9 +22,9 @@ namespace VanredneSituacije.Forme
             DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
             DataGridViewCellStyle cellStyle = new DataGridViewCellStyle();
 
-            dugmeObrisiSpecijalizaciju = new Button();
-            dugmeIzmeniSpecijalizaciju = new Button();
-            dugmeDodajSpecijalizaciju = new Button();
+            dugmeSpecijalizacijaObrisii = new Button();
+            dugmeSpecijalizacijaIzmenii = new Button();
+            dugmeSpecijalizacijaDodajj = new Button();
             tabelaSpecijalizacija = new DataGridView();
             naslovLabela = new Label();
 
@@ -32,35 +32,35 @@ namespace VanredneSituacije.Forme
             SuspendLayout();
 
 
-            dugmeDodajSpecijalizaciju.BackColor = Color.FromArgb(46, 204, 113);
-            dugmeDodajSpecijalizaciju.FlatStyle = FlatStyle.Flat;
-            dugmeDodajSpecijalizaciju.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
-            dugmeDodajSpecijalizaciju.ForeColor = Color.White;
-            dugmeDodajSpecijalizaciju.Location = new Point(12, 12);
-            dugmeDodajSpecijalizaciju.Size = new Size(150, 35);
-            dugmeDodajSpecijalizaciju.Text = "➕ Dodaj novu";
-            dugmeDodajSpecijalizaciju.UseVisualStyleBackColor = false;
-            dugmeDodajSpecijalizaciju.Click += dugmeDodajSpecijalizaciju_Click;
+            dugmeSpecijalizacijaDodajj.BackColor = Color.FromArgb(46, 204, 113);
+            dugmeSpecijalizacijaDodajj.FlatStyle = FlatStyle.Flat;
+            dugmeSpecijalizacijaDodajj.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            dugmeSpecijalizacijaDodajj.ForeColor = Color.White;
+            dugmeSpecijalizacijaDodajj.Location = new Point(12, 12);
+            dugmeSpecijalizacijaDodajj.Size = new Size(150, 35);
+            dugmeSpecijalizacijaDodajj.Text = "➕ Dodaj novu";
+            dugmeSpecijalizacijaDodajj.UseVisualStyleBackColor = false;
+            dugmeSpecijalizacijaDodajj.Click += dugmeSpecijalizacijaDodajj_Click;
 
-            dugmeIzmeniSpecijalizaciju.BackColor = Color.FromArgb(241, 196, 15);
-            dugmeIzmeniSpecijalizaciju.FlatStyle = FlatStyle.Flat;
-            dugmeIzmeniSpecijalizaciju.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            dugmeIzmeniSpecijalizaciju.ForeColor = Color.Black;
-            dugmeIzmeniSpecijalizaciju.Location = new Point(168, 12);
-            dugmeIzmeniSpecijalizaciju.Size = new Size(150, 35);
-            dugmeIzmeniSpecijalizaciju.Text = "✏ Izmeni podatke";
-            dugmeIzmeniSpecijalizaciju.UseVisualStyleBackColor = false;
-            dugmeIzmeniSpecijalizaciju.Click += dugmeIzmeniSpecijalizaciju_Click;
+            dugmeSpecijalizacijaIzmenii.BackColor = Color.FromArgb(241, 196, 15);
+            dugmeSpecijalizacijaIzmenii.FlatStyle = FlatStyle.Flat;
+            dugmeSpecijalizacijaIzmenii.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dugmeSpecijalizacijaIzmenii.ForeColor = Color.Black;
+            dugmeSpecijalizacijaIzmenii.Location = new Point(168, 12);
+            dugmeSpecijalizacijaIzmenii.Size = new Size(150, 35);
+            dugmeSpecijalizacijaIzmenii.Text = "✏ Izmeni podatke";
+            dugmeSpecijalizacijaIzmenii.UseVisualStyleBackColor = false;
+            dugmeSpecijalizacijaIzmenii.Click += dugmeSpecijalizacijaIzmenii_Click;
 
-            dugmeObrisiSpecijalizaciju.BackColor = Color.FromArgb(231, 76, 60);
-            dugmeObrisiSpecijalizaciju.FlatStyle = FlatStyle.Flat;
-            dugmeObrisiSpecijalizaciju.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            dugmeObrisiSpecijalizaciju.ForeColor = Color.White;
-            dugmeObrisiSpecijalizaciju.Location = new Point(1022, 11);
-            dugmeObrisiSpecijalizaciju.Size = new Size(150, 35);
-            dugmeObrisiSpecijalizaciju.Text = "🗑 Obriši zapis";
-            dugmeObrisiSpecijalizaciju.UseVisualStyleBackColor = false;
-            dugmeObrisiSpecijalizaciju.Click += dugmeObrisiSpecijalizaciju_Click;
+            dugmeSpecijalizacijaObrisii.BackColor = Color.FromArgb(231, 76, 60);
+            dugmeSpecijalizacijaObrisii.FlatStyle = FlatStyle.Flat;
+            dugmeSpecijalizacijaObrisii.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dugmeSpecijalizacijaObrisii.ForeColor = Color.White;
+            dugmeSpecijalizacijaObrisii.Location = new Point(1022, 11);
+            dugmeSpecijalizacijaObrisii.Size = new Size(150, 35);
+            dugmeSpecijalizacijaObrisii.Text = "🗑 Obriši zapis";
+            dugmeSpecijalizacijaObrisii.UseVisualStyleBackColor = false;
+            dugmeSpecijalizacijaObrisii.Click += dugmeSpecijalizacijaObrisii_Click;
 
  
             tabelaSpecijalizacija.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -98,9 +98,9 @@ namespace VanredneSituacije.Forme
             ClientSize = new Size(1184, 661);
             Controls.Add(naslovLabela);
             Controls.Add(tabelaSpecijalizacija);
-            Controls.Add(dugmeObrisiSpecijalizaciju);
-            Controls.Add(dugmeIzmeniSpecijalizaciju);
-            Controls.Add(dugmeDodajSpecijalizaciju);
+            Controls.Add(dugmeSpecijalizacijaObrisii);
+            Controls.Add(dugmeSpecijalizacijaIzmenii);
+            Controls.Add(dugmeSpecijalizacijaDodajj);
             Font = new Font("Segoe UI", 9F);
             ForeColor = Color.FromArgb(33, 37, 41);
             Name = "FormaPregledSpecijalizacija";
@@ -115,9 +115,9 @@ namespace VanredneSituacije.Forme
 
         #endregion
 
-        private Button dugmeObrisiSpecijalizaciju;
-        private Button dugmeIzmeniSpecijalizaciju;
-        private Button dugmeDodajSpecijalizaciju;
+        private Button dugmeSpecijalizacijaObrisii;
+        private Button dugmeSpecijalizacijaIzmenii;
+        private Button dugmeSpecijalizacijaDodajj;
         private DataGridView tabelaSpecijalizacija;
         private Label naslovLabela;
     }

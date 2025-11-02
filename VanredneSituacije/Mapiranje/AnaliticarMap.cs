@@ -18,7 +18,7 @@ namespace VanredneSituacije.Mapiranje
             HasMany(x => x.Softveri)
       .Cascade.All()
       .Inverse()
-      .KeyColumn("JMBGAnaliticaraaa");
+      .KeyColumn("JMBG_Analiticara");
             HasMany(x => x.Ekspertiza)
           .Cascade.All()
           .Inverse()

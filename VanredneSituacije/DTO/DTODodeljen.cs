@@ -53,14 +53,14 @@ namespace VanredneSituacije.DTO
             DatumDo = dod.DatumDo;
             if (dod.Jedinica != null)
             {
-                IdJedinica = dod.Jedinica.Jedinstveni_Broj;
+                IdJedinica = dod.Jedinica.JedinstveniBroj;
             }
             if (dod.Radnik != null)
             {
                 JMBGRadnik = dod.Radnik.JMBG;
             }
   
-            RegVozilo = dod.Vozilo.Registarska_Oznaka;
+            RegVozilo = dod.Vozilo.Registracijaa;
            
 
         }
@@ -88,7 +88,7 @@ namespace VanredneSituacije.DTO
             DatumDo = dod.DatumDo;
             if (dod.Jedinica != null)
             {
-                IdJedinica = dod.Jedinica.Jedinstveni_Broj;
+                IdJedinica = dod.Jedinica.JedinstveniBroj;
                 NazivJedinice = dod.Jedinica.Naziv;
             }
             if (dod.Radnik != null)
@@ -99,7 +99,7 @@ namespace VanredneSituacije.DTO
 
             }
 
-            RegVozilo = dod.Vozilo.Registarska_Oznaka;
+            RegVozilo = dod.Vozilo.Registracijaa;
         }
         public virtual int Id { get; set; }
 

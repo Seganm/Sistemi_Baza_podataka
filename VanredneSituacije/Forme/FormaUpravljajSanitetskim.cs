@@ -81,7 +81,7 @@ namespace VanredneSituacije.Forme
             izborStatus.DataSource = Enum.GetValues(typeof(StatusVozila));
             if (pocetno != null)
             {
-                unosReg.Text = pocetno.Registarska_Oznaka;
+                unosReg.Text = pocetno.Registracijaa;
                 unosLokacija.Text = pocetno.Lokacija;
                 unosProizvodjac.Text = pocetno.Proizvodjac;
                 izborStatus.SelectedItem = pocetno.Status;
@@ -112,7 +112,7 @@ namespace VanredneSituacije.Forme
             var novo = new DTODodajSanitetsko
             {
                 Status = uKvaru ? StatusVozila.U_kvaru : StatusVozila.Operativno,
-                Registarska_Oznaka = unosReg.Text,
+                Registracijaa = unosReg.Text,
                 Lokacija = unosLokacija.Text,
                 Proizvodjac = unosProizvodjac.Text
             };
@@ -134,9 +134,9 @@ namespace VanredneSituacije.Forme
             }
 
             if (pocetno == null)
-                await DTOManager.DodajSanitetskaVozilo(novo);
+                await DTOManager.SanitetskoDodajj(novo);
             else
-                await DTOManager.IzmeniSanitetskoVozilo(izmena, pocetno.Registarska_Oznaka);
+                await DTOManager.SanitetskoIzmenii(izmena, pocetno.Registracijaa);
 
             DialogResult = DialogResult.OK;
             Close();

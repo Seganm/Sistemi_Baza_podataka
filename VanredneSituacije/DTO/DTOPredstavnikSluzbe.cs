@@ -32,7 +32,7 @@ namespace VanredneSituacije.DTO
         }
     }
 
-    public class DTOIzmeniPredstavnikaSluzbe
+    public class DTOPredstavnikSluzbeIzmeniiSluzbe
     {
 
         public virtual string Ime { get; set; }
@@ -43,8 +43,8 @@ namespace VanredneSituacije.DTO
 
 
 
-        public DTOIzmeniPredstavnikaSluzbe() { }
-        public DTOIzmeniPredstavnikaSluzbe(PredstavnikSluzbe p)
+        public DTOPredstavnikSluzbeIzmeniiSluzbe() { }
+        public DTOPredstavnikSluzbeIzmeniiSluzbe(PredstavnikSluzbe p)
         {
             Ime = p.Ime;
             Prezime = p.Prezime;

@@ -14,7 +14,7 @@ namespace VanredneSituacije.Mapiranje
         {
             Table("InterventnaJedinica");
 
-            Id(x => x.Jedinstveni_Broj, "Jedinstveni_Broj").GeneratedBy.TriggerIdentity();
+            Id(x => x.JedinstveniBroj, "Jedinstveni_Broj").GeneratedBy.TriggerIdentity();
 
             References(x => x.Komandir)
             .Column("JMBG_KOMANDIRA")
@@ -32,7 +32,7 @@ namespace VanredneSituacije.Mapiranje
 
             HasMany(x => x.Oprema).KeyColumn("Id_Jedinice").Cascade.All();
             
-            HasMany(x => x.Ucestvuje).KeyColumn("IdInterventnee").Inverse().Cascade.All().LazyLoad();
+            HasMany(x => x.Ucestvuje).KeyColumn("IdInterventneJed").Inverse().Cascade.All().LazyLoad();
 
         }
     }
@@ -44,7 +44,7 @@ namespace VanredneSituacije.Mapiranje
 
             Table("SpecijalnaInterventnaJedinica");
             KeyColumn("Jedinstveni_Broj");
-            Map(x => x.TipSpecijalneJedinice, "TipSpecijalneJedinice");
+            Map(x => x.SpecijalnaTip, "TipSpecijalneJedinice");
         }
     }
     class OpstaInterventnaJedinicaMap : SubclassMap<OpstaInterventnaJedinica>

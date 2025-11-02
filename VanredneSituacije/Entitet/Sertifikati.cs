@@ -14,7 +14,7 @@ namespace VanredneSituacije.Entitet
             Id = new IdSertifikata();
         }
         public virtual IdSertifikata Id { get; set; }
-        public virtual DateTime? DatumVazenja { get; set; }
-        public virtual DateTime DatumIzdavanja { get; set; } 
+        public virtual DateTime? DatVazenje { get; set; }
+        public virtual DateTime DatIzdavanje { get; set; } 
     }
 }

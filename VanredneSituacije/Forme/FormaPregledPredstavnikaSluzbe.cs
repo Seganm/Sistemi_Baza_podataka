@@ -18,7 +18,7 @@ namespace VanredneSituacije.Forme
 
         private async void UcitajPodatke()
         {
-            var lista = await DTOManager.VratiPredstavnike();
+            var lista = await DTOManager.PredstavniciSluzbeVratii();
             tabelaPredstavnici.DataSource = lista;
             tabelaPredstavnici.Refresh();
             tabelaPredstavnici.ClearSelection();
@@ -63,7 +63,7 @@ namespace VanredneSituacije.Forme
 
             if (potvrda == DialogResult.OK)
             {
-                await DTOManager.ObrisiPredstavnika(selektovani.JMBG);
+                await DTOManager.PredstavnikSluzbeObrisii(selektovani.JMBG);
                 MessageBox.Show("Predstavnik uspešno obrisan.", "Info");
                 UcitajPodatke();
             }

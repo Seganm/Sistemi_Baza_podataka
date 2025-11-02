@@ -32,9 +32,9 @@ namespace VanredneSituacije.Forme
 
             if (!string.IsNullOrEmpty(Reg_Oznaka))
             {
-                var dzip = await DTOManager.VratiDzip(Reg_Oznaka);
+                var dzip = await DTOManager.DzipVratii(Reg_Oznaka);
 
-                textReg.Text = dzip.Registarska_Oznaka;
+                textReg.Text = dzip.Registracijaa;
                 textProizvodjac.Text = dzip.Proizvodjac;
                 textLok.Text = dzip.Lokacija;
                 comboStatus.SelectedItem = dzip.Status;
@@ -73,9 +73,9 @@ namespace VanredneSituacije.Forme
                 return;
             }
 
-            DTODodajDzip dzip = new DTODodajDzip
+            DTODzipDodajj dzip = new DTODzipDodajj
             {
-                Registarska_Oznaka = textReg.Text.Trim(),
+                Registracijaa = textReg.Text.Trim(),
                 Proizvodjac = textProizvodjac.Text.Trim(),
                 Lokacija = textLok.Text.Trim(),
                 Status = (StatusVozila)comboStatus.SelectedItem
@@ -85,13 +85,13 @@ namespace VanredneSituacije.Forme
             {
                 if (string.IsNullOrEmpty(Reg_Oznaka))
                 {
-                    await DTOManager.DodajDzip(dzip);
+                    await DTOManager.DzipDodajj(dzip);
                     MessageBox.Show("Novi džip je uspešno dodat.",
                         "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    await DTOManager.IzmeniDzip(dzip, Reg_Oznaka);
+                    await DTOManager.DzipIzmenii(dzip, Reg_Oznaka);
                     MessageBox.Show("Podaci o džipu su uspešno ažurirani.",
                         "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

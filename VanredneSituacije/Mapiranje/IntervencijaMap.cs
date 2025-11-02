@@ -19,23 +19,23 @@ namespace VanredneSituacije.Mapiranje
 
 
             Id(x => x.Id, "Id").GeneratedBy.TriggerIdentity();
-            Map(x => x.Broj_Povredjenih, "Broj_Povredjenih");
+            Map(x => x.BrPovredjenih, "Broj_Povredjenih");
             Map(x => x.Uspesnost, "Uspesnost");
 
-            Map(x => x.Datum_I_Vreme, "Datum_I_Vreme");
+            Map(x => x.DatumVremee, "Datum_I_Vreme");
             Map(x => x.Lokacija, "Lokacija");
             
           
             Map(x => x.Status, "Status").CustomType<EnumStringType<Status>>();
             Map(x => x.Resursi, "Resursi");
-            Map(x => x.Broj_Spasenih, "Broj_Spasenih");
+            Map(x => x.BrSpasenih, "Broj_Spasenih");
 
             HasMany(x => x.Ucestvovalos)
-              .KeyColumn("IdIntervencijee")
+              .KeyColumn("IdIntervencije")
               .Inverse()
               .Cascade.All();
             HasMany(x => x.Ucestvuje)
-                .KeyColumn("IdIntervencijee")
+                .KeyColumn("IdIntervencije")
                 .Inverse()
                 .Cascade.All();
 

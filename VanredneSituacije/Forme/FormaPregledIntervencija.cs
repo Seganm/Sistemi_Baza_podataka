@@ -18,7 +18,7 @@ namespace VanredneSituacije.Forme
 
         private async void UcitajPodatke()
         {
-            grIdIntervencijee.DataSource = await DTOManager.VratiIntervencije();
+            grIdIntervencijee.DataSource = await DTOManager.IntervencijeVratii();
             grIdIntervencijee.Refresh();
             grIdIntervencijee.ClearSelection();
         }
@@ -57,7 +57,7 @@ namespace VanredneSituacije.Forme
 
             if (potvrda == DialogResult.OK)
             {
-                await DTOManager.ObrisiIntervenciju(selektovana.Id);
+                await DTOManager.IntervencijaObrisii(selektovana.Id);
                 MessageBox.Show("Intervencija uspešno obrisana.", "Info");
                 UcitajPodatke();
             }

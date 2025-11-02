@@ -94,7 +94,8 @@ namespace VanredneSituacije.Forme
             mrezaSaradnje.RowHeadersVisible = false;
             mrezaSaradnje.RowTemplate.Height = 28;
             mrezaSaradnje.Size = new Size(1160, 599);
-
+            mrezaSaradnje.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            mrezaSaradnje.MultiSelect = false;
             kolId.DataPropertyName = "Id";
             kolId.HeaderText = "ID saradnje";
             kolSektor.DataPropertyName = "SektorID";

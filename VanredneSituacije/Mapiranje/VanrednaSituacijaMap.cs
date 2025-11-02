@@ -17,17 +17,17 @@ namespace VanredneSituacije.Mapiranja
 
             Id(x => x.Id).GeneratedBy.TriggerIdentity();
 
-            Map(x => x.DatumPoc).Column("DatumPoc");
-            Map(x => x.DatumKraj).Column("DatumKraj");
+            Map(x => x.DatumPoc).Column("Datum_Od");
+            Map(x => x.DatumKraj).Column("Datum_Do");
             Map(x => x.Tip).Column("Tip");
-            Map(x => x.Broj_Ugrozenih_Osoba).Column("Broj_Ugrozenih_Osoba");
-            Map(x => x.Nivo_Opasnosti).Column("Nivo_Opasnosti").CustomType<EnumStringType<NivoOpasnosti>>();
+            Map(x => x.BrojUgrozenih).Column("Broj_Ugrozenih_Osoba");
+            Map(x => x.NivoOpasnost).Column("Nivo_Opasnosti").CustomType<EnumStringType<NivoOpasnosti>>();
             Map(x => x.Opstina).Column("Opstina");
             Map(x => x.Lokacija).Column("Lokacija");
             Map(x => x.Opis).Column("Opis");
 
 
-            References(x => x.Prijava_ID).Column("Id_Prijave").Cascade.None();
+            References(x => x.PrijavaaID).Column("Id_Prijave").Cascade.None();
 
 
             HasMany(x => x.Ucestvuje)

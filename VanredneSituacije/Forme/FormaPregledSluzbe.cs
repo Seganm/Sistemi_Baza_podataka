@@ -22,20 +22,20 @@ namespace VanredneSituacije.Forme
 
         public async void OsveziPrikazSluzbi()
         {
-            var listaSluzbi = await DTOManager.VratiSluzbe();
+            var listaSluzbi = await DTOManager.SluzbeVratii();
             tabelaSluzbi.DataSource = listaSluzbi;
             tabelaSluzbi.Refresh();
             tabelaSluzbi.ClearSelection();
         }
 
-        private void dugmeDodajSluzbu_Click(object sender, EventArgs e)
+        private void dugmeSluzbaDodajj_Click(object sender, EventArgs e)
         {
             var forma = new FormaUpravljajSluzbom();
             forma.ShowDialog();
             OsveziPrikazSluzbi();
         }
 
-        private async void dugmeIzmeniSluzbu_Click(object sender, EventArgs e)
+        private async void dugmeSluzbaIzmenii_Click(object sender, EventArgs e)
         {
             if (tabelaSluzbi.SelectedRows.Count == 0)
             {
@@ -44,14 +44,14 @@ namespace VanredneSituacije.Forme
             }
 
             int idSluzbe = Convert.ToInt32(tabelaSluzbi.SelectedRows[0].Cells[0].Value);
-            var sluzba = await DTOManager.VratiSluzbu(idSluzbe);
+            var sluzba = await DTOManager.SluzbaVratii(idSluzbe);
 
             var forma = new FormaUpravljajSluzbom(sluzba);
             forma.ShowDialog();
             OsveziPrikazSluzbi();
         }
 
-        private async void dugmeObrisiSluzbu_Click(object sender, EventArgs e)
+        private async void dugmeSluzbaObrisii_Click(object sender, EventArgs e)
         {
             if (tabelaSluzbi.SelectedRows.Count == 0)
             {
@@ -70,7 +70,7 @@ namespace VanredneSituacije.Forme
 
             if (potvrda == DialogResult.OK)
             {
-                await DTOManager.ObrisiSluzbu(id);
+                await DTOManager.SluzbaObrisii(id);
                 MessageBox.Show("Služba je obrisana.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 OsveziPrikazSluzbi();
             }

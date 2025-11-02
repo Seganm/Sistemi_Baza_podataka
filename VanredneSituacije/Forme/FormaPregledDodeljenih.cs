@@ -19,7 +19,7 @@ namespace VanredneSituacije.Forme
 
         private async void UcitajPodatke()
         {
-            var lista = await DTOManager.VratiSvaDodeljivanja();
+            var lista = await DTOManager.DodeljivanjaVratii();
             gridDodeljivanja.DataSource = lista;
             gridDodeljivanja.Refresh();
             gridDodeljivanja.ClearSelection();
@@ -41,7 +41,7 @@ namespace VanredneSituacije.Forme
             }
 
             int dodeljenId = int.Parse(gridDodeljivanja.SelectedRows[0].Cells[0].Value.ToString());
-            DTOVratiDodeljen dodeljen = await DTOManager.VratiDodeljivanje(dodeljenId);
+            DTOVratiDodeljen dodeljen = await DTOManager.DodeljivanjeVratii(dodeljenId);
             MessageBox.Show($"ID dodeljivanja: {dodeljen.Id}");
             FormaUpravljajDodeljenim forma = new FormaUpravljajDodeljenim(dodeljen);
             forma.ShowDialog();
@@ -61,7 +61,7 @@ namespace VanredneSituacije.Forme
 
             if (potvrda == DialogResult.OK)
             {
-                await DTOManager.ObrisiDodeljivanje(selektovano.Id);
+                await DTOManager.DodeljivanjeObrisii(selektovano.Id);
                 MessageBox.Show("Uspešno obrisano dodeljivanje!", "Info");
                 UcitajPodatke();
             }

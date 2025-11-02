@@ -21,7 +21,7 @@ namespace VanredneSituacije.Forme
         {
             try
             {
-                dataGridRadnici.DataSource = await DTOManager.VratiOperativneRadnikeIzJedincie(jedId);
+                dataGridRadnici.DataSource = await DTOManager.JedinicaRadniciVratii(jedId);
                 dataGridRadnici.Refresh();
                 dataGridRadnici.ClearSelection();
             }
@@ -50,7 +50,7 @@ namespace VanredneSituacije.Forme
 
             if (potvrda == DialogResult.OK)
             {
-                await DTOManager.ObrisiOperativnogRadnika(operativni.JMBG);
+                await DTOManager.OperativniObrisii(operativni.JMBG);
                 MessageBox.Show("Obrisan operativni!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 UcitajRadnike();
             }

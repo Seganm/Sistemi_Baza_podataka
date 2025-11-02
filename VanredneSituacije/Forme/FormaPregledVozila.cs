@@ -27,17 +27,17 @@ namespace VanredneSituacije.Forme
             string izborTipa = izborTipaVozila.SelectedItem?.ToString();
 
             if (izborTipa == "Sva vozila")
-                tabelaVozila.DataSource = await DTOManager.VratiSvaVozila();
+                tabelaVozila.DataSource = await DTOManager.VozilaVratii();
             else if (izborTipa == "Sanitetska vozila")
-                tabelaVozila.DataSource = await DTOManager.VratiSanitetskaVozila();
+                tabelaVozila.DataSource = await DTOManager.SanitetskaVratii();
             else if (izborTipa == "Specijalna vozila")
-                tabelaVozila.DataSource = await DTOManager.VratiSpecijalnaVozila();
+                tabelaVozila.DataSource = await DTOManager.SpecijalnaVratii();
             else if (izborTipa == "Kamioni")
-                tabelaVozila.DataSource = await DTOManager.VratiKamione();
+                tabelaVozila.DataSource = await DTOManager.KamioniVratii();
             else if (izborTipa == "Džipovi")
-                tabelaVozila.DataSource = await DTOManager.VratiDzipove();
+                tabelaVozila.DataSource = await DTOManager.DzipoviVratii();
             else
-                tabelaVozila.DataSource = await DTOManager.VratiSvaVozila();
+                tabelaVozila.DataSource = await DTOManager.VozilaVratii();
 
             tabelaVozila.Refresh();
             tabelaVozila.ClearSelection();
@@ -57,11 +57,11 @@ namespace VanredneSituacije.Forme
             if (vozilo is DTOSanitetsko sanitetsko)
                 forma = new FormaUpravljajSanitetskim(sanitetsko);
             else if (vozilo is DTOSpecijalno specijalno)
-                forma = new FormaUpravljajSpecijalnim(specijalno.Registarska_Oznaka);
+                forma = new FormaUpravljajSpecijalnim(specijalno.Registracijaa);
             else if (vozilo is DTOKamion kamion)
-                forma = new FormaUpravljajKamionom(kamion.Registarska_Oznaka);
+                forma = new FormaUpravljajKamionom(kamion.Registracijaa);
             else if (vozilo is DTODzip dzip)
-                forma = new FormaUpravljajDzipom(dzip.Registarska_Oznaka);
+                forma = new FormaUpravljajDzipom(dzip.Registracijaa);
             else
                 throw new Exception("Nepoznat tip vozila.");
 
@@ -84,13 +84,13 @@ namespace VanredneSituacije.Forme
                 var vozilo = tabelaVozila.CurrentRow.DataBoundItem as DTOVozilo;
 
                 if (vozilo is DTOSanitetsko sanitetsko)
-                    await DTOManager.ObrisiSanitetskoVozilo(sanitetsko.Registarska_Oznaka);
+                    await DTOManager.SanitetskoObrisii(sanitetsko.Registracijaa);
                 else if (vozilo is DTOSpecijalno specijalno)
-                    await DTOManager.ObrisiSpecijalnoVozilo(specijalno.Registarska_Oznaka);
+                    await DTOManager.SpecijalnoObrisii(specijalno.Registracijaa);
                 else if (vozilo is DTOKamion kamion)
-                    await DTOManager.ObrisiKamion(kamion.Registarska_Oznaka);
+                    await DTOManager.KamionObrisii(kamion.Registracijaa);
                 else if (vozilo is DTODzip dzip)
-                    await DTOManager.ObrisiDzip(dzip.Registarska_Oznaka);
+                    await DTOManager.DzipObrisii(dzip.Registracijaa);
                 else
                     throw new Exception("Nepoznat tip vozila.");
 
@@ -108,7 +108,7 @@ namespace VanredneSituacije.Forme
             }
 
             var vozilo = tabelaVozila.CurrentRow.DataBoundItem as DTOVozilo;
-            var forma = new FormaAngazovanostVozila(vozilo.Registarska_Oznaka);
+            var forma = new FormaAngazovanostVozila(vozilo.Registracijaa);
             forma.ShowDialog();
             OsveziPrikazVozila();
         }
@@ -135,7 +135,7 @@ namespace VanredneSituacije.Forme
         private async void FormaPregledVozila_Load(object sender, EventArgs e)
         {
             izborTipaVozila.SelectedIndex = 0;
-            tabelaVozila.DataSource = await DTOManager.VratiSvaVozila();
+            tabelaVozila.DataSource = await DTOManager.VozilaVratii();
             OsveziPrikazVozila();
         }
     }

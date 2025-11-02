@@ -9,18 +9,18 @@ namespace VanredneSituacije.DTO
 {
     public class DTOSpecijalnaInterventnaJedinica : DTOInterventnaJedinica
     {
-        public virtual string TipSpecijalneJedinice { get; set; }
+        public virtual string SpecijalnaTip { get; set; }
 
         public DTOSpecijalnaInterventnaJedinica() { }
         public DTOSpecijalnaInterventnaJedinica(SpecijalnaInterventnaJedinica sij) : base(sij)
         {
-            TipSpecijalneJedinice = sij.TipSpecijalneJedinice;
+            SpecijalnaTip = sij.SpecijalnaTip;
         }
     }
     public class DTOVratiSpecijalnuInterventnuJedinicu : DTOVratiInterventnuJedinicu
     {
 
-        public virtual string TipSpecijalneJedinice { get; set; }
+        public virtual string SpecijalnaTip { get; set; }
 
         public DTOVratiSpecijalnuInterventnuJedinicu()
         {
@@ -28,17 +28,17 @@ namespace VanredneSituacije.DTO
         public DTOVratiSpecijalnuInterventnuJedinicu(SpecijalnaInterventnaJedinica sij) : base(sij)
         {
 
-            this.TipSpecijalneJedinice = sij.TipSpecijalneJedinice;
+            this.SpecijalnaTip = sij.SpecijalnaTip;
         }
     }
     public class DTOOsnovnaSpecijalnaInterventnaJedinica : DTOOsnovnaInterventnaJedinica
     {
-        public virtual string TipSpecijalneJedinice { get; set; }
+        public virtual string SpecijalnaTip { get; set; }
 
         public DTOOsnovnaSpecijalnaInterventnaJedinica() { }
         public DTOOsnovnaSpecijalnaInterventnaJedinica(SpecijalnaInterventnaJedinica sij) : base(sij)
         {
-            TipSpecijalneJedinice = sij.TipSpecijalneJedinice;
+            SpecijalnaTip = sij.SpecijalnaTip;
         }
     }
 

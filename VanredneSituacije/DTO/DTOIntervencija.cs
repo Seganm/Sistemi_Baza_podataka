@@ -19,19 +19,19 @@ namespace VanredneSituacije.DTO
             Lokacija = intv.Lokacija;
             Id = intv.Id;
             Resursi = intv.Resursi;
-            Broj_Spasenih = intv.Broj_Spasenih;
-            Broj_Povredjenih = intv.Broj_Povredjenih;
+            BrSpasenih = intv.BrSpasenih;
+            BrPovredjenih = intv.BrPovredjenih;
             Status = intv.Status.ToString();
 
             Uspesnost = intv.Uspesnost;
 
-            Datum_I_Vreme = intv.Datum_I_Vreme;
+            DatumVremee = intv.DatumVremee;
         }
         public virtual string Lokacija { get; set; }
         public virtual int Id { get; set; }
         public virtual string Resursi { get; set; }
-        public virtual int Broj_Spasenih { get; set; }
-        public virtual int Broj_Povredjenih { get; set; }
+        public virtual int BrSpasenih { get; set; }
+        public virtual int BrPovredjenih { get; set; }
 
 
 
@@ -39,7 +39,7 @@ namespace VanredneSituacije.DTO
 
 
         public virtual int Uspesnost { get; set; }
-        public virtual DateTime Datum_I_Vreme { get; set; }
+        public virtual DateTime DatumVremee { get; set; }
 
 
     }
@@ -50,26 +50,26 @@ namespace VanredneSituacije.DTO
         {
             Lokacija = intv.Lokacija;
             Resursi = intv.Resursi;
-            Broj_Spasenih = intv.Broj_Spasenih;
-            Broj_Povredjenih = intv.Broj_Povredjenih;
+            BrSpasenih = intv.BrSpasenih;
+            BrPovredjenih = intv.BrPovredjenih;
 
 
             Status = intv.Status;
 
             Uspesnost = intv.Uspesnost;
-            Datum_I_Vreme = intv.Datum_I_Vreme;
+            DatumVremee = intv.DatumVremee;
         }
         public virtual string Lokacija { get; set; }
         public virtual string Resursi { get; set; }
-        public virtual int Broj_Spasenih { get; set; }
-        public virtual int Broj_Povredjenih { get; set; }
+        public virtual int BrSpasenih { get; set; }
+        public virtual int BrPovredjenih { get; set; }
 
 
         public virtual Status Status { get; set; }
 
 
         public virtual int Uspesnost { get; set; }
-        public virtual DateTime Datum_I_Vreme { get; set; }
+        public virtual DateTime DatumVremee { get; set; }
 
 
     }

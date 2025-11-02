@@ -19,10 +19,10 @@ namespace VanredneSituacije.Entitet
 
         public virtual IList<Angazovano> Ucestvovalos { get; set; }
         public virtual string Resursi { get; set; }
-        public virtual int Broj_Spasenih { get; set; } = 0;
-        public virtual int Broj_Povredjenih { get; set; } = 0;
+        public virtual int BrSpasenih { get; set; } = 0;
+        public virtual int BrPovredjenih { get; set; } = 0;
         public virtual int Uspesnost { get; set; }
-        public virtual DateTime Datum_I_Vreme { get; set; }
+        public virtual DateTime DatumVremee { get; set; }
 
         public virtual string Lokacija { get; set; }
         public virtual Status Status { get; set; }

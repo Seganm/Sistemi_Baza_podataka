@@ -41,7 +41,7 @@ namespace VanredneSituacije.DTO
         public DTODodajOpremu(Oprema opr)
         {
             Naziv = opr.Naziv;
-            JedinicaID = opr.Jedinica.Jedinstveni_Broj;
+            JedinicaID = opr.Jedinica.JedinstveniBroj;
             Serijski_Broj = opr.Serijski_Broj;
            
             Status = opr.Status;
@@ -78,7 +78,7 @@ namespace VanredneSituacije.DTO
         public DTOIzmeniOpremu() { }
         public DTOIzmeniOpremu(Oprema opr)
         {
-            JedinicaID = opr.Jedinica.Jedinstveni_Broj;
+            JedinicaID = opr.Jedinica.JedinstveniBroj;
             Naziv = opr.Naziv;
             Status = opr.Status;
             DatumNabavke = opr.DatumNabavke;

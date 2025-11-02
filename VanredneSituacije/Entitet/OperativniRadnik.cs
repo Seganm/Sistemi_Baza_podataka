@@ -10,16 +10,16 @@ namespace VanredneSituacije.Entitet
     {
 
         public virtual InterventnaJedinica? InterventnaJedinica { get; set; }
-        public virtual Spremnost Fizicka_Spremnost { get; set; }
+        public virtual Spremnost FizSpremnost { get; set; }
 
         public virtual IList<Dodeljen> Dodeljuje { get; set; }
-        public virtual IList<Sertifikati> Sertifikats { get; set; }
-        public virtual int Broj_Sati { get; set; }
+        public virtual IList<Sertifikati> Sertifikatii { get; set; }
+        public virtual int BrSati { get; set; }
 
         public OperativniRadnik()
         {
             Dodeljuje = new List<Dodeljen>();
-            Sertifikats = new List<Sertifikati>();
+            Sertifikatii = new List<Sertifikati>();
         }
     }
     public enum Spremnost { Visoka, Srednja, Niska }

@@ -16,8 +16,8 @@ namespace VanredneSituacije.Mapiranje
 
             Id(x => x.Id, "Id").GeneratedBy.TriggerIdentity();
             References(x => x.IdVanrednee, "IdVanredneSituacije").Cascade.None();
-            References(x => x.IdInterventnee, "IdInterventnee").Cascade.None();
-            References(x => x.IdIntervencijee, "IdIntervencijee").Cascade.None();
+            References(x => x.IdInterventnee, "IdInterventneJed").Cascade.None();
+            References(x => x.IdIntervencijee, "IdIntervencije").Cascade.None();
         }
     }
 }

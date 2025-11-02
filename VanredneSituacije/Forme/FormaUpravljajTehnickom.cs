@@ -39,10 +39,10 @@ namespace VanredneSituacije.Forme
 
         private async Task PopuniComboe()
         {
-            var jedinice = await DTOManager.VratiSpecijalneJedinice();
+            var jedinice = await DTOManager.SpecijalneVratii();
             cmbJedinica.DataSource = jedinice;
             cmbJedinica.DisplayMember = "Naziv";
-            cmbJedinica.ValueMember = "Jedinstveni_Broj";
+            cmbJedinica.ValueMember = "JedinstveniBroj";
 
             cmbStatus.DataSource = Enum.GetValues(typeof(StatusOpreme));
             cmbTipOpreme.DataSource = Enum.GetValues(typeof(TipTehnicke));

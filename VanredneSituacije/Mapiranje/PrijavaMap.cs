@@ -20,13 +20,13 @@ namespace VanredneSituacije.Mapiranje
 
 
 
-            Map(x => x.Datum_I_Vreme, "Datum_I_Vreme");
+            Map(x => x.DatumVremee, "Datum_I_Vreme");
             Map(x => x.Tip).Column("Tip");
-            Map(x => x.Ime_Prijavioca).Column("Ime_Prijavioca");
+            Map(x => x.PrijavilacIme).Column("Ime_Prijavioca");
             Map(x => x.Kontakt).Column("Kontakt_Prijavioca");
             Map(x => x.Lokacija).Column("Lokacija");
             Map(x => x.Opis).Column("Opis");
-            Map(x => x.JMBG_Dispecer).Column("JMBG_Dispecera");
+            Map(x => x.DispecerJMBG).Column("JMBG_Dispecera");
             Map(x => x.Prioritet).Column("Prioritet");
 
 

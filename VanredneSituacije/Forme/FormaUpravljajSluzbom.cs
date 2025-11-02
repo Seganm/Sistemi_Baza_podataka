@@ -25,7 +25,7 @@ namespace VanredneSituacije.Forme
 
         private async Task UcitajPredstavnike()
         {
-            cmbPredstavnici.DataSource = await DTOManager.VratiPredstavnike();
+            cmbPredstavnici.DataSource = await DTOManager.PredstavniciSluzbeVratii();
             cmbPredstavnici.DisplayMember = "PunoIme";
             cmbPredstavnici.ValueMember = "JMBG";
             cmbPredstavnici.SelectedIndex = -1;
@@ -41,10 +41,10 @@ namespace VanredneSituacije.Forme
 
         private async void btnSnimi_Click(object sender, EventArgs e)
         {
-            DTODodajSluzbu nova = new DTODodajSluzbu
+            DTOSluzbaDodajj nova = new DTOSluzbaDodajj
             {
                 TipSektora = txtTipSektora.Text,
-                JMBG_Predstavnik = (string)cmbPredstavnici.SelectedValue
+                JMBGPredstavnikaa = (string)cmbPredstavnici.SelectedValue
             };
 
             if (string.IsNullOrWhiteSpace(txtTipSektora.Text) || cmbPredstavnici.SelectedIndex == -1)
@@ -54,9 +54,9 @@ namespace VanredneSituacije.Forme
             }
 
             if (_postojecaSluzba == null)
-                await DTOManager.DodajSluzbu(nova);
+                await DTOManager.SluzbaDodajj(nova);
             else
-                await DTOManager.IzmeniSluzbu(nova, _postojecaSluzba.SektorrId);
+                await DTOManager.SluzbaIzmenii(nova, _postojecaSluzba.SektorrId);
 
             DialogResult = DialogResult.OK;
             Close();

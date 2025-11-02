@@ -18,7 +18,7 @@ namespace VanredneSituacije.Entitet
         }
         public virtual string Naziv { get; set; }
         public virtual int BrojClanova { get; set; }
-        public virtual int Jedinstveni_Broj { get; set; }
+        public virtual int JedinstveniBroj { get; set; }
         
         public virtual string Baza { get; set; }
         public virtual IList<OperativniRadnik> Radnici { get; set; }
@@ -33,7 +33,7 @@ namespace VanredneSituacije.Entitet
     }
     public class SpecijalnaInterventnaJedinica : InterventnaJedinica
     {
-        public virtual string TipSpecijalneJedinice { get; set; }
+        public virtual string SpecijalnaTip { get; set; }
     }
     public class OpstaInterventnaJedinica : InterventnaJedinica { }
 }

@@ -58,10 +58,10 @@ namespace VanredneSituacije.Forme
 
         private async Task NapuniListe()
         {
-            var jedinice = await DTOManager.VratiSveJedinice();
+            var jedinice = await DTOManager.InterventneVratii();
             cmbJedinica.DataSource = jedinice;
             cmbJedinica.DisplayMember = "Naziv";
-            cmbJedinica.ValueMember = "Jedinstveni_Broj";
+            cmbJedinica.ValueMember = "JedinstveniBroj";
 
             cmbTip.DataSource = Enum.GetValues(typeof(TipZalihe));
             cmbStatus.DataSource = Enum.GetValues(typeof(StatusOpreme));

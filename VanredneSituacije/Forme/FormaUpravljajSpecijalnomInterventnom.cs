@@ -26,7 +26,7 @@ namespace VanredneSituacije.Forme
 
         public async void PopuniPodacima()
         {
-            var operativni = await DTOManager.VratiOperativneRadnike();
+            var operativni = await DTOManager.RadniciVratii();
             cmbKomandir.DataSource = operativni;
             cmbKomandir.DisplayMember = "PunoIme";
             cmbKomandir.ValueMember = "JMBG";
@@ -35,7 +35,7 @@ namespace VanredneSituacije.Forme
             {
                 txtNaziv.Text = specijalna.Naziv;
                 txtBaza.Text = specijalna.Baza;
-                txtTip.Text = specijalna.TipSpecijalneJedinice;
+                txtTip.Text = specijalna.SpecijalnaTip;
 
                 if (specijalna.JMBGKomandira != null)
                 {
@@ -65,13 +65,13 @@ namespace VanredneSituacije.Forme
                 Naziv = txtNaziv.Text,
                 Baza = txtBaza.Text,
                 JMBGKomandira = cmbKomandir.SelectedValue?.ToString(),
-                TipSpecijalneJedinice = txtTip.Text
+                SpecijalnaTip = txtTip.Text
             };
 
             if (specijalna == null)
-                await DTOManager.DodajSpecijalnuIntervetnuJedinicu(spec);
+                await DTOManager.SpecijalnaJedinicaDodajj(spec);
             else
-                await DTOManager.izmeniSpecijalnuInterventnuJedinicu(spec, specijalna.Jedinstveni_Broj);
+                await DTOManager.SpecijalnaJedinicaIzmenii(spec, specijalna.JedinstveniBroj);
 
             MessageBox.Show("Podaci o specijalnoj jedinici su uspešno sačuvani.",
                 "Uspešno čuvanje", MessageBoxButtons.OK, MessageBoxIcon.Information);

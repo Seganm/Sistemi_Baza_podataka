@@ -24,13 +24,13 @@ namespace VanredneSituacije.Forme
 
         private async void FormaDodajAngazovano_Load(object sender, EventArgs e)
         {
-            listaIntervencija.DataSource = await DTOManager.VratiIntervencije();
+            listaIntervencija.DataSource = await DTOManager.IntervencijeVratii();
             listaIntervencija.DisplayMember = "Id";
             listaIntervencija.ValueMember = "Id";
 
-            listaVozila.DataSource = await DTOManager.VratiSvaVozila();
-            listaVozila.DisplayMember = "Registarska_Oznaka";
-            listaVozila.ValueMember = "Registarska_Oznaka";
+            listaVozila.DataSource = await DTOManager.VozilaVratii();
+            listaVozila.DisplayMember = "Registracijaa";
+            listaVozila.ValueMember = "Registracijaa";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -74,11 +74,11 @@ namespace VanredneSituacije.Forme
 
             if (angazovanost == null)
             {
-                await DTOManager.DodajUcestvovanje(info);
+                await DTOManager.AngazovanjeDodajj(info);
             }
             else
             {
-                await DTOManager.IzmeniUcestvovanje(info, angazovanost.Id);
+                await DTOManager.AngazovanjeIzmenii(info, angazovanost.Id);
             }
 
             DialogResult = DialogResult.OK;

@@ -15,63 +15,63 @@ namespace VanredneSituacije.DTO
 
         public DTOOperativniRadnik(OperativniRadnik opr) : base(opr)
         {
-            Broj_Sati = opr.Broj_Sati;
-            Fizicka_Spremnost = opr.Fizicka_Spremnost;
+            BrSati = opr.BrSati;
+            FizSpremnost = opr.FizSpremnost;
             if (opr.InterventnaJedinica != null)
             {
                 InterventnaJedinica = new DTOVratiInterventnuJedinicu(opr.InterventnaJedinica);
             }
         }
         public virtual DTOVratiInterventnuJedinicu? InterventnaJedinica { get; set; }
-        public virtual Spremnost Fizicka_Spremnost { get; set; }
-        public virtual int Broj_Sati { get; set; }
+        public virtual Spremnost FizSpremnost { get; set; }
+        public virtual int BrSati { get; set; }
 
     }
-    public class DTODodajOperativnogRadnika : DTOZaposleni
+    public class DTOOperativniDodajja : DTOZaposleni
     {
 
-        public DTODodajOperativnogRadnika()
+        public DTOOperativniDodajja()
         {
         }
 
-        public DTODodajOperativnogRadnika(OperativniRadnik opr) : base(opr)
+        public DTOOperativniDodajja(OperativniRadnik opr) : base(opr)
         {
 
             if (opr.InterventnaJedinica != null)
             {
-                InterventnaJedinica = opr.InterventnaJedinica.Jedinstveni_Broj;
+                InterventnaJedinica = opr.InterventnaJedinica.JedinstveniBroj;
             }
-            Broj_Sati = opr.Broj_Sati;
-            Fizicka_Spremnost = opr.Fizicka_Spremnost;
+            BrSati = opr.BrSati;
+            FizSpremnost = opr.FizSpremnost;
         }
-        public virtual Spremnost Fizicka_Spremnost { get; set; }
-        public virtual int Broj_Sati { get; set; }
+        public virtual Spremnost FizSpremnost { get; set; }
+        public virtual int BrSati { get; set; }
         public virtual int? InterventnaJedinica { get; set; }
 
 
     }
-    public class DTOIzmeniOperativnogRadnika : DTOIzmeniZaposlenog
+    public class DTOOperativniIzmeniiRadnika : DTOIzmeniZaposlenog
     {
-        public DTOIzmeniOperativnogRadnika()
+        public DTOOperativniIzmeniiRadnika()
         {
 
         }
 
-        public DTOIzmeniOperativnogRadnika(OperativniRadnik opr) : base(opr)
+        public DTOOperativniIzmeniiRadnika(OperativniRadnik opr) : base(opr)
         {
 
             if (opr.InterventnaJedinica != null)
             {
-                this.IdJedinice = opr.InterventnaJedinica.Jedinstveni_Broj;
+                this.IdJedinice = opr.InterventnaJedinica.JedinstveniBroj;
             }
-            this.Fizicka_Spremnost = opr.Fizicka_Spremnost;
-            this.Broj_Sati = opr.Broj_Sati;
+            this.FizSpremnost = opr.FizSpremnost;
+            this.BrSati = opr.BrSati;
         }
 
 
-        public virtual int Broj_Sati { get; set; }
+        public virtual int BrSati { get; set; }
 
-        public virtual Spremnost Fizicka_Spremnost { get; set; }
+        public virtual Spremnost FizSpremnost { get; set; }
 
 
         public virtual int? IdJedinice { get; set; }

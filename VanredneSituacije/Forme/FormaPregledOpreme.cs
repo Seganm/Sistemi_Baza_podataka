@@ -16,7 +16,7 @@ namespace VanredneSituacije.Forme
             string tip = komboTip.SelectedItem?.ToString();
 
             if (tip == "Sve")
-                mrezaOprema.DataSource = await DTOManager.VratiSvuOpremu();
+                mrezaOprema.DataSource = await DTOManager.OpremaVratii();
             else if (tip == "Lična zaštita")
                 mrezaOprema.DataSource = await DTOManager.VratiOpremuLicneZastite();
             else if (tip == "Medicinska")
@@ -26,7 +26,7 @@ namespace VanredneSituacije.Forme
             else if (tip == "Zalihe")
                 mrezaOprema.DataSource = await DTOManager.VratiZalihe();
             else
-                mrezaOprema.DataSource = await DTOManager.VratiSvuOpremu();
+                mrezaOprema.DataSource = await DTOManager.OpremaVratii();
 
             mrezaOprema.Refresh();
             mrezaOprema.ClearSelection();
@@ -35,7 +35,7 @@ namespace VanredneSituacije.Forme
         private async void FormaPregledOpreme_Load(object sender, EventArgs e)
         {
             komboTip.SelectedText = "Sve";
-            mrezaOprema.DataSource = await DTOManager.VratiSvuOpremu();
+            mrezaOprema.DataSource = await DTOManager.OpremaVratii();
             PopuniPodacima();
         }
 

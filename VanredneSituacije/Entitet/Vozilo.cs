@@ -20,7 +20,7 @@ namespace VanredneSituacije.Entitet
 
         public virtual IList<Angazovano> Ucestvovalo { get; set; }
 
-        public virtual string Registarska_Oznaka { get; set; }
+        public virtual string Registracijaa { get; set; }
 
         public virtual string Proizvodjac { get; set; }
 

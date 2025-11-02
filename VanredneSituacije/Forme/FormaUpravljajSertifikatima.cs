@@ -10,7 +10,7 @@ namespace VanredneSituacije.Forme
     public partial class FormaUpravljajSertifikatima : Form
     {
         private DTODodajIdSertifikata _idSertifikata;
-        private DTOVratiSertifikat _postojeciSertifikat;
+        private DTOSertifikatVratii _postojeciSertifikat;
         public readonly string _jmbgRadnika;
 
         public FormaUpravljajSertifikatima()
@@ -30,7 +30,7 @@ namespace VanredneSituacije.Forme
             txtJmbgRadnika.BackColor = Color.LightGray;
         }
 
-        public FormaUpravljajSertifikatima(DTOVratiSertifikat sertifikat)
+        public FormaUpravljajSertifikatima(DTOSertifikatVratii sertifikat)
         {
             InitializeComponent();
             PodesiStil();
@@ -82,8 +82,8 @@ namespace VanredneSituacije.Forme
                 txtInstitucijaSertifikata.Enabled = false;
                 txtInstitucijaSertifikata.BackColor = Color.LightGray;
 
-                dtpDatumIzdavanja.Value = _postojeciSertifikat.DatumIzdavanja;
-                dtpDatumVazenja.Value = _postojeciSertifikat.DatumVazenja ?? DateTime.Now;
+                dtpDatIzdavanje.Value = _postojeciSertifikat.DatIzdavanje;
+                dtpDatVazenje.Value = _postojeciSertifikat.DatVazenje ?? DateTime.Now;
             }
         }
 
@@ -97,8 +97,8 @@ namespace VanredneSituacije.Forme
                     Naziv = txtNazivSertifikata.Text.Trim(),
                     Institucija = txtInstitucijaSertifikata.Text.Trim()
                 },
-                DatumIzdavanja = dtpDatumIzdavanja.Value,
-                DatumVazenja = dtpDatumVazenja.Checked ? dtpDatumVazenja.Value : (DateTime?)null
+                DatIzdavanje = dtpDatIzdavanje.Value,
+                DatVazenje = dtpDatVazenje.Checked ? dtpDatVazenje.Value : (DateTime?)null
             };
 
             if (string.IsNullOrEmpty(sertifikat.Id.JMBGRadnika) ||
@@ -112,13 +112,13 @@ namespace VanredneSituacije.Forme
 
             if (_postojeciSertifikat == null)
             {
-                await DTOManager.DodajSertifikat(sertifikat);
+                await DTOManager.SertifikatDodajj(sertifikat);
                 MessageBox.Show("Sertifikat je uspešno dodat!", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                await DTOManager.IzmeniSertifikat(sertifikat);
+                await DTOManager.SertifikatIzmenii(sertifikat);
                 MessageBox.Show("Sertifikat je izmenjen", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -131,8 +131,8 @@ namespace VanredneSituacije.Forme
         {
             txtNazivSertifikata.Clear();
             txtInstitucijaSertifikata.Clear();
-            dtpDatumIzdavanja.Value = DateTime.Now;
-            dtpDatumVazenja.Value = DateTime.Now;
+            dtpDatIzdavanje.Value = DateTime.Now;
+            dtpDatVazenje.Value = DateTime.Now;
         }
 
         private void btnZatvoriFormu_Click(object sender, EventArgs e)

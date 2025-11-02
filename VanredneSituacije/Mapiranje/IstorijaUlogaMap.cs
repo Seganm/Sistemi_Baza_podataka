@@ -16,8 +16,8 @@ namespace VanredneSituacije.Mapiranje
             Table("IstorijaUloga");
             Id(x => x.Id, "Id").GeneratedBy.TriggerIdentity();
             References(x => x.Zaposleni, "JMBG").Not.Nullable().Cascade.None();
-            Map(x => x.DatumPoc).Column("DatumPoc").Not.Nullable();
-            Map(x => x.DatumKraj).Column("DatumKraj").Nullable();
+            Map(x => x.DatumPoc).Column("Datum_Od").Not.Nullable();
+            Map(x => x.DatumKraj).Column("Datum_Do").Nullable();
             Map(x => x.Uloga).Column("Uloga");
          
         }

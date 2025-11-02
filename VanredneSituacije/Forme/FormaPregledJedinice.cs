@@ -17,11 +17,11 @@ namespace VanredneSituacije.Forme
             string tip = izborTipa.SelectedItem?.ToString();
 
             if (tip == "Opšte Jedinice")
-                mrezaJedinice.DataSource = await DTOManager.VratiOpstejedinice();
+                mrezaJedinice.DataSource = await DTOManager.OpsteJediniceVratii();
             else if (tip == "Specijalne Jedinice")
-                mrezaJedinice.DataSource = await DTOManager.VratiSpecijalneJedinice();
+                mrezaJedinice.DataSource = await DTOManager.SpecijalneVratii();
             else
-                mrezaJedinice.DataSource = await DTOManager.VratiSveJedinice();
+                mrezaJedinice.DataSource = await DTOManager.InterventneVratii();
 
             mrezaJedinice.Refresh();
             mrezaJedinice.ClearSelection();
@@ -76,9 +76,9 @@ namespace VanredneSituacije.Forme
                 var jedinica = mrezaJedinice.CurrentRow.DataBoundItem as DTOVratiInterventnuJedinicu;
 
                 if (jedinica is DTOVratiOpstuInterventnuJedinicu opsta)
-                    await DTOManager.ObrisiOpstuInterventnuJedinicu(opsta.Jedinstveni_Broj);
+                    await DTOManager.OpstaInterventnaObrisii(opsta.JedinstveniBroj);
                 else if (jedinica is DTOVratiSpecijalnuInterventnuJedinicu spec)
-                    await DTOManager.ObrisiSpecijalnuInterventnuJedinicu(spec.Jedinstveni_Broj);
+                    await DTOManager.SpecijalnaJedinicaObrisii(spec.JedinstveniBroj);
 
                 MessageBox.Show("Jedinica uspešno obrisana.", "Info");
                 PopuniPodacima();
@@ -97,9 +97,9 @@ namespace VanredneSituacije.Forme
             Form forma;
 
             if (jedinica is DTOVratiSpecijalnuInterventnuJedinicu spec)
-                forma = new FormaJedinicaVozila(spec.Jedinstveni_Broj);
+                forma = new FormaJedinicaVozila(spec.JedinstveniBroj);
             else if (jedinica is DTOVratiOpstuInterventnuJedinicu opsta)
-                forma = new FormaJedinicaVozila(opsta.Jedinstveni_Broj);
+                forma = new FormaJedinicaVozila(opsta.JedinstveniBroj);
             else
                 throw new Exception("Nepoznat tip jedinice!");
 
@@ -119,9 +119,9 @@ namespace VanredneSituacije.Forme
             Form forma;
 
             if (jedinica is DTOVratiSpecijalnuInterventnuJedinicu spec)
-                forma = new FormaOperativciJedinice(spec.Jedinstveni_Broj);
+                forma = new FormaOperativciJedinice(spec.JedinstveniBroj);
             else if (jedinica is DTOVratiOpstuInterventnuJedinicu opsta)
-                forma = new FormaOperativciJedinice(opsta.Jedinstveni_Broj);
+                forma = new FormaOperativciJedinice(opsta.JedinstveniBroj);
             else
                 throw new Exception("Nepoznat tip jedinice!");
 
@@ -132,7 +132,7 @@ namespace VanredneSituacije.Forme
         private async void FormaPregledJedinice_Load(object sender, EventArgs e)
         {
             izborTipa.SelectedText = "Sve Jedinice";
-            mrezaJedinice.DataSource = await DTOManager.VratiSveJedinice();
+            mrezaJedinice.DataSource = await DTOManager.InterventneVratii();
             PopuniPodacima();
         }
     }

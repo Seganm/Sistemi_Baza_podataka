@@ -33,14 +33,14 @@ namespace VanredneSituacije.DTO
 
         
     }
-    public class DTOVratiSluzbu
+    public class DTOSluzbaVratii
     {
 
-        public DTOVratiSluzbu()
+        public DTOSluzbaVratii()
         {
         }
 
-        public DTOVratiSluzbu(Sluzba sl)
+        public DTOSluzbaVratii(Sluzba sl)
         {
             SektorrId = sl.SektorrId;
             TipSektora = sl.TipSektora;
@@ -62,18 +62,18 @@ namespace VanredneSituacije.DTO
 
 
     }
-    public class DTODodajSluzbu
+    public class DTOSluzbaDodajj
     {
-        public DTODodajSluzbu() { }
-        public DTODodajSluzbu(Sluzba sl)
+        public DTOSluzbaDodajj() { }
+        public DTOSluzbaDodajj(Sluzba sl)
         {
             if (sl.Predstavnik != null)
-                JMBG_Predstavnik = sl.Predstavnik.JMBG;
+                JMBGPredstavnikaa = sl.Predstavnik.JMBG;
             TipSektora = sl.TipSektora;
 
         }
         public virtual string TipSektora { get; set; }
-        public virtual string JMBG_Predstavnik { get; set; }
+        public virtual string JMBGPredstavnikaa { get; set; }
 
     }
     public class DTOPregledSluzbe

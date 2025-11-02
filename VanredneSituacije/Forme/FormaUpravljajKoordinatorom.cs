@@ -96,14 +96,14 @@ namespace VanredneSituacije.Forme
         {
             try
             {
-                DTOKoordinator kordinator = new DTOKoordinator();
-                kordinator.JMBG = textJmbg.Text;
-                kordinator.Ime = textIme.Text;
-                kordinator.Prezime = textPrezime.Text;
-                kordinator.DatumRodj = dateRodjenje.Value;
-                kordinator.BrojTelefona = textKontakt.Text;
-                kordinator.Email = textEmail.Text;
-                kordinator.AdresaStan = textAdresa.Text;
+                DTOKoordinator Koordinator = new DTOKoordinator();
+                Koordinator.JMBG = textJmbg.Text;
+                Koordinator.Ime = textIme.Text;
+                Koordinator.Prezime = textPrezime.Text;
+                Koordinator.DatumRodj = dateRodjenje.Value;
+                Koordinator.BrojTelefona = textKontakt.Text;
+                Koordinator.Email = textEmail.Text;
+                Koordinator.AdresaStan = textAdresa.Text;
 
                 if (textJmbg.Text.Length != 13 || int.TryParse(textJmbg.Text, out _))
                 {
@@ -116,11 +116,11 @@ namespace VanredneSituacije.Forme
                 }
                 if (checkMusko.Checked == true)
                 {
-                    kordinator.Pol = "M";
+                    Koordinator.Pol = "M";
                 }
                 else if (checkZensko.Checked == true)
                 {
-                    kordinator.Pol = "Z";
+                    Koordinator.Pol = "Z";
                 }
                 else
                 {
@@ -136,11 +136,11 @@ namespace VanredneSituacije.Forme
 
                 if (kord == null)
                 {
-                    await DTOManager.KoordinatorDodajj(kordinator);
+                    await DTOManager.KoordinatorDodajj(Koordinator);
                 }
                 else
                 {
-                    await DTOManager.KoordinatorIzmenii(kordinator, kord.JMBG);
+                    await DTOManager.KoordinatorIzmenii(Koordinator, kord.JMBG);
                 }
 
                 this.DialogResult = DialogResult.OK;

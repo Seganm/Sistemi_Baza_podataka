@@ -18,8 +18,8 @@ namespace VanredneSituacije.Mapiranje
             References(x => x.Vozilo, "Registarska_Oznaka").Not.Nullable().Cascade.None();
             References(x => x.Radnik, "JMBG_Pojedinca").Nullable().Cascade.None();
             References(x => x.Jedinica, "IdJedinice").Nullable().Cascade.None();
-            Map(x => x.DatumOd).Column("DatumPoc");
-            Map(x => x.DatumDo).Column("DatumKraj");
+            Map(x => x.DatumOd).Column("Datum_Od");
+            Map(x => x.DatumDo).Column("Datum_Do");
 
 
         }

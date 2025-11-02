@@ -52,7 +52,7 @@ namespace VanredneSituacije.DTO
             if (i.IdIntervencijee != null)
                 IdIntervencijee = i.IdIntervencijee.Id;
             if (i.IdInterventnee != null)
-                IdInterventnee = i.IdInterventnee.Jedinstveni_Broj;
+                IdInterventnee = i.IdInterventnee.JedinstveniBroj;
 
             this.Id = i.Id;
 
@@ -71,7 +71,7 @@ namespace VanredneSituacije.DTO
             if (i.IdIntervencijee != null)
                 IdIntervencijee = i.IdIntervencijee.Id;
             if (i.IdInterventnee != null)
-                IdInterventnee = i.IdInterventnee.Jedinstveni_Broj;
+                IdInterventnee = i.IdInterventnee.JedinstveniBroj;
           
         }
         public virtual int IdVanredneSituacije { get; set; }

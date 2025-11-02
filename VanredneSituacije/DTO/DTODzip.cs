@@ -7,14 +7,14 @@ using VanredneSituacije.Entitet;
 
 namespace VanredneSituacije.DTO
 {
-    public class DTODodajDzip : DTODodajVozilo
+    public class DTODzipDodajj : DTODodajVozilo
     {
-        public DTODodajDzip()
+        public DTODzipDodajj()
         { 
             
         }
 
-        public DTODodajDzip(Vozilo vo) : base(vo) 
+        public DTODzipDodajj(Vozilo vo) : base(vo) 
         {
         }
     }

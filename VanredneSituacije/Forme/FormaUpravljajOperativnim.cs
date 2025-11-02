@@ -56,21 +56,21 @@ namespace VanredneSituacije.Forme
             txtEmail.Text = OperativniRadnik.Email;
             txtAdresa.Text = OperativniRadnik.AdresaStan;
             dtpZaposlenje.Value = OperativniRadnik.DatumZap;
-            numSati.Value = OperativniRadnik.Broj_Sati;
-            cmbSpremnost.SelectedItem = OperativniRadnik.Fizicka_Spremnost;
+            numSati.Value = OperativniRadnik.BrSati;
+            cmbSpremnost.SelectedItem = OperativniRadnik.FizSpremnost;
 
-            if (OperativniRadnik.InterventnaJedinica.Jedinstveni_Broj == null)
+            if (OperativniRadnik.InterventnaJedinica.JedinstveniBroj == null)
                 cmbJedinica.SelectedIndex = -1;
             else
-                cmbJedinica.SelectedValue = OperativniRadnik.InterventnaJedinica.Jedinstveni_Broj;
+                cmbJedinica.SelectedValue = OperativniRadnik.InterventnaJedinica.JedinstveniBroj;
         }
 
         private async void FormaUpravljajOperativnim_Load(object sender, EventArgs e)
         {
-            var jedinice = await DTOManager.VratiSveJedinice();
+            var jedinice = await DTOManager.InterventneVratii();
             cmbJedinica.DataSource = jedinice;
             cmbJedinica.DisplayMember = "Naziv";
-            cmbJedinica.ValueMember = "Jedinstveni_Broj";
+            cmbJedinica.ValueMember = "JedinstveniBroj";
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -105,7 +105,7 @@ namespace VanredneSituacije.Forme
         {
             try
             {
-                DTODodajOperativnogRadnika operativni = new DTODodajOperativnogRadnika
+                DTOOperativniDodajja operativni = new DTOOperativniDodajja
                 {
                     JMBG = txtJmbg.Text,
                     Ime = txtIme.Text,
@@ -115,8 +115,8 @@ namespace VanredneSituacije.Forme
                     Email = txtEmail.Text,
                     AdresaStan = txtAdresa.Text,
                     DatumZap = dtpZaposlenje.Value,
-                    Broj_Sati = (int)numSati.Value,
-                    Fizicka_Spremnost = (Spremnost)cmbSpremnost.SelectedValue
+                    BrSati = (int)numSati.Value,
+                    FizSpremnost = (Spremnost)cmbSpremnost.SelectedValue
                 };
 
                 if (txtJmbg.Text.Length != 13 || int.TryParse(txtJmbg.Text, out _))
@@ -159,9 +159,9 @@ namespace VanredneSituacije.Forme
                 }
 
                 if (OperativniRadnik == null)
-                    await DTOManager.DodajOperativnogRadnik(operativni);
+                    await DTOManager.OperativniDodajj(operativni);
                 else
-                    await DTOManager.IzmeniOperativnog(operativni, OperativniRadnik.JMBG);
+                    await DTOManager.OperativniIzmenii(operativni, OperativniRadnik.JMBG);
 
                 DialogResult = DialogResult.OK;
                 Close();

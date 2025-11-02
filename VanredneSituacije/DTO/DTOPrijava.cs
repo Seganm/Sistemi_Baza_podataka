@@ -12,16 +12,16 @@ namespace VanredneSituacije.DTO
         {
             public virtual int Id { get; set; }
 
-            public virtual DateTime Datum_I_Vreme { get; set; }
+            public virtual DateTime DatumVremee { get; set; }
 
 
 
             public virtual string Tip { get; set; }
-            public virtual string Ime_Prijavioca { get; set; }
+            public virtual string PrijavilacIme { get; set; }
             public virtual string Kontakt { get; set; }
             public virtual string Lokacija { get; set; }
             public virtual string Opis { get; set; }
-            public virtual string JMBG_Dispecer { get; set; }
+            public virtual string DispecerJMBG { get; set; }
 
             public virtual int? Prioritet { get; set; }
 
@@ -34,46 +34,46 @@ namespace VanredneSituacije.DTO
             public DTOPrijava(Prijava p)
             {
                 Id = p.Id;
-                Datum_I_Vreme = p.Datum_I_Vreme;
+                DatumVremee = p.DatumVremee;
                 Tip = p.Tip;
-                Ime_Prijavioca = p.Ime_Prijavioca;
+                PrijavilacIme = p.PrijavilacIme;
                 Kontakt = p.Kontakt;
                 Lokacija = p.Lokacija;
                 Opis = p.Opis;
-                JMBG_Dispecer = p.JMBG_Dispecer;
+                DispecerJMBG = p.DispecerJMBG;
                 Prioritet = p.Prioritet;
             }
         }
 
-        public class DTODodajPrijavu
+        public class DTOPrijavaDodajj
         {
 
-            public virtual DateTime Datum_I_Vreme { get; set; }
+            public virtual DateTime DatumVremee { get; set; }
 
             public virtual string Tip { get; set; }
-            public virtual string Ime_Prijavioca { get; set; }
+            public virtual string PrijavilacIme { get; set; }
             public virtual string Kontakt { get; set; }
             public virtual string Lokacija { get; set; }
             public virtual string Opis { get; set; }
-            public virtual string JMBG_Dispecer { get; set; }
+            public virtual string DispecerJMBG { get; set; }
 
             public virtual int? Prioritet { get; set; }
 
 
-            public DTODodajPrijavu()
+            public DTOPrijavaDodajj()
             {
             }
 
-            public DTODodajPrijavu(Prijava p)
+            public DTOPrijavaDodajj(Prijava p)
             {
 
-                Datum_I_Vreme = p.Datum_I_Vreme;
+                DatumVremee = p.DatumVremee;
                 Tip = p.Tip;
-                Ime_Prijavioca = p.Ime_Prijavioca;
+                PrijavilacIme = p.PrijavilacIme;
                 Kontakt = p.Kontakt;
                 Lokacija = p.Lokacija;
                 Opis = p.Opis;
-                JMBG_Dispecer = p.JMBG_Dispecer;
+                DispecerJMBG = p.DispecerJMBG;
                 Prioritet = p.Prioritet;
 
             }
@@ -82,9 +82,9 @@ namespace VanredneSituacije.DTO
         public class DTOPregledPrijave
         {
             public virtual int Id { get; set; }
-            public virtual DateTime Datum_I_Vreme { get; set; }
+            public virtual DateTime DatumVremee { get; set; }
             public virtual string Tip { get; set; }
-            public virtual string Ime_Prijavioca { get; set; }
+            public virtual string PrijavilacIme { get; set; }
             public virtual string Kontakt { get; set; }
             public virtual string Lokacija { get; set; }
             public virtual int? Prioritet { get; set; }
@@ -94,9 +94,9 @@ namespace VanredneSituacije.DTO
             public DTOPregledPrijave(Prijava p)
             {
                 Id = p.Id;
-                Datum_I_Vreme = p.Datum_I_Vreme;
+                DatumVremee = p.DatumVremee;
                 Tip = p.Tip;
-                Ime_Prijavioca = p.Ime_Prijavioca;
+                PrijavilacIme = p.PrijavilacIme;
                 Kontakt = p.Kontakt;
                 Lokacija = p.Lokacija;
                 Prioritet = p.Prioritet;

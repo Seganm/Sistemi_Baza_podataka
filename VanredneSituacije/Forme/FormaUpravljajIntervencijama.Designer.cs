@@ -40,9 +40,7 @@ namespace VanredneSituacije.Forme
             ((System.ComponentModel.ISupportInitialize)numericSpaseni).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUspesnost).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
+           
             label1.ForeColor = Color.FromArgb(40, 40, 40);
             label1.Location = new Point(259, 38);
             label1.Name = "label1";
@@ -50,43 +48,33 @@ namespace VanredneSituacije.Forme
             label1.TabIndex = 3;
             label1.Text = "Broj povređenih:";
             label1.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // numericPovredjeni
-            // 
+            
             numericPovredjeni.Location = new Point(393, 34);
             numericPovredjeni.Margin = new Padding(3, 2, 3, 2);
             numericPovredjeni.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             numericPovredjeni.Name = "numericPovredjeni";
             numericPovredjeni.Size = new Size(128, 23);
             numericPovredjeni.TabIndex = 4;
-            // 
-            // dateDatumVreme
-            // 
+          
             dateDatumVreme.Location = new Point(120, 8);
             dateDatumVreme.Margin = new Padding(3, 2, 3, 2);
             dateDatumVreme.Name = "dateDatumVreme";
             dateDatumVreme.Size = new Size(129, 23);
             dateDatumVreme.TabIndex = 5;
-            // 
-            // textResursi
-            // 
+         
             textResursi.Location = new Point(119, 88);
             textResursi.Margin = new Padding(3, 2, 3, 2);
             textResursi.Multiline = true;
             textResursi.Name = "textResursi";
             textResursi.Size = new Size(129, 52);
             textResursi.TabIndex = 6;
-            // 
-            // textLokacija
-            // 
+            
             textLokacija.Location = new Point(121, 35);
             textLokacija.Margin = new Padding(3, 2, 3, 2);
             textLokacija.Name = "textLokacija";
             textLokacija.Size = new Size(129, 23);
             textLokacija.TabIndex = 7;
-            // 
-            // buttonRst
-            // 
+           
             buttonRst.BackColor = Color.FromArgb(255, 200, 80);
             buttonRst.FlatAppearance.BorderSize = 0;
             buttonRst.FlatStyle = FlatStyle.Flat;
@@ -98,9 +86,7 @@ namespace VanredneSituacije.Forme
             buttonRst.Text = "Reset";
             buttonRst.UseVisualStyleBackColor = false;
             buttonRst.Click += buttonRst_Click;
-            // 
-            // buttonCancel
-            // 
+           
             buttonCancel.BackColor = Color.FromArgb(220, 70, 70);
             buttonCancel.FlatAppearance.BorderSize = 0;
             buttonCancel.FlatStyle = FlatStyle.Flat;
@@ -113,9 +99,7 @@ namespace VanredneSituacije.Forme
             buttonCancel.Text = "Odustani";
             buttonCancel.UseVisualStyleBackColor = false;
             buttonCancel.Click += buttonCancel_Click;
-            // 
-            // buttonSave
-            // 
+         
             buttonSave.BackColor = Color.FromArgb(0, 122, 204);
             buttonSave.FlatAppearance.BorderSize = 0;
             buttonSave.FlatStyle = FlatStyle.Flat;
@@ -128,9 +112,7 @@ namespace VanredneSituacije.Forme
             buttonSave.Text = "Sačuvaj";
             buttonSave.UseVisualStyleBackColor = false;
             buttonSave.Click += buttonSave_Click_1;
-            // 
-            // label9
-            // 
+          
             label9.ForeColor = Color.FromArgb(40, 40, 40);
             label9.Location = new Point(259, 7);
             label9.Name = "label9";
@@ -138,9 +120,7 @@ namespace VanredneSituacije.Forme
             label9.TabIndex = 11;
             label9.Text = "Broj spašenih:";
             label9.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label8
-            // 
+           
             label8.ForeColor = Color.FromArgb(40, 40, 40);
             label8.Location = new Point(20, 103);
             label8.Name = "label8";
@@ -148,9 +128,7 @@ namespace VanredneSituacije.Forme
             label8.TabIndex = 12;
             label8.Text = "Resursi:";
             label8.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
+            
             label5.ForeColor = Color.FromArgb(40, 40, 40);
             label5.Location = new Point(259, 64);
             label5.Name = "label5";
@@ -158,9 +136,7 @@ namespace VanredneSituacije.Forme
             label5.TabIndex = 13;
             label5.Text = "Uspešnost (%):";
             label5.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
+            
             label3.ForeColor = Color.FromArgb(40, 40, 40);
             label3.Location = new Point(20, 66);
             label3.Name = "label3";
@@ -168,9 +144,7 @@ namespace VanredneSituacije.Forme
             label3.TabIndex = 14;
             label3.Text = "Status:";
             label3.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
+            
             label2.ForeColor = Color.FromArgb(40, 40, 40);
             label2.Location = new Point(19, 10);
             label2.Name = "label2";
@@ -178,9 +152,7 @@ namespace VanredneSituacije.Forme
             label2.TabIndex = 15;
             label2.Text = "Datum i vreme:";
             label2.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
+           
             label4.ForeColor = Color.FromArgb(40, 40, 40);
             label4.Location = new Point(20, 38);
             label4.Name = "label4";
@@ -188,36 +160,28 @@ namespace VanredneSituacije.Forme
             label4.TabIndex = 16;
             label4.Text = "Lokacija:";
             label4.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // comboStatus
-            // 
+           
             comboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboStatus.Items.AddRange(new object[] { "U_toku", "Završena" });
+            comboStatus.Items.AddRange(new object[] { "U_toku", "Zavrsena" });
             comboStatus.Location = new Point(119, 61);
             comboStatus.Margin = new Padding(3, 2, 3, 2);
             comboStatus.Name = "comboStatus";
             comboStatus.Size = new Size(129, 23);
             comboStatus.TabIndex = 2;
-            // 
-            // numericSpaseni
-            // 
+          
             numericSpaseni.Location = new Point(393, 5);
             numericSpaseni.Margin = new Padding(3, 2, 3, 2);
             numericSpaseni.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             numericSpaseni.Name = "numericSpaseni";
             numericSpaseni.Size = new Size(128, 23);
             numericSpaseni.TabIndex = 1;
-            // 
-            // numericUspesnost
-            // 
+           
             numericUspesnost.Location = new Point(393, 64);
             numericUspesnost.Margin = new Padding(3, 2, 3, 2);
             numericUspesnost.Name = "numericUspesnost";
             numericUspesnost.Size = new Size(128, 23);
             numericUspesnost.TabIndex = 0;
-            // 
-            // FormaUpravljajIntervencijama
-            // 
+          
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 247, 251);

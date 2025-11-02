@@ -27,20 +27,20 @@ namespace VanredneSituacije.Forme
 
         public async void PopuniPodacima()
         {
-            var jedinice = await DTOManager.VratiSveJedinice();
+            var jedinice = await DTOManager.InterventneVratii();
             comboJedinica.DataSource = jedinice;
 
             comboJedinica.DisplayMember = "Naziv";
-            comboJedinica.ValueMember = "Jedinstveni_Broj";
+            comboJedinica.ValueMember = "JedinstveniBroj";
 
 
-            var intervencije = await DTOManager.VratiIntervencije();
+            var intervencije = await DTOManager.IntervencijeVratii();
             comboIntervencija.DataSource = intervencije;
             comboIntervencija.DisplayMember = "Id";
             comboIntervencija.ValueMember = "Id";
 
 
-            var vanredne = await DTOManager.VratiVanredneSituacije();
+            var vanredne = await DTOManager.VanredneVratii();
             comboVs.DataSource = vanredne;
             comboVs.DisplayMember = "Id";
             comboVs.ValueMember = "Id";

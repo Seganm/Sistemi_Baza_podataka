@@ -14,7 +14,7 @@ namespace VanredneSituacije.Forme
 
         public async void PopuniPodacima()
         {
-            gridAngazovanja.DataSource = await DTOManager.VratiUcestvovanja();
+            gridAngazovanja.DataSource = await DTOManager.AngazovanjaVratii();
             gridAngazovanja.Refresh();
             gridAngazovanja.ClearSelection();
         }
@@ -62,7 +62,7 @@ namespace VanredneSituacije.Forme
 
             if (potvrda == DialogResult.OK)
             {
-                await DTOManager.ObrisiUcestvovanje(selektovano.Id);
+                await DTOManager.AngazovanjeObrisii(selektovano.Id);
                 MessageBox.Show("Uspešno obrisano!", "Info");
                 PopuniPodacima();
             }

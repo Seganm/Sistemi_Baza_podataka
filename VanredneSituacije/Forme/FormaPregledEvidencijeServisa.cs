@@ -22,7 +22,7 @@ namespace VanredneSituacije.Forme
 
         public async void UcitajPodatke()
         {
-            var lista = await DTOManager.VratiServiseVozila(vozilo.Registarska_Oznaka);
+            var lista = await DTOManager.EvidencijaServisaVozilaVratii(vozilo.Registracijaa);
             gridServisi.DataSource = lista;
             gridServisi.Refresh();
             gridServisi.ClearSelection();
@@ -30,7 +30,7 @@ namespace VanredneSituacije.Forme
 
         private void dugmeDodaj_Click(object sender, EventArgs e)
         {
-            var forma = new FormaUpravljajEvidencijomServisa(vozilo.Registarska_Oznaka);
+            var forma = new FormaUpravljajEvidencijomServisa(vozilo.Registracijaa);
             forma.ShowDialog();
             UcitajPodatke();
         }
@@ -62,7 +62,7 @@ namespace VanredneSituacije.Forme
 
             if (potvrda == DialogResult.Yes)
             {
-                await DTOManager.ObrisiServis(selektovana.Id);
+                await DTOManager.EvidencijaServisObrisii(selektovana.Id);
                 MessageBox.Show("Evidencija uspešno obrisana.", "Info");
                 UcitajPodatke();
             }

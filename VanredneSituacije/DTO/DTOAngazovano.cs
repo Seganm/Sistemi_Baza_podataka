@@ -38,7 +38,7 @@ namespace VanredneSituacije.DTO
             Id = a.ID;
             DatumPoc = a.DatumPoc;
             DatumKraj = a.DatumKraj;
-            VoziloReg = a.Vozilo.Registarska_Oznaka;
+            VoziloReg = a.Vozilo.Registracijaa;
             IntervencijaID = a.Intervencija.Id;
 
 
@@ -61,7 +61,7 @@ namespace VanredneSituacije.DTO
         {
             DatumPoc = a.DatumPoc;
             DatumKraj = a.DatumKraj;
-            VoziloReg = a.Vozilo.Registarska_Oznaka;
+            VoziloReg = a.Vozilo.Registracijaa;
             IntervencijaID = a.Intervencija.Id;
  
 

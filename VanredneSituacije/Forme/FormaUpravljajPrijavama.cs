@@ -24,28 +24,28 @@ namespace VanredneSituacije.Forme
 
         public async void PopuniPodacima()
         {
-            dtDatumVreme.Value = prijava.Datum_I_Vreme;
+            dtDatumVreme.Value = prijava.DatumVremee;
             tbTip.Text = prijava.Tip;
-            tbIme.Text = prijava.Ime_Prijavioca;
+            tbIme.Text = prijava.PrijavilacIme;
             tbKontakt.Text = prijava.Kontakt;
             tbLokacija.Text = prijava.Lokacija;
             tbOpis.Text = prijava.Opis;
-            tbDispecer.Text = prijava.JMBG_Dispecer;
+            tbDispecer.Text = prijava.DispecerJMBG;
             numPrioritet.Value = (int)prijava.Prioritet;
         }
 
         private async void btnSacuvaj_Click(object sender, EventArgs e)
         {
-            DTODodajPrijavu pr = new DTODodajPrijavu
+            DTOPrijavaDodajj pr = new DTOPrijavaDodajj
             {
-                Datum_I_Vreme = dtDatumVreme.Value,
+                DatumVremee = dtDatumVreme.Value,
                 Tip = tbTip.Text,
-                Ime_Prijavioca = tbIme.Text,
+                PrijavilacIme = tbIme.Text,
                 Kontakt = tbKontakt.Text,
                 Lokacija = tbLokacija.Text,
                 Opis = tbOpis.Text,
                 Prioritet = (int)numPrioritet.Value,
-                JMBG_Dispecer = tbDispecer.Text
+                DispecerJMBG = tbDispecer.Text
             };
 
             if (!dtDatumVreme.Checked || string.IsNullOrEmpty(tbTip.Text) || string.IsNullOrEmpty(tbIme.Text) ||
@@ -57,9 +57,9 @@ namespace VanredneSituacije.Forme
             }
 
             if (prijava == null)
-                await DTOManager.DodajPrijavu(pr);
+                await DTOManager.PrijavaDodajj(pr);
             else
-                await DTOManager.IzmeniPrijavu(pr, prijava.Id);
+                await DTOManager.PrijavaIzmenii(pr, prijava.Id);
 
             DialogResult = DialogResult.OK;
             Close();

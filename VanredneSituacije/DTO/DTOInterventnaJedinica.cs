@@ -39,7 +39,7 @@ namespace VanredneSituacije.DTO
         public DTOVratiInterventnuJedinicu(InterventnaJedinica i)
         {
             Naziv = i.Naziv;
-            Jedinstveni_Broj = i.Jedinstveni_Broj;
+            JedinstveniBroj = i.JedinstveniBroj;
             Baza = i.Baza;
             BrojClanova = i.BrojClanova;
             if (i.Komandir != null)
@@ -55,7 +55,7 @@ namespace VanredneSituacije.DTO
 
         public virtual string? PrezimeKomandira { get; set; }
         public virtual string? JMBGKomandira { get; set; }
-        public virtual int Jedinstveni_Broj { get; set; }
+        public virtual int JedinstveniBroj { get; set; }
         public virtual string Naziv { get; set; }
 
         public virtual string Baza { get; set; }

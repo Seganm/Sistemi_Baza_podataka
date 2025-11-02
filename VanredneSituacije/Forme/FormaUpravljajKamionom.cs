@@ -36,8 +36,8 @@ namespace VanredneSituacije.Forme
             comboStatus.DataSource = Enum.GetValues(typeof(StatusVozila));
             if (Reg_oznaka != null)
             {
-                var kamion = await DTOManager.VratiKamion(Reg_oznaka);
-                textReg.Text = kamion.Registarska_Oznaka;
+                var kamion = await DTOManager.KamionVratii(Reg_oznaka);
+                textReg.Text = kamion.Registracijaa;
                 textPro.Text = kamion.Proizvodjac;
 
                 comboStatus.SelectedItem = kamion.Status;
@@ -74,8 +74,8 @@ namespace VanredneSituacije.Forme
 
         private async void buttonSave_Click(object sender, EventArgs e)
         {
-            DTODodajKamion ka = new DTODodajKamion();
-            ka.Registarska_Oznaka = textReg.Text;
+            DTOKamionDodajj ka = new DTOKamionDodajj();
+            ka.Registracijaa = textReg.Text;
             ka.Proizvodjac = textPro.Text;
             ka.Lokacija = textLok.Text;
 
@@ -91,11 +91,11 @@ namespace VanredneSituacije.Forme
 
             if (Reg_oznaka == null)
             {
-                await DTOManager.DodajKamion(ka);
+                await DTOManager.KamionDodajj(ka);
             }
             else
             {
-                await DTOManager.IzmeniKamion(ka, Reg_oznaka);
+                await DTOManager.KamionIzmenii(ka, Reg_oznaka);
             }
 
             this.DialogResult = DialogResult.OK;

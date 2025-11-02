@@ -55,7 +55,7 @@ namespace VanredneSituacije.Forme
 
             if (rezultat == DialogResult.OK)
             {
-                await DTOManager.obrisiVanrednuSituaciju(situacija.Id);
+                await DTOManager.VanrednaObrisii(situacija.Id);
                 MessageBox.Show("Situacija je obrisana.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 OsveziPodatke();
             }
@@ -68,7 +68,7 @@ namespace VanredneSituacije.Forme
 
         public async void OsveziPodatke()
         {
-            var podaci = await DTOManager.VratiVanredneSituacije();
+            var podaci = await DTOManager.VanredneVratii();
             tabelaSituacije.DataSource = podaci;
             tabelaSituacije.Refresh();
             tabelaSituacije.ClearSelection();

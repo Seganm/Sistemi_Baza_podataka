@@ -72,20 +72,20 @@ namespace VanredneSituacije.Forme
 
         private async Task PopuniComboe()
         {
-            var Vozila = await DTOManager.VratiSvaVozila();
+            var Vozila = await DTOManager.VozilaVratii();
             comboVozilo.DataSource = Vozila;
-            comboVozilo.DisplayMember = "Registarska_Oznaka";
-            comboVozilo.ValueMember = "Registarska_Oznaka";
+            comboVozilo.DisplayMember = "Registracijaa";
+            comboVozilo.ValueMember = "Registracijaa";
 
-            var Radnik = await DTOManager.VratiOperativneRadnike();
+            var Radnik = await DTOManager.RadniciVratii();
             comboRadnik.DataSource = Radnik;
             comboRadnik.DisplayMember = "PunoIme";
             comboRadnik.ValueMember = "JMBG";
 
-            var Jedinica = await DTOManager.VratiSveJedinice();
+            var Jedinica = await DTOManager.InterventneVratii();
             comboJedinica.DataSource = Jedinica;
             comboJedinica.DisplayMember = "Naziv";
-            comboJedinica.ValueMember = "Jedinstveni_Broj";
+            comboJedinica.ValueMember = "JedinstveniBroj";
 
             dateOd.Value = DateTime.Now;
             dateDo.Value = DateTime.Now;
@@ -139,7 +139,7 @@ namespace VanredneSituacije.Forme
                         DatumDo = datumDo
                     };
 
-                    await DTOManager.DodajDodeljivanje(d);
+                    await DTOManager.DodeljivanjeDodajj(d);
                     MessageBox.Show("Uspešno ste dodelili vozilo radniku");
                 }
                 else if (string.IsNullOrEmpty(JMBG_Radnika) && comboRadnik.SelectedIndex == -1)
@@ -153,12 +153,12 @@ namespace VanredneSituacije.Forme
                         DatumDo = datumDo
                     };
 
-                    await DTOManager.DodajDodeljivanje(d);
+                    await DTOManager.DodeljivanjeDodajj(d);
                     MessageBox.Show("Uspešno ste dodelili vozilo jedinici");
                 }
                 else
                 {
-                    MessageBox.Show("Morate izabrati ili radnika ili jedinicu (ne oba i ne nijednog)!");
+                    MessageBox.Show("Morate izabrati ili radnika ili jedinicu");
                 }
             }
             else
@@ -174,7 +174,7 @@ namespace VanredneSituacije.Forme
                         DatumDo = datumDo
                     };
 
-                    await DTOManager.IzmeniDodeljujeSe(d, dodela.Id);
+                    await DTOManager.DodeljenoIzmenii(d, dodela.Id);
                     MessageBox.Show("Uspešno ste izmenili dodelu");
                 }
                 else if (string.IsNullOrEmpty(JMBG_Radnika) && comboRadnik.SelectedIndex == -1)
@@ -188,7 +188,7 @@ namespace VanredneSituacije.Forme
                         DatumDo = datumDo
                     };
 
-                    await DTOManager.IzmeniDodeljujeSe(d, dodela.Id);
+                    await DTOManager.DodeljenoIzmenii(d, dodela.Id);
                     MessageBox.Show("Uspešno ste izmenili dodelu");
                 }
                 else

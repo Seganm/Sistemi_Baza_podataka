@@ -67,11 +67,11 @@ namespace VanredneSituacije.Forme
 
                 if (predstavnik == null)
                 {
-                    await DTOManager.DodajPredstavnika(pred);
+                    await DTOManager.PredstavnikSluzbeDodajj(pred);
                 }
                 else
                 {
-                    await DTOManager.IzmeniPredstavnika(pred, predstavnik.JMBG);
+                    await DTOManager.PredstavnikSluzbeIzmenii(pred, predstavnik.JMBG);
                 }
 
                 DialogResult = DialogResult.OK;

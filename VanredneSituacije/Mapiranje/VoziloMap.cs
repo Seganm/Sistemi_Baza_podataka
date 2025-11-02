@@ -16,7 +16,7 @@ namespace VanredneSituacije.Mapiranje
         {
             Table("Vozilo");
 
-            Id(x => x.Registarska_Oznaka, "Registarska_Oznaka").GeneratedBy.Assigned();
+            Id(x => x.Registracijaa, "Registarska_Oznaka").GeneratedBy.Assigned();
             Map(x => x.Status).Column("Status").CustomType<EnumStringType<StatusVozila>>();
             Map(x => x.Lokacija).Column("Lokacija");
             Map(x => x.Proizvodjac).Column("Proizvodjac");

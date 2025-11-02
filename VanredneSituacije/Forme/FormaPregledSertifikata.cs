@@ -22,7 +22,7 @@ namespace VanredneSituacije.Forme
 
         private async void UcitajSertifikate()
         {
-            var sertifikati = await DTOManager.VratiSertifikateZaposlenog(operativni.JMBG);
+            var sertifikati = await DTOManager.SertifikatiPoJMBGVratii(operativni.JMBG);
             mrezaSertifikati.DataSource = sertifikati;
             mrezaSertifikati.Refresh();
             mrezaSertifikati.ClearSelection();
@@ -43,7 +43,7 @@ namespace VanredneSituacije.Forme
                 return;
             }
 
-            var sertifikat = mrezaSertifikati.CurrentRow.DataBoundItem as DTOVratiSertifikat;
+            var sertifikat = mrezaSertifikati.CurrentRow.DataBoundItem as DTOSertifikatVratii;
             var forma = new FormaUpravljajSertifikatima(sertifikat);
             forma.ShowDialog();
             UcitajSertifikate();
@@ -77,7 +77,7 @@ namespace VanredneSituacije.Forme
 
             if (potvrda == DialogResult.OK)
             {
-                await DTOManager.ObrisiSertifikat(sertifikatId);
+                await DTOManager.SertifikatObrisii(sertifikatId);
                 MessageBox.Show("Sertifikat je uspešno obrisan! ", "Info");
                 UcitajSertifikate();
             }

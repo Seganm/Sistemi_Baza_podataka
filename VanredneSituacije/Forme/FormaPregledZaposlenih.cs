@@ -34,7 +34,7 @@ namespace VanredneSituacije.Forme
             }
             else if (tip == "Operativni radnici")
             {
-                tabelaZaposleni.DataSource = await DTOManager.VratiOperativneRadnike();
+                tabelaZaposleni.DataSource = await DTOManager.RadniciVratii();
                 dugmeSertifikati.Visible = true;
                 dugmeEkspertize.Visible = false;
                 dugmeSoftver.Visible = false;
@@ -90,7 +90,7 @@ namespace VanredneSituacije.Forme
                 var zaposleni = tabelaZaposleni.CurrentRow.DataBoundItem as DTOZaposleni;
 
                 if (zaposleni is DTOOperativniRadnik op)
-                    await DTOManager.ObrisiOperativnogRadnika(op.JMBG);
+                    await DTOManager.OperativniObrisii(op.JMBG);
                 else if (zaposleni is DTOKoordinator kor)
                     await DTOManager.KoordinatorObrisii(kor.JMBG);
                 else if (zaposleni is DTOAnaliticar an)

@@ -16,37 +16,37 @@ namespace VanredneSituacije.DTO
         public DTOSpecijalizacije(Specijalizacije spec)
         {
            
-            JMBG_Kordinatora = spec.Kordinator.JMBG;
+            JMBGKoordinatoraa = spec.Koordinator.JMBG;
             Id = spec.Id;
             Tip = spec.Tip;
-            ImeKordinatora = spec.Kordinator.Ime;
-            PrezimeKordinatora = spec.Kordinator.Prezime;
+            ImeKoordinatora = spec.Koordinator.Ime;
+            PrezimeKoordinatora = spec.Koordinator.Prezime;
 
         }
 
-        public virtual string JMBG_Kordinatora { get; set; }
+        public virtual string JMBGKoordinatoraa { get; set; }
         public virtual int Id { get; set; }
 
         public virtual string Tip { get; set; }
 
-        public virtual string ImeKordinatora { get; set; }
+        public virtual string ImeKoordinatora { get; set; }
 
-        public virtual string PrezimeKordinatora { get; set; }
+        public virtual string PrezimeKoordinatora { get; set; }
 
 
        
     }
 
-    public class DTODodajSpecijalizaciju
+    public class DTOSpecijalizacijaDodajj
     {
-        public DTODodajSpecijalizaciju() { }
-        public DTODodajSpecijalizaciju(Specijalizacije spec)
+        public DTOSpecijalizacijaDodajj() { }
+        public DTOSpecijalizacijaDodajj(Specijalizacije spec)
         {
-            JMBG_Kordinator = spec.Kordinator.JMBG;
+            JMBGKoordinatora = spec.Koordinator.JMBG;
             Tip = spec.Tip;
         }
         public virtual string Tip { get; set; }
-        public virtual string JMBG_Kordinator { get; set; }
+        public virtual string JMBGKoordinatora { get; set; }
 
 
        

@@ -31,11 +31,11 @@ namespace VanredneSituacije.Forme
             {
                 if (idjed != 0)
                 {
-                    gridVozila.DataSource = await DTOManager.VratiDodeljivanjaJedinic(idjed);
+                    gridVozila.DataSource = await DTOManager.DodeljivanjaJediniceVratii(idjed);
                 }
                 else if (!string.IsNullOrEmpty(maticni))
                 {
-                    gridVozila.DataSource = await DTOManager.VratiDodeljenaVozilaRadniku(maticni);
+                    gridVozila.DataSource = await DTOManager.DodeljenaVratii(maticni);
                 }
 
                 gridVozila.Refresh();
@@ -67,7 +67,7 @@ namespace VanredneSituacije.Forme
 
             if (ok == DialogResult.OK)
             {
-                await DTOManager.ObrisiVozilo(v.Registarska_Oznaka);
+                await DTOManager.VoziloObrisii(v.Registracijaa);
                 MessageBox.Show("Obrisano vozilo", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 UcitajPodatke();
             }

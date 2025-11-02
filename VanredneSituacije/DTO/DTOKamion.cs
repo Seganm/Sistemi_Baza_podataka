@@ -7,10 +7,10 @@ using VanredneSituacije.Entitet;
 
 namespace VanredneSituacije.DTO
 {
-    public class DTODodajKamion : DTODodajVozilo
+    public class DTOKamionDodajj : DTODodajVozilo
     {
-        public DTODodajKamion() { }
-        public DTODodajKamion(Vozilo vo) : base(vo) { }
+        public DTOKamionDodajj() { }
+        public DTOKamionDodajj(Vozilo vo) : base(vo) { }
     }
     public class DTOKamion : DTOVozilo
     {

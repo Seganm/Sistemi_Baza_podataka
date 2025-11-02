@@ -22,9 +22,9 @@ namespace VanredneSituacije.Forme
             components = new System.ComponentModel.Container();
 
             naslovLabela = new Label();
-            dugmeObrisiSluzbu = new Button();
-            dugmeIzmeniSluzbu = new Button();
-            dugmeDodajSluzbu = new Button();
+            dugmeSluzbaObrisii = new Button();
+            dugmeSluzbaIzmenii = new Button();
+            dugmeSluzbaDodajj = new Button();
             tabelaSluzbi = new DataGridView();
             kolonaIdSektora = new DataGridViewTextBoxColumn();
             kolonaTipSektora = new DataGridViewTextBoxColumn();
@@ -44,39 +44,39 @@ namespace VanredneSituacije.Forme
             naslovLabela.Location = new Point(20, 12);
             naslovLabela.Text = "📋 Pregled svih službi";
 
-            dugmeDodajSluzbu.BackColor = Color.FromArgb(0, 122, 204);
-            dugmeDodajSluzbu.FlatAppearance.BorderSize = 0;
-            dugmeDodajSluzbu.FlatStyle = FlatStyle.Flat;
-            dugmeDodajSluzbu.Font = new Font("Segoe UI Semibold", 9F);
-            dugmeDodajSluzbu.ForeColor = Color.White;
-            dugmeDodajSluzbu.Location = new Point(710, 12);
-            dugmeDodajSluzbu.Size = new Size(150, 32);
-            dugmeDodajSluzbu.Text = "➕ Dodaj službu";
-            dugmeDodajSluzbu.UseVisualStyleBackColor = false;
-            dugmeDodajSluzbu.Click += dugmeDodajSluzbu_Click;
+            dugmeSluzbaDodajj.BackColor = Color.FromArgb(0, 122, 204);
+            dugmeSluzbaDodajj.FlatAppearance.BorderSize = 0;
+            dugmeSluzbaDodajj.FlatStyle = FlatStyle.Flat;
+            dugmeSluzbaDodajj.Font = new Font("Segoe UI Semibold", 9F);
+            dugmeSluzbaDodajj.ForeColor = Color.White;
+            dugmeSluzbaDodajj.Location = new Point(710, 12);
+            dugmeSluzbaDodajj.Size = new Size(150, 32);
+            dugmeSluzbaDodajj.Text = "➕ Dodaj službu";
+            dugmeSluzbaDodajj.UseVisualStyleBackColor = false;
+            dugmeSluzbaDodajj.Click += dugmeSluzbaDodajj_Click;
 
  
-            dugmeIzmeniSluzbu.BackColor = Color.FromArgb(255, 193, 7);
-            dugmeIzmeniSluzbu.FlatAppearance.BorderSize = 0;
-            dugmeIzmeniSluzbu.FlatStyle = FlatStyle.Flat;
-            dugmeIzmeniSluzbu.Font = new Font("Segoe UI Semibold", 9F);
-            dugmeIzmeniSluzbu.ForeColor = Color.Black;
-            dugmeIzmeniSluzbu.Location = new Point(866, 12);
-            dugmeIzmeniSluzbu.Size = new Size(150, 32);
-            dugmeIzmeniSluzbu.Text = "✏ Izmeni službu";
-            dugmeIzmeniSluzbu.UseVisualStyleBackColor = false;
-            dugmeIzmeniSluzbu.Click += dugmeIzmeniSluzbu_Click;
+            dugmeSluzbaIzmenii.BackColor = Color.FromArgb(255, 193, 7);
+            dugmeSluzbaIzmenii.FlatAppearance.BorderSize = 0;
+            dugmeSluzbaIzmenii.FlatStyle = FlatStyle.Flat;
+            dugmeSluzbaIzmenii.Font = new Font("Segoe UI Semibold", 9F);
+            dugmeSluzbaIzmenii.ForeColor = Color.Black;
+            dugmeSluzbaIzmenii.Location = new Point(866, 12);
+            dugmeSluzbaIzmenii.Size = new Size(150, 32);
+            dugmeSluzbaIzmenii.Text = "✏ Izmeni službu";
+            dugmeSluzbaIzmenii.UseVisualStyleBackColor = false;
+            dugmeSluzbaIzmenii.Click += dugmeSluzbaIzmenii_Click;
 
-            dugmeObrisiSluzbu.BackColor = Color.FromArgb(220, 70, 70);
-            dugmeObrisiSluzbu.FlatAppearance.BorderSize = 0;
-            dugmeObrisiSluzbu.FlatStyle = FlatStyle.Flat;
-            dugmeObrisiSluzbu.Font = new Font("Segoe UI Semibold", 9F);
-            dugmeObrisiSluzbu.ForeColor = Color.White;
-            dugmeObrisiSluzbu.Location = new Point(1022, 12);
-            dugmeObrisiSluzbu.Size = new Size(150, 32);
-            dugmeObrisiSluzbu.Text = "🗑 Obriši službu";
-            dugmeObrisiSluzbu.UseVisualStyleBackColor = false;
-            dugmeObrisiSluzbu.Click += dugmeObrisiSluzbu_Click;
+            dugmeSluzbaObrisii.BackColor = Color.FromArgb(220, 70, 70);
+            dugmeSluzbaObrisii.FlatAppearance.BorderSize = 0;
+            dugmeSluzbaObrisii.FlatStyle = FlatStyle.Flat;
+            dugmeSluzbaObrisii.Font = new Font("Segoe UI Semibold", 9F);
+            dugmeSluzbaObrisii.ForeColor = Color.White;
+            dugmeSluzbaObrisii.Location = new Point(1022, 12);
+            dugmeSluzbaObrisii.Size = new Size(150, 32);
+            dugmeSluzbaObrisii.Text = "🗑 Obriši službu";
+            dugmeSluzbaObrisii.UseVisualStyleBackColor = false;
+            dugmeSluzbaObrisii.Click += dugmeSluzbaObrisii_Click;
 
             tabelaSluzbi.AutoGenerateColumns = false;
             tabelaSluzbi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -134,7 +134,7 @@ namespace VanredneSituacije.Forme
                 kolonaImePredstavnika, kolonaPrezimePredstavnika
             });
 
-            bindingSluzbi.DataSource = typeof(DTO.DTOVratiSluzbu);
+            bindingSluzbi.DataSource = typeof(DTO.DTOSluzbaVratii);
 
  
             AutoScaleDimensions = new SizeF(8F, 16F);
@@ -143,9 +143,9 @@ namespace VanredneSituacije.Forme
             ClientSize = new Size(1184, 661);
             Controls.Add(tabelaSluzbi);
             Controls.Add(naslovLabela);
-            Controls.Add(dugmeObrisiSluzbu);
-            Controls.Add(dugmeIzmeniSluzbu);
-            Controls.Add(dugmeDodajSluzbu);
+            Controls.Add(dugmeSluzbaObrisii);
+            Controls.Add(dugmeSluzbaIzmenii);
+            Controls.Add(dugmeSluzbaDodajj);
             Font = new Font("Segoe UI", 9F);
             Name = "FormaPregledSluzbe";
             Text = "Pregled službi";
@@ -161,9 +161,9 @@ namespace VanredneSituacije.Forme
         #endregion
 
         private Label naslovLabela;
-        private Button dugmeObrisiSluzbu;
-        private Button dugmeIzmeniSluzbu;
-        private Button dugmeDodajSluzbu;
+        private Button dugmeSluzbaObrisii;
+        private Button dugmeSluzbaIzmenii;
+        private Button dugmeSluzbaDodajj;
         private DataGridView tabelaSluzbi;
         private BindingSource bindingSluzbi;
         private DataGridViewTextBoxColumn kolonaIdSektora;

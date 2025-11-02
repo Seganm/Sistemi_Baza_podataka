@@ -137,10 +137,10 @@
             tipKolona.DataPropertyName = "Tip";
             tipKolona.HeaderText = "Tip situacije";
 
-            brojUgrozenihKolona.DataPropertyName = "Broj_Ugrozenih_Osoba";
+            brojUgrozenihKolona.DataPropertyName = "BrojUgrozenih";
             brojUgrozenihKolona.HeaderText = "Broj ugroženih osoba";
 
-            nivoOpasnostiKolona.DataPropertyName = "Nivo_Opasnosti";
+            nivoOpasnostiKolona.DataPropertyName = "NivoOpasnost";
             nivoOpasnostiKolona.HeaderText = "Nivo opasnosti";
 
             opstinaKolona.DataPropertyName = "Opstina";

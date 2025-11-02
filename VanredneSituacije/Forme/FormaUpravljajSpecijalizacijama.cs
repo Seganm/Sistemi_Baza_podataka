@@ -32,15 +32,15 @@ namespace VanredneSituacije.Forme
 
         private async void PopuniPoljaZaIzmenu()
         {
-            txtJmbgKoordinatora.Text = _postojecaSpecijalizacija.JMBG_Kordinatora;
+            txtJmbgKoordinatora.Text = _postojecaSpecijalizacija.JMBGKoordinatoraa;
             txtOblastSpecijalizacije.Text = _postojecaSpecijalizacija.Tip;
         }
 
         private async void btnSacuvajSpecijalizaciju_Click(object sender, EventArgs e)
         {
-            DTODodajSpecijalizaciju novaSpecijalizacija = new DTODodajSpecijalizaciju
+            DTOSpecijalizacijaDodajj novaSpecijalizacija = new DTOSpecijalizacijaDodajj
             {
-                JMBG_Kordinator = txtJmbgKoordinatora.Text,
+                JMBGKoordinatora = txtJmbgKoordinatora.Text,
                 Tip = txtOblastSpecijalizacije.Text
             };
 
@@ -52,12 +52,12 @@ namespace VanredneSituacije.Forme
 
             if (_postojecaSpecijalizacija == null)
             {
-                await DTOManager.DodajSpecijalizaciju(novaSpecijalizacija);
+                await DTOManager.SpecijalizacijaDodajj(novaSpecijalizacija);
                 MessageBox.Show("Specijalizacija je  dodata.");
             }
             else
             {
-                await DTOManager.IzmeniSpecijalizaciju(novaSpecijalizacija, _postojecaSpecijalizacija.Id);
+                await DTOManager.SpecijalizacijaIzmenii(novaSpecijalizacija, _postojecaSpecijalizacija.Id);
                 MessageBox.Show("Specijalizacija je  izmenjena.");
             }
 

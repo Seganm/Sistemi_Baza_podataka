@@ -8,14 +8,14 @@ using VanredneSituacije.Entitet;
 namespace VanredneSituacije.DTO
 {
     
-        public class DTODodajVanrednuSituaciju
+        public class DTOVanrednaDodajj
         {
             public virtual DateTime DatumPoc { get; set; }
             public virtual DateTime? DatumKraj { get; set; }
 
             public virtual string Tip { get; set; }
-            public virtual int? Broj_Ugrozenih_Osoba { get; set; }
-            public virtual NivoOpasnosti Nivo_Opasnosti { get; set; }
+            public virtual int? BrojUgrozenih { get; set; }
+            public virtual NivoOpasnosti NivoOpasnost { get; set; }
             public virtual string Opstina { get; set; }
             public virtual string Lokacija { get; set; }
             public virtual string? Opis { get; set; } = "";
@@ -23,22 +23,22 @@ namespace VanredneSituacije.DTO
             public virtual int IdPrijave { get; set; }
 
 
-            public DTODodajVanrednuSituaciju()
+            public DTOVanrednaDodajj()
             {
 
             }
 
-            public DTODodajVanrednuSituaciju(VanrednaSituacija v)
+            public DTOVanrednaDodajj(VanrednaSituacija v)
             {
                 DatumPoc = v.DatumPoc;
                 DatumKraj = v.DatumKraj;
                 Tip = v.Tip;
-                Broj_Ugrozenih_Osoba = v.Broj_Ugrozenih_Osoba;
-                Nivo_Opasnosti = v.Nivo_Opasnosti;
+                BrojUgrozenih = v.BrojUgrozenih;
+                NivoOpasnost = v.NivoOpasnost;
                 Opstina = v.Opstina;
                 Lokacija = v.Lokacija;
                 Opis = v.Opis;
-                IdPrijave = v.Prijava_ID.Id;
+                IdPrijave = v.PrijavaaID.Id;
             }
         }
 
@@ -48,7 +48,7 @@ namespace VanredneSituacije.DTO
             public virtual string Tip { get; set; }
             public virtual string Opstina { get; set; }
             public virtual string Lokacija { get; set; }
-            public virtual string Nivo_Opasnosti { get; set; }
+            public virtual string NivoOpasnost { get; set; }
 
             public virtual string? Opis { get; set; }
 
@@ -59,7 +59,7 @@ namespace VanredneSituacije.DTO
                 Tip = v.Tip;
                 Opstina = v.Opstina;
                 Lokacija = v.Lokacija;
-                Nivo_Opasnosti = v.Nivo_Opasnosti.ToString();
+                NivoOpasnost = v.NivoOpasnost.ToString();
                 Opis = v.Opis;
             }
         }
@@ -71,8 +71,8 @@ namespace VanredneSituacije.DTO
             public virtual DateTime? DatumKraj { get; set; }
 
             public virtual string Tip { get; set; }
-            public virtual int? Broj_Ugrozenih_Osoba { get; set; }
-            public virtual string Nivo_Opasnosti { get; set; }
+            public virtual int? BrojUgrozenih { get; set; }
+            public virtual string NivoOpasnost { get; set; }
             public virtual string Opstina { get; set; }
             public virtual string Lokacija { get; set; }
             public virtual string? Opis { get; set; }
@@ -92,12 +92,12 @@ namespace VanredneSituacije.DTO
                 DatumPoc = v.DatumPoc;
                 DatumKraj = v.DatumKraj;
                 Tip = v.Tip;
-                Broj_Ugrozenih_Osoba = v.Broj_Ugrozenih_Osoba;
-                Nivo_Opasnosti = v.Nivo_Opasnosti.ToString();
+                BrojUgrozenih = v.BrojUgrozenih;
+                NivoOpasnost = v.NivoOpasnost.ToString();
                 Opstina = v.Opstina;
                 Lokacija = v.Lokacija;
                 Opis = v.Opis;
-                Prijava = new DTOPregledPrijave(v.Prijava_ID);
+                Prijava = new DTOPregledPrijave(v.PrijavaaID);
             }
         }
 

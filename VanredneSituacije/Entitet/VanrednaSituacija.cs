@@ -21,12 +21,12 @@ namespace VanredneSituacije.Entitet
         public virtual string Lokacija { get; set; }
         public virtual string? Opis { get; set; }
         public virtual string Tip { get; set; }
-        public virtual int? Broj_Ugrozenih_Osoba { get; set; }
-        public virtual NivoOpasnosti Nivo_Opasnosti { get; set; }
+        public virtual int? BrojUgrozenih { get; set; }
+        public virtual NivoOpasnosti NivoOpasnost { get; set; }
         public virtual DateTime DatumPoc { get; set; }
         public virtual DateTime? DatumKraj { get; set; }
 
-        public virtual Prijava Prijava_ID { get; set; }
+        public virtual Prijava PrijavaaID { get; set; }
     }
     public enum NivoOpasnosti
     {

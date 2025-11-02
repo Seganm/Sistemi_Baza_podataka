@@ -24,38 +24,38 @@ namespace VanredneSituacije.DTO
                 JMBGRadnika = s.Id.OperativniRadnik.JMBG
 
             };
-            DatumIzdavanja = s.DatumIzdavanja;
-            DatumVazenja = s.DatumVazenja;
+            DatIzdavanje = s.DatIzdavanje;
+            DatVazenje = s.DatVazenje;
         }
-        public virtual DateTime DatumIzdavanja { get; set; }
-        public virtual DateTime? DatumVazenja { get; set; }
+        public virtual DateTime DatIzdavanje { get; set; }
+        public virtual DateTime? DatVazenje { get; set; }
 
 
 
        
     }
 
-    public class DTOVratiSertifikat
+    public class DTOSertifikatVratii
     {
-        public DTOVratiSertifikat()
+        public DTOSertifikatVratii()
         {
 
         }
 
-        public DTOVratiSertifikat(Sertifikati s)
+        public DTOSertifikatVratii(Sertifikati s)
         {
             Naziv = s.Id.Naziv;
             JMBGOperativnogRadnika = s.Id.OperativniRadnik.JMBG;
            
           
-            DatumIzdavanja = s.DatumIzdavanja;
-            DatumVazenja = s.DatumVazenja;
+            DatIzdavanje = s.DatIzdavanje;
+            DatVazenje = s.DatVazenje;
             Institucija = s.Id.Institucija;
         }
         public virtual string Naziv { get; set; }
         public virtual string JMBGOperativnogRadnika { get; set; }
-        public virtual DateTime DatumIzdavanja { get; set; }
-        public virtual DateTime? DatumVazenja { get; set; }
+        public virtual DateTime DatIzdavanje { get; set; }
+        public virtual DateTime? DatVazenje { get; set; }
         public virtual string Institucija { get; set; }
 
 

@@ -29,6 +29,7 @@ namespace VanredneSituacije.Forme
         {
             InitializeComponent();
             _ekspertiza = ekspertiza;
+            _jmbgAnaliticara = ekspertiza.JMBGAnaliticara;
             PopuniPodacimaZaIzmenu();
 
             txtJmbgAnaliticara.ReadOnly = true;

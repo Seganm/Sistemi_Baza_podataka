@@ -16,7 +16,7 @@ namespace VanredneSituacije.Mapiranje
                 Table("Specijalizacije");
                 Id(x => x.Id, "Id").GeneratedBy.TriggerIdentity();
                 Map(x => x.Tip, "Oblast");
-                References(x => x.Kordinator, "JMBG_Kordinatora").Cascade.None();
+                References(x => x.Koordinator, "JMBG_Kordinatora").Cascade.None();
             }
     }
 }

@@ -15,8 +15,8 @@ namespace VanredneSituacije.Mapiranje
         {
             Table("OPERATIVNIRADNIK");
             KeyColumn("JMBG");
-            Map(x => x.Fizicka_Spremnost).Column("Fizicka_Spremnost").CustomType<EnumStringType<Spremnost>>(); 
-            Map(x => x.Broj_Sati).Column("Broj_Sati");
+            Map(x => x.FizSpremnost).Column("Fizicka_Spremnost").CustomType<EnumStringType<Spremnost>>(); 
+            Map(x => x.BrSati).Column("Broj_Sati");
             References(x => x.InterventnaJedinica).Column("Jedinica_Id").Nullable().LazyLoad();
 
             HasMany(x => x.Dodeljuje)
@@ -24,7 +24,7 @@ namespace VanredneSituacije.Mapiranje
                 .Inverse()
                 .KeyColumn("JMBG_Pojedinca");
 
-            HasMany(x => x.Sertifikats)
+            HasMany(x => x.Sertifikatii)
           .Cascade.All()
           .Inverse()
           .KeyColumn("JMBG");
